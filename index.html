@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>محمد حسين | مصمم جرافيك، مطور ويب، ومسوق رقمي في الرياض</title>
+    <meta name="author" content="محمد حسين">
+    <meta name="description" content="محمد حسين، خبير مستقل في التصميم الجرافيكي، تطوير المواقع، والتسويق الرقمي بخبرة تزيد عن 5 سنوات في الرياض. أقدم حلولاً إبداعية متكاملة تشمل تصميم الهويات البصرية، إنتاج الفيديو، إدارة حملات التسويق، وتحسين محركات البحث لمساعدتك على تحقيق أهدافك.">
+    <meta name="keywords" content="مصمم جرافيك, مطور ويب, مسوق رقمي, الرياض, تصميم مواقع, تسويق الكتروني, هوية بصرية, إنتاج فيديو, إدارة سوشيال ميديا, محمد حسين, مصمم مستقل, السعودية">
+    <link rel="canonical" href="https://www.yourdomain.com/"> <!-- استبدل هذا برابط موقعك الفعلي -->
+
+    <!-- Open Graph Meta Tags (for social media sharing) -->
+    <meta property="og:title" content="محمد حسين | مصمم جرافيك، مطور ويب، ومسوق رقمي في الرياض">
+    <meta property="og:description" content="خبير مستقل في التصميم، التطوير، والتسويق الرقمي بخبرة تزيد عن 5 سنوات.">
+    <meta property="og:image" content="https://placehold.co/1200x630/0D1117/34D399?text=محمد+حسين"> <!-- استبدل هذا برابط صورة مناسبة لك -->
+    <meta property="og:url" content="https://www.yourdomain.com/"> <!-- استبدل هذا برابط موقعك الفعلي -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ar_SA">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="محمد حسين | مصمم جرافيك، مطور ويب، ومسوق رقمي في الرياض">
+    <meta name="twitter:description" content="خبير مستقل في التصميم، التطوير، والتسويق الرقمي بخبرة تزيد عن 5 سنوات.">
+    <meta name="twitter:image" content="https://placehold.co/1200x630/0D1117/34D399?text=محمد+حسين"> <!-- استبدل هذا برابط صورة مناسبة لك -->
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-dark: #0D1117;
+            --bg-card: #161B22;
+            --border-color: #30363d;
+            --text-primary: #e6edf3;
+            --text-secondary: #7d8590;
+            --mint: #34D399;
+            --mint-dark: #10B981;
+            --glow-shadow: 0 0 15px rgba(52, 211, 153, 0.5), 0 0 5px rgba(52, 211, 153, 0.7);
+        }
+        body { 
+            font-family: 'Cairo', sans-serif; 
+            scroll-behavior: smooth;
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+        }
+        .text-mint { color: var(--mint); }
+        .bg-mint { background-color: var(--mint); }
+        .hover\:bg-mint-dark:hover { background-color: var(--mint-dark); }
+        .border-mint { border-color: var(--mint); }
+        .ring-mint-focus:focus {
+            --tw-ring-color: var(--mint);
+        }
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            text-align: center;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .btn:hover {
+             box-shadow: var(--glow-shadow);
+        }
+        .btn-primary {
+            background-color: var(--mint);
+            color: var(--bg-dark);
+            font-weight: 800;
+        }
+        .btn-primary:hover {
+            background-color: var(--mint-dark);
+            transform: translateY(-2px);
+        }
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid var(--border-color);
+            color: var(--text-primary);
+        }
+        .btn-secondary:hover {
+            background-color: var(--border-color);
+            border-color: var(--mint);
+            color: var(--mint);
+        }
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--mint);
+            color: var(--mint);
+            font-weight: 700;
+        }
+        .btn-outline:hover {
+            background-color: var(--mint);
+            color: var(--bg-dark);
+        }
+        .section-title {
+            font-size: 2.25rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 3rem auto;
+        }
+        .service-card, .project-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .project-card {
+            padding: 0;
+            overflow: hidden;
+        }
+         .project-card-clickable {
+            cursor: pointer;
+        }
+        .project-card .p-6 {
+            flex-grow: 1;
+        }
+        .service-card:hover, .project-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--mint);
+            box-shadow: var(--glow-shadow);
+        }
+        .filter-btn.active {
+            background-color: var(--mint);
+            color: var(--bg-dark);
+            border-color: var(--mint);
+            box-shadow: var(--glow-shadow);
+        }
+        .hero-title-glow {
+            color: #fff;
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.3),
+                         0 0 20px rgba(52, 211, 153, 0.7),
+                         0 0 35px rgba(52, 211, 153, 0.5),
+                         0 0 50px rgba(52, 211, 153, 0.3);
+        }
+        .hero-section {
+            position: relative;
+            overflow: hidden;
+        }
+        #hero-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        .form-input {
+            width: 100%;
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            border: 1px solid var(--border-color);
+            transition: border-color 0.3s;
+        }
+        .form-input:focus, select.form-input:focus {
+            outline: none;
+            border-color: var(--mint);
+            box-shadow: 0 0 0 2px rgba(52, 211, 153, 0.3);
+        }
+        select.form-input {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%237d8590' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: left 0.75rem center;
+        }
+        /* Modal Styles */
+        .modal {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background-color: rgba(10, 10, 20, 0.85);
+            backdrop-filter: blur(5px);
+            z-index: 100; display: flex; align-items: center; justify-content: center;
+            opacity: 0; visibility: hidden; transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .modal.active { opacity: 1; visibility: visible; }
+        .modal-content {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 1.5rem; border-radius: 1rem; width: 90%; height: 90vh; position: relative;
+            transform: scale(0.95); transition: transform 0.3s ease;
+            display: flex; flex-direction: column;
+        }
+        .modal-content-gallery { max-width: 1000px; }
+        .modal-content-cv { max-width: 900px; }
+        .modal.active .modal-content { transform: scale(1); }
+        .modal-close-btn {
+            position: absolute; top: 1rem; left: 1rem; background: var(--bg-dark);
+            border-radius: 50%; width: 2.5rem; height: 2.5rem;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.5rem; cursor: pointer; color: var(--text-primary);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2); z-index: 110;
+            border: 1px solid var(--border-color);
+        }
+        .modal-close-btn:hover { color: var(--mint); }
+        
+        /* New Gallery Styles */
+        .modal-gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem; /* space between images */
+            align-items: center; /* center the images */
+            padding: 1rem;
+        }
+        .gallery-item img {
+            width: 100%;
+            max-width: 800px; /* Control max size on large screens */
+            height: auto;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            opacity: 0;
+            animation: fadeIn 0.5s ease forwards;
+        }
+        @keyframes fadeIn { to { opacity: 1; } }
+        
+        .partner-logo-container:hover img {
+             filter: drop-shadow(0 0 8px var(--mint));
+        }
+        nav a:hover {
+            color: var(--mint);
+            text-shadow: 0 0 10px var(--mint);
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header id="header" class="bg-black/50 backdrop-blur-sm fixed top-0 left-0 w-full z-50 transition-all duration-300 shadow-lg shadow-black/20">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white flex items-center gap-3">
+                <img src="logo/logo.png" alt="شعار محمد حسين" class="w-10 h-10">
+                <span>محمد حسين</span>
+            </a>
+            <nav class="hidden md:flex items-center space-x-8 space-x-reverse">
+                <a href="#about" class="text-gray-300 transition-all duration-300 font-semibold">نبذة عني</a>
+                <a href="#services" class="text-gray-300 transition-all duration-300 font-semibold">خدماتي</a>
+                <a href="#portfolio" class="text-gray-300 transition-all duration-300 font-semibold">أعمالي</a>
+                <a href="#partners" class="text-gray-300 transition-all duration-300 font-semibold">شركاء النجاح</a>
+                <a href="#contact" class="text-gray-300 transition-all duration-300 font-semibold">التواصل</a>
+            </nav>
+            <a href="#contact" class="hidden md:block btn btn-primary">تواصل معي</a>
+            <button id="mobile-menu-btn" class="md:hidden text-2xl text-white"><i class="fas fa-bars"></i></button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900 border-t border-gray-700">
+            <a href="#about" class="block py-3 px-6 text-white hover:bg-gray-800 font-semibold">نبذة عني</a>
+            <a href="#services" class="block py-3 px-6 text-white hover:bg-gray-800 font-semibold">خدماتي</a>
+            <a href="#portfolio" class="block py-3 px-6 text-white hover:bg-gray-800 font-semibold">أعمالي</a>
+            <a href="#partners" class="block py-3 px-6 text-white hover:bg-gray-800 font-semibold">شركاء النجاح</a>
+            <a href="#contact" class="block py-3 px-6 text-white hover:bg-gray-800 font-semibold">التواصل</a>
+            <div class="p-4">
+                <a href="#contact" class="block btn btn-primary w-full">تواصل معي</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section min-h-screen flex items-center justify-center pt-24 pb-12">
+            <canvas id="hero-canvas"></canvas>
+            <div class="container mx-auto px-6 text-center hero-content">
+                <h1 class="hero-title-glow text-4xl md:text-6xl font-extrabold leading-tight mb-4">مرحباً، أنا محمد حسين</h1>
+                <p class="text-lg md:text-xl text-mint max-w-3xl mx-auto mb-8 tracking-wider">
+                    مصمم جرافيك • منتج فيديوهات • مسوق الكتروني • مطور ويب
+                </p>
+                <p class="text-lg text-gray-400 max-w-3xl mx-auto mb-10">أقدم حلولاً إبداعية متكاملة في التصميم والتطوير والتسويق الرقمي لتحقيق أهدافك وتمييز علامتك التجارية في العالم الرقمي.</p>
+                <div class="flex justify-center items-center flex-wrap gap-4">
+                    <a href="#portfolio" class="btn btn-primary">استعرض أعمالي</a>
+                    <a href="#contact" class="btn btn-secondary">اتصل بي الآن <i class="fas fa-arrow-left mr-2"></i></a>
+                    <button data-modal-target="cv-modal" class="btn btn-secondary">عرض السيرة الذاتية <i class="fas fa-eye mr-2"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="py-20 bg-gray-950/50">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
+                    <div class="md:col-span-1">
+                         <img src="personal/personal.jpg" alt="صورة محمد حسين الشخصية" class="rounded-2xl shadow-xl w-full h-auto object-cover ring-4 ring-offset-4 ring-offset-gray-900 ring-mint">
+                    </div>
+                    <div class="md:col-span-2">
+                        <h2 class="text-3xl font-extrabold text-white mb-4 text-center md:text-right">نبذة عني</h2>
+                        <h3 class="text-xl font-bold text-mint mb-4 text-center md:text-right">شغفي هو تحويل الأفكار إلى واقع رقمي مبهر</h3>
+                        <p class="text-gray-400 leading-relaxed mb-6 text-center md:text-right">
+                            بخبرة تزيد عن 5 سنوات في عالم التصميم والتسويق الرقمي، أساعد الشركات والأفراد على بناء حضور قوي في العالم الرقمي من خلال تصاميم إبداعية واستراتيجيات تسويقية فعالة. أؤمن بأن كل مشروع له قصة فريدة، وأعمل على إيصال هذه القصة بطريقة بصرية مؤثرة تلامس قلوب الجمهور وتحقق الأهداف المرجوة.
+                        </p>
+                        <p class="text-gray-400 leading-relaxed mb-10 text-center md:text-right">
+                            من التصميم الجرافيكي إلى إنتاج الفيديو، ومن تطوير المواقع إلى إدارة الحملات الإعلانية، أقدم خدمات متكاملة تضمن تحقيق أقصى استفادة من استثمارك الرقمي.
+                        </p>
+                        <h3 class="text-xl font-bold text-white mb-6 text-center md:text-right">مهاراتي وخبراتي</h3>
+                        <div class="flex flex-wrap justify-center md:justify-end gap-3">
+                            <span class="bg-mint/10 text-mint font-semibold py-2 px-4 rounded-full">التسويق الالكتروني</span>
+                            <span class="bg-mint/10 text-mint font-semibold py-2 px-4 rounded-full">إنتاج الفيديو</span>
+                            <span class="bg-mint/10 text-mint font-semibold py-2 px-4 rounded-full">تصميم الجرافيك</span>
+                            <span class="bg-mint/10 text-mint font-semibold py-2 px-4 rounded-full">تطوير المواقع</span>
+                            <span class="bg-mint/10 text-mint font-semibold py-2 px-4 rounded-full">التصوير الفوتوغرافي</span>
+                            <span class="bg-mint/10 text-mint font-semibold py-2 px-4 rounded-full">كتابة المحتوى</span>
+                            <span class="bg-mint/10 text-mint font-semibold py-2 px-4 rounded-full">إدارة وسائل التواصل</span>
+                            <span class="bg-mint/10 text-mint font-semibold py-2 px-4 rounded-full">تصميم صفحات الويب</span>
+                            <span class="bg-mint/10 text-mint font-semibold py-2 px-4 rounded-full">تحسين محركات البحث</span>
+                            <span class="bg-mint/10 text-mint font-semibold py-2 px-4 rounded-full">حملات جوجل الإعلانية</span>
+                            <span class="bg-mint/10 text-mint font-semibold py-2 px-4 rounded-full">تحليل البيانات</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Partners Section -->
+        <section id="partners" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">شركاء النجاح</h2>
+                <p class="section-subtitle">تشرفت بالعمل مع مجموعة من العملاء المميزين في مختلف المجالات.</p>
+                <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center">
+                    <div class="flex justify-center transition duration-300 partner-logo-container"><img src="شركاء النجاح/الاولى.png" alt="شعار شركة الأولى" class="h-16 opacity-80 hover:opacity-100"></div>
+                    <div class="flex justify-center transition duration-300 partner-logo-container"><img src="شركاء النجاح/بيرين.png" alt="شعار شركة بيرين" class="h-16 opacity-80 hover:opacity-100"></div>
+                    <div class="flex justify-center transition duration-300 partner-logo-container"><img src="شركاء النجاح/حلول ميزاب.png" alt="شعار حلول ميزاب" class="h-16 opacity-80 hover:opacity-100"></div>
+                    <div class="flex justify-center transition duration-300 partner-logo-container"><img src="شركاء النجاح/الوصل.png" alt="شعار الوصل" class="h-16 opacity-80 hover:opacity-100"></div>
+                    <div class="flex justify-center transition duration-300 partner-logo-container"><img src="شركاء النجاح/مية هلا.png" alt="شعار مية هلا" class="h-16 opacity-80 hover:opacity-100"></div>
+                    <div class="flex justify-center transition duration-300 partner-logo-container"><img src="شركاء النجاح/طابونة.png" alt="شعار طابونة" class="h-16 opacity-80 hover:opacity-100"></div>
+                    <div class="flex justify-center transition duration-300 partner-logo-container"><img src="شركاء النجاح/وسيم قدها.png" alt="شعار وسيم قدها" class="h-16 opacity-80 hover:opacity-100"></div>
+                    <div class="flex justify-center transition duration-300 partner-logo-container"><img src="شركاء النجاح/المسافر.png" alt="شعار المسافر" class="h-16 opacity-80 hover:opacity-100"></div>
+                    <div class="flex justify-center transition duration-300 partner-logo-container"><img src="شركاء النجاح/شعار_نادي_الفيحاء_2022.svg.png" alt="شعار نادي الفيحاء" class="h-16 opacity-80 hover:opacity-100"></div>
+                    <div class="flex justify-center transition duration-300 partner-logo-container"><img src="شركاء النجاح/قمة ميزاب.png" alt="شعار قمة ميزاب" class="h-16 opacity-80 hover:opacity-100"></div>
+                    <div class="flex justify-center transition duration-300 partner-logo-container"><img src="شركاء النجاح/عالم ابو راكان.png" alt="شعار عالم ابو راكان" class="h-16 opacity-80 hover:opacity-100"></div>
+                    <div class="flex justify-center transition duration-300 partner-logo-container"><img src="شركاء النجاح/فورت.png" alt="شعار فورت" class="h-16 opacity-80 hover:opacity-100"></div>
+                    <div class="flex justify-center transition duration-300 partner-logo-container"><img src="شركاء النجاح/لقطة شاشة 2025-08-26 022857.png" alt="شعار مؤسسة التمويل الأصغر" class="h-16 opacity-80 hover:opacity-100"></div>
+                    <div class="flex justify-center transition duration-300 partner-logo-container"><img src="شركاء النجاح/مطعم هني.png" alt="شعار شركة إنماء" class="h-16 opacity-80 hover:opacity-100"></div>
+                    <div class="flex justify-center transition duration-300 partner-logo-container"><img src="شركاء النجاح/بادية الشام.png" alt="شعار شركة إنماء" class="h-16 opacity-80 hover:opacity-100"></div>
+                </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20 bg-gray-950/50">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">خدماتي</h2>
+                <p class="section-subtitle">أقدم مجموعة شاملة من الخدمات الإبداعية والتقنية لتلبية جميع احتياجاتك الرقمية.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service: تصميم الجرافيك -->
+                    <div class="service-card p-8">
+                        <div class="bg-mint/10 text-mint w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-4"><i class="fas fa-palette"></i></div>
+                        <h3 class="text-xl font-bold text-white mb-2">تصميم الجرافيك</h3>
+                        <p class="text-gray-400 mb-4 flex-grow">تصاميم إبداعية للهويات البصرية، الشعارات، المطبوعات، والمواد التسويقية.</p>
+                        <ul class="space-y-2 text-gray-300 mb-6 text-right">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>تصميم الهويات البصرية</span></li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>الشعارات والعلامات التجارية</span></li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>المطبوعات والكروت</span></li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>تصاميم السوشيال ميديا</span></li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline mt-auto">اطلب الخدمة</a>
+                    </div>
+                    <!-- Service: إنتاج الفيديو -->
+                    <div class="service-card p-8">
+                        <div class="bg-mint/10 text-mint w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-4"><i class="fas fa-video"></i></div>
+                        <h3 class="text-xl font-bold text-white mb-2">إنتاج الفيديو</h3>
+                        <p class="text-gray-400 mb-4 flex-grow">إنتاج فيديوهات احترافية تسويقية وتعليمية ومونتاج متقدم.</p>
+                         <ul class="space-y-2 text-gray-300 mb-6 text-right">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>الفيديوهات التسويقية</span></li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>المونتاج والمعالجة</span></li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>الرسوم المتحركة</span></li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>الفيديوهات التعليمية</span></li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline mt-auto">اطلب الخدمة</a>
+                    </div>
+                    <!-- Service: التسويق الالكتروني -->
+                    <div class="service-card p-8">
+                        <div class="bg-mint/10 text-mint w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-4"><i class="fas fa-bullhorn"></i></div>
+                        <h3 class="text-xl font-bold text-white mb-2">التسويق الالكتروني</h3>
+                        <p class="text-gray-400 mb-4 flex-grow">استراتيجيات تسويقية متكاملة لزيادة المبيعات والوصول للجمهور المستهدف.</p>
+                         <ul class="space-y-2 text-gray-300 mb-6 text-right">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>استراتيجيات التسويق</span></li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>تحليل السوق والمنافسين</span></li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>التسويق عبر البريد</span></li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>الإعلانات المدفوعة</span></li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline mt-auto">اطلب الخدمة</a>
+                    </div>
+                    <!-- Service: تصميم وتطوير المواقع -->
+                    <div class="service-card p-8">
+                        <div class="bg-mint/10 text-mint w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-4"><i class="fas fa-code"></i></div>
+                        <h3 class="text-xl font-bold text-white mb-2">تصميم وتطوير المواقع</h3>
+                        <p class="text-gray-400 mb-4 flex-grow">تطوير مواقع ويب حديثة وسريعة ومتجاوبة مع جميع الأجهزة.</p>
+                         <ul class="space-y-2 text-gray-300 mb-6 text-right">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>المواقع التفاعلية</span></li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>التجارة الالكترونية</span></li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>التحسين للسرعة</span></li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>الأمان والحماية</span></li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline mt-auto">اطلب الخدمة</a>
+                    </div>
+                    <!-- Service: التصوير الفوتوغرافي -->
+                    <div class="service-card p-8">
+                        <div class="bg-mint/10 text-mint w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-4"><i class="fas fa-camera-retro"></i></div>
+                        <h3 class="text-xl font-bold text-white mb-2">التصوير الفوتوغرافي</h3>
+                        <p class="text-gray-400 mb-4 flex-grow">تصوير احترافي للمنتجات والفعاليات والبورتريه.</p>
+                         <ul class="space-y-2 text-gray-300 mb-6 text-right">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>تصوير المنتجات</span></li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>التصوير التجاري</span></li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>تصوير الفعاليات</span></li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>معالجة الصور</span></li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline mt-auto">اطلب الخدمة</a>
+                    </div>
+                    <!-- Service: كتابة المحتوى -->
+                    <div class="service-card p-8">
+                        <div class="bg-mint/10 text-mint w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-4"><i class="fas fa-pencil-alt"></i></div>
+                        <h3 class="text-xl font-bold text-white mb-2">كتابة المحتوى</h3>
+                        <p class="text-gray-400 mb-4 flex-grow">محتوى جذاب ومؤثر للمواقع ووسائل التواصل الاجتماعي.</p>
+                         <ul class="space-y-2 text-gray-300 mb-6 text-right">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>محتوى المواقع</span></li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>منشورات السوشيال ميديا</span></li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>المقالات التسويقية</span></li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>النصوص الإعلانية</span></li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline mt-auto">اطلب الخدمة</a>
+                    </div>
+                    <!-- Service: ادارة التواصل الاجتماعي -->
+                    <div class="service-card p-8">
+                        <div class="bg-mint/10 text-mint w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-4"><i class="fas fa-users"></i></div>
+                        <h3 class="text-xl font-bold text-white mb-2">إدارة التواصل الاجتماعي</h3>
+                        <p class="text-gray-400 mb-4 flex-grow">إدارة شاملة لحسابات التواصل الاجتماعي وتنمية المتابعين.</p>
+                         <ul class="space-y-2 text-gray-300 mb-6 text-right">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>إدارة الحسابات</span></li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>تخطيط المحتوى</span></li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>التفاعل مع الجمهور</span></li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>تحليل الأداء</span></li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline mt-auto">اطلب الخدمة</a>
+                    </div>
+                    <!-- Service: ادارة قنوات اليوتيوب -->
+                    <div class="service-card p-8">
+                        <div class="bg-mint/10 text-mint w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-4"><i class="fab fa-youtube"></i></div>
+                        <h3 class="text-xl font-bold text-white mb-2">إدارة قنوات اليوتيوب</h3>
+                        <p class="text-gray-400 mb-4 flex-grow">إدارة متكاملة للقناة، من تصوير ومونتاج إلى النشر والتحسين.</p>
+                         <ul class="space-y-2 text-gray-300 mb-6 text-right">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>إنتاج المحتوى</span></li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>المونتاج الاحترافي</span></li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>تحسين SEO للفيديو</span></li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>إدارة التعليقات</span></li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline mt-auto">اطلب الخدمة</a>
+                    </div>
+                    <!-- Service: تحسين محركات البحث -->
+                    <div class="service-card p-8">
+                        <div class="bg-mint/10 text-mint w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-4"><i class="fas fa-search"></i></div>
+                        <h3 class="text-xl font-bold text-white mb-2">تحسين محركات البحث</h3>
+                        <p class="text-gray-400 mb-4 flex-grow">تحسين ظهور موقعك في نتائج البحث وزيادة الزيارات الطبيعية.</p>
+                         <ul class="space-y-2 text-gray-300 mb-6 text-right">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>تحليل الكلمات المفتاحية</span></li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>تحسين المحتوى</span></li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>الروابط الخلفية</span></li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>تقارير الأداء</span></li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline mt-auto">اطلب الخدمة</a>
+                    </div>
+                    <!-- Service: تحليل البيانات -->
+                    <div class="service-card p-8">
+                        <div class="bg-mint/10 text-mint w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-4"><i class="fas fa-chart-line"></i></div>
+                        <h3 class="text-xl font-bold text-white mb-2">تحليل البيانات</h3>
+                        <p class="text-gray-400 mb-4 flex-grow">تحويل البيانات إلى رؤى قابلة للتنفيذ لدعم اتخاذ القرار وتحسين الأداء.</p>
+                         <ul class="space-y-2 text-gray-300 mb-6 text-right">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>جمع وتنظيف البيانات</span></li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>تحليل البيانات الاستكشافي</span></li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>تصور البيانات</span></li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>إعداد التقارير واللوحات</span></li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline mt-auto">اطلب الخدمة</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">أعمالي</h2>
+                <p class="section-subtitle">مجموعة مختارة من أفضل المشاريع التي عملت عليها مع عملائي.</p>
+                
+                <div id="filter-buttons" class="flex flex-wrap justify-center gap-2 mb-12">
+                    <button class="filter-btn active btn btn-secondary" data-filter="all">جميع الأعمال</button>
+                    <button class="filter-btn btn btn-secondary" data-filter="design">تصميم</button>
+                    <button class="filter-btn btn btn-secondary" data-filter="web">مواقع ويب</button>
+                    <button class="filter-btn btn btn-secondary" data-filter="marketing">تسويق</button>
+                    <button class="filter-btn btn btn-secondary" data-filter="video">فيديو</button>
+                    <button class="filter-btn btn btn-secondary" data-filter="photo">تصوير</button>
+                </div>
+
+                <div id="portfolio-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project: هوية بصرية -->
+                    <div class="project-card project-card-clickable" data-category="design" data-modal-target="identity-modal">
+                        <img src="https://placehold.co/600x400/34D399/0D1117?text=تصميم+هوية" alt="تصميم هوية بصرية متكاملة" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white">تصميم هوية بصرية متكاملة</h3>
+                            <p class="text-gray-400 my-2">تصميم هوية بصرية شاملة لشركة تقنية ناشئة تشمل الشعار والألوان والخطوط.</p>
+                            <div class="flex flex-wrap gap-2 mt-4">
+                                <span class="text-xs font-semibold bg-gray-700 text-gray-300 py-1 px-3 rounded-full">Illustrator</span>
+                                <span class="text-xs font-semibold bg-gray-700 text-gray-300 py-1 px-3 rounded-full">Photoshop</span>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Project: حملة إعلانية سوشيال ميديا -->
+                    <div class="project-card project-card-clickable" data-category="marketing" data-modal-target="campaign-modal">
+                        <img src="https://placehold.co/600x400/1D4ED8/FFFFFF?text=حملة+إعلانية" alt="حملة إعلانية على وسائل التواصل" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white">حملة إعلانية على وسائل التواصل</h3>
+                            <p class="text-gray-400 my-2">إنشاء وإدارة حملة تسويقية شاملة حققت زيادة 300% في المبيعات.</p>
+                            <div class="flex flex-wrap gap-2 mt-4">
+                                <span class="text-xs font-semibold bg-gray-700 text-gray-300 py-1 px-3 rounded-full">Facebook Ads</span>
+                                <span class="text-xs font-semibold bg-gray-700 text-gray-300 py-1 px-3 rounded-full">Analytics</span>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Project: حملة إعلانية جوجل -->
+                    <div class="project-card project-card-clickable" data-category="marketing" data-modal-target="google-ads-modal">
+                        <img src="https://placehold.co/600x400/fbbc05/0D1117?text=إعلانات+جوجل" alt="حملة إعلانية بجوجل" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white">حملة إعلانية بجوجل</h3>
+                            <p class="text-gray-400 my-2">إدارة حملات إعلانية مستهدفة على شبكة جوجل البحثية والإعلانية.</p>
+                            <div class="flex flex-wrap gap-2 mt-4">
+                                <span class="text-xs font-semibold bg-gray-700 text-gray-300 py-1 px-3 rounded-full">Google Ads</span>
+                                <span class="text-xs font-semibold bg-gray-700 text-gray-300 py-1 px-3 rounded-full">SEM</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project: موقع تجارة -->
+                    <div class="project-card project-card-clickable" data-category="web" data-modal-target="ecommerce-modal">
+                        <img src="https://placehold.co/600x400/D97706/FFFFFF?text=موقع+تجارة" alt="موقع تجارة إلكترونية" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white">موقع تجارة إلكترونية</h3>
+                            <p class="text-gray-400 my-2">تطوير متجر إلكتروني متكامل مع نظام دفع آمن وإدارة المخزون.</p>
+                            <div class="flex flex-wrap gap-2 mt-4">
+                                <span class="text-xs font-semibold bg-gray-700 text-gray-300 py-1 px-3 rounded-full">React</span>
+                                <span class="text-xs font-semibold bg-gray-700 text-gray-300 py-1 px-3 rounded-full">Node.js</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project: الفيديوهات -->
+                    <a href="https://drive.google.com/drive/folders/1G9dVvt9mNiqAa3ZW9LlaODJWk2c5PsM0?usp=sharing" target="_blank" class="block" data-category="video">
+                        <div class="project-card h-full">
+                            <img src="https://placehold.co/600x400/9333EA/FFFFFF?text=الفيديوهات" alt="الفيديوهات" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-white">الفيديوهات</h3>
+                                <p class="text-gray-400 my-2">مجموعة من أعمالي في إنتاج ومونتاج الفيديو. اضغط للمشاهدة.</p>
+                                <div class="flex flex-wrap gap-2 mt-4">
+                                    <span class="text-xs font-semibold bg-gray-700 text-gray-300 py-1 px-3 rounded-full">After Effects</span>
+                                    <span class="text-xs font-semibold bg-gray-700 text-gray-300 py-1 px-3 rounded-full">Premiere Pro</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Project: تصوير منتجات -->
+                    <div class="project-card project-card-clickable" data-category="photo" data-modal-target="photo-modal">
+                        <img src="https://placehold.co/600x400/6D28D9/FFFFFF?text=تصوير+منتجات" alt="جلسة تصوير منتجات" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white">تصوير منتجات</h3>
+                            <p class="text-gray-400 my-2">تصوير احترافي لمجموعة منتجات مع إضاءة استوديو ومعالجة متقدمة.</p>
+                            <div class="flex flex-wrap gap-2 mt-4">
+                                <span class="text-xs font-semibold bg-gray-700 text-gray-300 py-1 px-3 rounded-full">Photography</span>
+                                <span class="text-xs font-semibold bg-gray-700 text-gray-300 py-1 px-3 rounded-full">Lightroom</span>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Project: تصوير رياضي -->
+                    <div class="project-card project-card-clickable" data-category="photo" data-modal-target="sports-photo-modal">
+                        <img src="https://placehold.co/600x400/2563eb/FFFFFF?text=تصوير+رياضي" alt="تصوير رياضي" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white">تصوير رياضي</h3>
+                            <p class="text-gray-400 my-2">تغطية وتصوير الفعاليات والمباريات الرياضية باحترافية عالية.</p>
+                            <div class="flex flex-wrap gap-2 mt-4">
+                                <span class="text-xs font-semibold bg-gray-700 text-gray-300 py-1 px-3 rounded-full">Sports</span>
+                                <span class="text-xs font-semibold bg-gray-700 text-gray-300 py-1 px-3 rounded-full">Action Photography</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project: سوشيال ميديا -->
+                    <div class="project-card project-card-clickable" data-category="design" data-modal-target="social-media-gallery">
+                        <img src="https://placehold.co/600x400/DB2777/FFFFFF?text=سوشيال+ميديا" alt="تصاميم سوشيال ميديا" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white">تصاميم سوشيال ميديا</h3>
+                            <p class="text-gray-400 my-2">مجموعة من التصاميم الجذابة لمنصات التواصل الاجتماعي لزيادة التفاعل.</p>
+                            <div class="flex flex-wrap gap-2 mt-4">
+                                <span class="text-xs font-semibold bg-gray-700 text-gray-300 py-1 px-3 rounded-full">Social Media</span>
+                                <span class="text-xs font-semibold bg-gray-700 text-gray-300 py-1 px-3 rounded-full">Canva</span>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Project: تصاميم رياضية -->
+                    <div class="project-card project-card-clickable" data-category="design" data-modal-target="sports-design-modal">
+                        <img src="https://placehold.co/600x400/be123c/FFFFFF?text=تصاميم+رياضية" alt="تصاميم رياضية" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white">تصاميم رياضية</h3>
+                            <p class="text-gray-400 my-2">تصاميم إبداعية خاصة بالأندية والفعاليات الرياضية المختلفة.</p>
+                            <div class="flex flex-wrap gap-2 mt-4">
+                                <span class="text-xs font-semibold bg-gray-700 text-gray-300 py-1 px-3 rounded-full">Sports Design</span>
+                                <span class="text-xs font-semibold bg-gray-700 text-gray-300 py-1 px-3 rounded-full">Photoshop</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project: انفوجرافيك -->
+                    <div class="project-card project-card-clickable" data-category="design" data-modal-target="infographic-modal">
+                        <img src="https://placehold.co/600x400/4F46E5/FFFFFF?text=انفوجرافيك" alt="تصميم انفوجرافيك" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white">تصميم برزنتيشن</h3>
+                            <p class="text-gray-400 my-2">تحويل البيانات المعقدة إلى رسوم بيانية بصرية سهلة الفهم.</p>
+                            <div class="flex flex-wrap gap-2 mt-4">
+                                <span class="text-xs font-semibold bg-gray-700 text-gray-300 py-1 px-3 rounded-full">Infographic</span>
+                                <span class="text-xs font-semibold bg-gray-700 text-gray-300 py-1 px-3 rounded-full">Illustrator</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project: إعلانات -->
+                    <div class="project-card project-card-clickable" data-category="design" data-modal-target="ads-modal">
+                        <img src="https://placehold.co/600x400/E11D48/FFFFFF?text=إعلانات" alt="تصميم إعلانات" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white">تصميم لوحات</h3>
+                            <p class="text-gray-400 my-2">تصميم لوحات مطبوعة</p>
+                            <div class="flex flex-wrap gap-2 mt-4">
+                                <span class="text-xs font-semibold bg-gray-700 text-gray-300 py-1 px-3 rounded-full">Advertising</span>
+                                <span class="text-xs font-semibold bg-gray-700 text-gray-300 py-1 px-3 rounded-full">InDesign</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project: شعارات ومطبوعات -->
+                    <div class="project-card project-card-clickable" data-category="design" data-modal-target="logo-modal">
+                        <img src="https://placehold.co/600x400/059669/FFFFFF?text=شعارات" alt="تصميم شعارات ومطبوعات" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white">تصميم شعارات ومطبوعات</h3>
+                            <p class="text-gray-400 my-2">تصميم شعار فريد ومجموعة من المطبوعات التجارية لشركة ناشئة.</p>
+                            <div class="flex flex-wrap gap-2 mt-4">
+                                <span class="text-xs font-semibold bg-gray-700 text-gray-300 py-1 px-3 rounded-full">Logo Design</span>
+                                <span class="text-xs font-semibold bg-gray-700 text-gray-300 py-1 px-3 rounded-full">Branding</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-gray-950/50">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">تواصل معي</h2>
+                <p class="section-subtitle">لديك مشروع في ذهنك؟ دعنا نتحدث ونحول فكرتك إلى واقع رقمي مذهل.</p>
+                <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                    <!-- Left Column: Form -->
+                    <div class="bg-card border border-border-color p-8 rounded-2xl">
+                        <h3 class="text-2xl font-bold mb-6 text-white">أرسل رسالتك</h3>
+                        <form id="contact-form">
+                            <div class="mb-4">
+                                <label for="name" class="block text-gray-400 font-semibold mb-2">الاسم الكامل</label>
+                                <input type="text" id="name" placeholder="أدخل اسمك الكامل" class="form-input">
+                            </div>
+                            <div class="mb-4">
+                                <label for="service" class="block text-gray-400 font-semibold mb-2">الخدمة المطلوبة</label>
+                                <select id="service" class="form-input">
+                                    <option>اختر الخدمة</option>
+                                    <option>تصميم الجرافيك</option>
+                                    <option>إنتاج الفيديو</option>
+                                    <option>التسويق الالكتروني</option>
+                                    <option>تطوير المواقع</option>
+                                    <option>التصوير الفوتوغرافي</option>
+                                    <option>كتابة المحتوى</option>
+                                    <option>إدارة التواصل الاجتماعي</option>
+                                    <option>إدارة قنوات اليوتيوب</option>
+                                    <option>تحسين محركات البحث</option>
+                                    <option>تحليل البيانات</option>
+                                </select>
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-400 font-semibold mb-2">تفاصيل المشروع</label>
+                                <textarea id="message" placeholder="اكتب تفاصيل مشروعك وما تحتاجه بالضبط..." rows="5" class="form-input"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-full text-lg">
+                                <i class="fab fa-whatsapp ml-2"></i>
+                                إرسال الرسالة عبر واتساب
+                            </button>
+                        </form>
+                    </div>
+                    <!-- Right Column: Why Choose Me -->
+                    <div class="pt-8">
+                         <h3 class="text-2xl font-bold mb-6 text-white">لماذا تختارني؟</h3>
+                         <ul class="space-y-4">
+                             <li class="flex items-start gap-3">
+                                 <i class="fas fa-check-circle text-mint text-xl mt-1"></i>
+                                 <span class="font-semibold text-gray-300">خبرة 5+ سنوات في التصميم والتسويق الرقمي</span>
+                             </li>
+                              <li class="flex items-start gap-3">
+                                 <i class="fas fa-check-circle text-mint text-xl mt-1"></i>
+                                 <span class="font-semibold text-gray-300">التزام بالمواعيد والجودة العالية</span>
+                             </li>
+                              <li class="flex items-start gap-3">
+                                 <i class="fas fa-check-circle text-mint text-xl mt-1"></i>
+                                 <span class="font-semibold text-gray-300">دعم مستمر حتى بعد التسليم</span>
+                             </li>
+                              <li class="flex items-start gap-3">
+                                 <i class="fas fa-check-circle text-mint text-xl mt-1"></i>
+                                 <span class="font-semibold text-gray-300">أسعار تنافسية وباقات متنوعة</span>
+                             </li>
+                              <li class="flex items-start gap-3">
+                                 <i class="fas fa-check-circle text-mint text-xl mt-1"></i>
+                                 <span class="font-semibold text-gray-300">تواصل مباشر ومتابعة شخصية</span>
+                             </li>
+                         </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-bg-card border-t border-border-color text-gray-400">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Footer Column 1: About -->
+                <div class="md:col-span-1">
+                     <a href="#" class="text-2xl font-bold text-white flex items-center gap-3 mb-4">
+                         <img src="logo/logo.png" alt="شعار محمد حسين" class="w-10 h-10">
+                         <span>محمد حسين</span>
+                     </a>
+                    <p class="text-sm">
+                        مصمم جرافيك ومطور ويب ومسوق رقمي، شغوف بتحويل الأفكار إلى حلول رقمية إبداعية. أساعد الشركات والأفراد على بناء حضور قوي ومؤثر في العالم الرقمي.
+                    </p>
+                </div>
+                <!-- Footer Column 2: Quick Links -->
+                <div>
+                    <h4 class="font-bold text-white text-lg mb-4">روابط سريعة</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-mint transition-colors">الرئيسية</a></li>
+                        <li><a href="#about" class="hover:text-mint transition-colors">نبذة عني</a></li>
+                        <li><a href="#services" class="hover:text-mint transition-colors">خدماتي</a></li>
+                        <li><a href="#portfolio" class="hover:text-mint transition-colors">أعمالي</a></li>
+                        <li><a href="#contact" class="hover:text-mint transition-colors">التواصل</a></li>
+                    </ul>
+                </div>
+                <!-- Footer Column 3: Contact Info -->
+                <div>
+                    <h4 class="font-bold text-white text-lg mb-4">معلومات التواصل</h4>
+                     <ul class="space-y-3">
+                         <li class="flex items-center gap-3">
+                             <i class="fas fa-phone-alt text-mint"></i>
+                             <span dir="ltr">+966 53 805 3947</span>
+                         </li>
+                          <li class="flex items-center gap-3">
+                             <i class="fas fa-envelope text-mint"></i>
+                             <span>mm.housen77@gmail.com</span>
+                         </li>
+                          <li class="flex items-center gap-3">
+                             <i class="fas fa-clock text-mint"></i>
+                             <span>جميع الأوقات</span>
+                         </li>
+                     </ul>
+                </div>
+            </div>
+            <div class="border-t border-border-color mt-8 pt-6 text-center text-sm">
+                 <p>&copy; 2025 | جميع الحقوق محفوظة لـ <span class="font-bold text-white">محمد حسين</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals for Portfolio -->
+    <!-- Social Media Modal -->
+    <div id="social-media-gallery" class="modal">
+        <div class="modal-content modal-content-gallery">
+            <div class="modal-close-btn">&times;</div>
+            <h2 class="text-2xl font-bold mb-6 text-center text-white">معرض تصاميم السوشيال ميديا</h2>
+            <div class="flex-grow overflow-y-auto pr-4">
+                <div class="modal-gallery">
+                    <div class="gallery-item"><img src="اعمال سوشيال ميديا/مية هلا.jpg" alt="تصميم سوشيال ميديا 1"></div>
+                    <div class="gallery-item"><img src="اعمال سوشيال ميديا/المسافر.jpg" alt="تصميم سوشيال ميديا 2"></div>
+                    <div class="gallery-item"><img src="اعمال سوشيال ميديا/الاولى.jpg" alt="تصميم سوشيال ميديا 3"></div>
+                    <div class="gallery-item"><img src="اعمال سوشيال ميديا/الفيحاء.jpg" alt="تصميم سوشيال ميديا 3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Identity Modal -->
+    <div id="identity-modal" class="modal">
+        <div class="modal-content modal-content-gallery">
+            <div class="modal-close-btn">&times;</div>
+            <h2 class="text-2xl font-bold mb-6 text-center text-white">معرض تصميم هوية بصرية</h2>
+            <div class="flex-grow overflow-y-auto pr-4">
+                <div class="modal-gallery">
+                    <div class="gallery-item"><img src="هويات بصرية/Untitled-1.png" alt="شعار"></div>
+                    <div class="gallery-item"><img src="هويات بصرية/Untitled-12.png" alt="بطاقة أعمال"></div>
+                       <div class="gallery-item"><img src="هويات بصرية/Untitled-13.png" alt="بطاقة أعمال"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Sports Design Modal -->
+    <div id="sports-design-modal" class="modal">
+        <div class="modal-content modal-content-gallery">
+            <div class="modal-close-btn">&times;</div>
+            <h2 class="text-2xl font-bold mb-6 text-center text-white">معرض تصاميم رياضية</h2>
+            <div class="flex-grow overflow-y-auto pr-4">
+                <div class="modal-gallery">
+                    <div class="gallery-item"><img src="اعمال رياضية/‏‏تصاميم رياضية - نسخة.jpg" alt="تصميم رياضي 1"></div>
+                    <div class="gallery-item"><img src="اعمال رياضية/تصاميم رياضية.jpg" alt="تصميم رياضي 2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Sports Photo Modal -->
+    <div id="sports-photo-modal" class="modal">
+        <div class="modal-content modal-content-gallery">
+            <div class="modal-close-btn">&times;</div>
+            <h2 class="text-2xl font-bold mb-6 text-center text-white">معرض تصوير رياضي</h2>
+            <div class="flex-grow overflow-y-auto pr-4">
+                <div class="modal-gallery">
+                    <div class="gallery-item"><img src="تصوير رياضي/1.jpg" alt="تصوير رياضي 1"></div>
+                    <div class="gallery-item"><img src="تصوير رياضي/2.jpg" alt="تصوير رياضي 2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- Google Ads Modal -->
+    <div id="google-ads-modal" class="modal">
+        <div class="modal-content modal-content-gallery">
+            <div class="modal-close-btn">&times;</div>
+            <h2 class="text-2xl font-bold mb-6 text-center text-white">معرض حملات جوجل الإعلانية</h2>
+            <div class="flex-grow overflow-y-auto pr-4">
+                <div class="modal-gallery">
+                    <div class="gallery-item"><img src="حملات جوجل/1.jpg" alt="مثال إعلان جوجل 1"></div>
+                    <div class="gallery-item"><img src="حملات جوجل/حملة جوجل قمة ميزاب.jpg" alt="مثال إعلان جوجل 2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Other Modals -->
+    <div id="campaign-modal" class="modal"> 
+        <div class="modal-content modal-content-gallery">
+            <div class="modal-close-btn">&times;</div>
+            <h2 class="text-2xl font-bold mb-6 text-center text-white">معرض حملة إعلانية (سوشيال ميديا)</h2>
+            <div class="flex-grow overflow-y-auto pr-4">
+                <div class="modal-gallery">
+                    <div class="gallery-item"><img src="حملات سوشيال ميديا/حملة سناب.png" alt="إعلان سوشيال ميديا 1"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="ecommerce-modal" class="modal"> 
+        <div class="modal-content modal-content-gallery">
+            <div class="modal-close-btn">&times;</div>
+            <h2 class="text-2xl font-bold mb-6 text-center text-white">معرض موقع تجارة إلكترونية</h2>
+            <div class="flex-grow overflow-y-auto pr-4">
+                <div class="modal-gallery">
+                    <div class="gallery-item"><img src="https://placehold.co/1280x720/D97706/FFFFFF?text=E-commerce+Homepage" alt="صفحة رئيسية لمتجر"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="photo-modal" class="modal"> 
+        <div class="modal-content modal-content-gallery">
+            <div class="modal-close-btn">&times;</div>
+            <h2 class="text-2xl font-bold mb-6 text-center text-white">معرض تصوير منتجات</h2>
+            <div class="flex-grow overflow-y-auto pr-4">
+                <div class="modal-gallery">
+                    <div class="gallery-item"><img src="منتجات/منتجات هلا.jpg" alt="صورة منتج 1"></div>
+                     <div class="gallery-item"><img src="منتجات/منتجات هني.jpg" alt="صورة منتج 2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="infographic-modal" class="modal"> 
+        <div class="modal-content modal-content-gallery">
+            <div class="modal-close-btn">&times;</div>
+            <h2 class="text-2xl font-bold mb-6 text-center text-white">معرض تصميم برزنتيشن</h2>
+            <div class="flex-grow overflow-y-auto pr-4">
+                <div class="modal-gallery">
+                    <div class="gallery-item"><img src="https://placehold.co/1280x720/4F46E5/FFFFFF?text=Presentation+Slide" alt="شريحة عرض تقديمي"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="ads-modal" class="modal"> 
+        <div class="modal-content modal-content-gallery">
+            <div class="modal-close-btn">&times;</div>
+            <h2 class="text-2xl font-bold mb-6 text-center text-white">معرض تصميم لوحات</h2>
+            <div class="flex-grow overflow-y-auto pr-4">
+                <div class="modal-gallery">
+                    <div class="gallery-item"><img src="لوحات/Mockup.jpg" alt="إعلان مطبوع"></div>
+                    <div class="gallery-item"><img src="لوحات/large_billboard_on_old_underground_subway_wall.jpg" alt="إعلان مطبوع"></div>
+                    <div class="gallery-item"><img src="لوحات/Free-High-Quality-Billboard-Mockup-PSD-File.jpg" alt="إعلان مطبوع"></div>
+                    <div class="gallery-item"><img src="لوحات/Free Roadside City Billboard PSD Mockup.jpg" alt="إعلان مطبوع"></div>
+                    <div class="gallery-item"><img src="لوحات/Free Outdoor Advertising Billboard PSD Mockup.jpg" alt="إعلان مطبوع"></div>
+                    <div class="gallery-item"><img src="لوحات/Adversiment-Billboard-mockup-vol4.jpg" alt="إعلان مطبوع"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="logo-modal" class="modal"> 
+        <div class="modal-content modal-content-gallery">
+            <div class="modal-close-btn">&times;</div>
+            <h2 class="text-2xl font-bold mb-6 text-center text-white">معرض تصميم شعارات</h2>
+            <div class="flex-grow overflow-y-auto pr-4">
+                <div class="modal-gallery">
+                    <div class="gallery-item"><img src="https://placehold.co/1280x720/059669/FFFFFF?text=Logo+Concept" alt="تصميم شعار"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CV Modal -->
+    <div id="cv-modal" class="modal">
+        <div class="modal-content modal-content-cv">
+            <div class="modal-close-btn">&times;</div>
+            <!--  هام: استبدل 'your-cv.pdf' بالمسار الصحيح لملف سيرتك الذاتية -->
+            <embed src="cv/محمد_حسين_سيرة_ذاتية.pdf" type="application/pdf" width="100%" height="100%">
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // --- Animated Canvas Background ---
+            const canvas = document.getElementById('hero-canvas');
+            const ctx = canvas.getContext('2d');
+            let particlesArray;
+            let animationFrameId;
+
+            const mouse = {
+                x: null,
+                y: null,
+                radius: 120
+            }
+
+            window.addEventListener('mousemove', function(event){
+                mouse.x = event.x;
+                mouse.y = event.y;
+            });
+            
+            window.addEventListener('mouseout', function(){
+                mouse.x = undefined;
+                mouse.y = undefined;
+            });
+
+            function setCanvasSize() {
+                canvas.width = window.innerWidth;
+                canvas.height = document.querySelector('.hero-section').offsetHeight;
+            }
+
+            class Particle {
+                constructor(x, y, directionX, directionY, size, color){
+                    this.x = x;
+                    this.y = y;
+                    this.directionX = directionX;
+                    this.directionY = directionY;
+                    this.size = size;
+                    this.color = color;
+                }
+                draw(){
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
+                    ctx.fillStyle = 'rgba(52, 211, 153, 0.2)';
+                    ctx.fill();
+                }
+                update(){
+                    if(this.x > canvas.width || this.x < 0) this.directionX = -this.directionX;
+                    if(this.y > canvas.height || this.y < 0) this.directionY = -this.directionY;
+                    
+                    this.x += this.directionX;
+                    this.y += this.directionY;
+                    this.draw();
+                }
+            }
+
+            function init(){
+                setCanvasSize();
+                particlesArray = [];
+                let numberOfParticles = (canvas.height * canvas.width) / 15000;
+                for(let i = 0; i < numberOfParticles; i++){
+                    let size = (Math.random() * 2) + 1;
+                    let x = (Math.random() * ((innerWidth - size * 2) - (size * 2)) + size * 2);
+                    let y = (Math.random() * ((innerHeight - size * 2) - (size * 2)) + size * 2);
+                    let directionX = (Math.random() * 0.4) - 0.2;
+                    let directionY = (Math.random() * 0.4) - 0.2;
+                    let color = 'rgba(52, 211, 153, 0.8)';
+                    particlesArray.push(new Particle(x, y, directionX, directionY, size, color));
+                }
+            }
+
+            function connect(){
+                for(let a = 0; a < particlesArray.length; a++){
+                    let distanceToMouse = Math.sqrt(Math.pow(mouse.x - particlesArray[a].x, 2) + Math.pow(mouse.y - particlesArray[a].y, 2));
+                    if (distanceToMouse < mouse.radius) {
+                        for(let b = a; b < particlesArray.length; b++){
+                            let distance = Math.sqrt(Math.pow(particlesArray[a].x - particlesArray[b].x, 2) + Math.pow(particlesArray[a].y - particlesArray[b].y, 2));
+                            if(distance < mouse.radius / 1.5){
+                                let opacity = 1 - (distance / (mouse.radius / 1.5));
+                                ctx.strokeStyle = 'rgba(52, 211, 153,' + opacity + ')';
+                                ctx.lineWidth = 1;
+                                ctx.beginPath();
+                                ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
+                                ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
+                                ctx.stroke();
+                            }
+                        }
+                    }
+                }
+            }
+            
+            function animate(){
+                animationFrameId = requestAnimationFrame(animate);
+                ctx.clearRect(0,0,innerWidth, innerHeight);
+                for(let i = 0; i < particlesArray.length; i++){
+                    particlesArray[i].update();
+                }
+                if (mouse.x !== undefined && mouse.y !== undefined) {
+                    connect();
+                }
+            }
+
+            window.addEventListener('resize', () => {
+                cancelAnimationFrame(animationFrameId);
+                init();
+                animate();
+            });
+
+            init();
+            animate();
+
+
+            // --- Mobile Menu Toggle ---
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            mobileMenu.addEventListener('click', (e) => {
+                if(e.target.tagName === 'A'){ mobileMenu.classList.add('hidden'); }
+            });
+
+            // --- Portfolio Filter Logic ---
+            const filterButtons = document.querySelectorAll('#filter-buttons .filter-btn');
+            const portfolioGrid = document.getElementById('portfolio-grid');
+            if (portfolioGrid) {
+                const projects = Array.from(portfolioGrid.children);
+                filterButtons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        filterButtons.forEach(btn => btn.classList.remove('active'));
+                        button.classList.add('active');
+                        const filter = button.getAttribute('data-filter');
+                        projects.forEach(project => {
+                            project.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+                            project.style.opacity = '0';
+                            project.style.transform = 'scale(0.95)';
+                            
+                            setTimeout(() => {
+                                if (filter === 'all' || project.getAttribute('data-category') === filter) {
+                                    project.style.display = project.tagName === 'A' ? 'block' : 'flex';
+                                    setTimeout(() => {
+                                        project.style.opacity = '1';
+                                        project.style.transform = 'scale(1)';
+                                    }, 20);
+                                } else {
+                                    project.style.display = 'none';
+                                }
+                            }, 300);
+                        });
+                    });
+                });
+            }
+
+            // --- Unified Modal Logic ---
+            const modalTriggers = document.querySelectorAll('[data-modal-target]');
+            const closeButtons = document.querySelectorAll('.modal-close-btn');
+            const modals = document.querySelectorAll('.modal');
+
+            modalTriggers.forEach(trigger => {
+                trigger.addEventListener('click', () => {
+                    const modalId = trigger.getAttribute('data-modal-target');
+                    const modal = document.getElementById(modalId);
+                    if (modal) {
+                        modal.classList.add('active');
+                    }
+                });
+            });
+
+            closeButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    button.closest('.modal').classList.remove('active');
+                });
+            });
+
+            modals.forEach(modal => {
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) {
+                        modal.classList.remove('active');
+                    }
+                });
+            });
+
+            // --- Contact Form to WhatsApp ---
+            const contactForm = document.getElementById('contact-form');
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                const name = document.getElementById('name').value;
+                const service = document.getElementById('service').value;
+                const message = document.getElementById('message').value;
+                
+                const whatsAppNumber = '966538053947';
+
+                let text = `مرحباً،\n`;
+                text += `الاسم: ${name}\n`;
+                text += `الخدمة المطلوبة: ${service}\n`;
+                text += `التفاصيل: ${message}\n`;
+
+                const encodedText = encodeURIComponent(text);
+                
+                const whatsappUrl = `https://wa.me/${whatsAppNumber}?text=${encodedText}`;
+                
+                window.open(whatsappUrl, '_blank');
+            });
+        });
+    </script>
+</body>
+</html>
