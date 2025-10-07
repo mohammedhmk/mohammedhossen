@@ -1204,24 +1204,16 @@
 
             // --- Contact Form to WhatsApp ---
             const contactForm = document.getElementById('contact-form');
-
-contactForm.addEventListener('submit', function(e) {
-  e.preventDefault();
-
-  const name = document.getElementById('name').value;
-  const service = document.getElementById('service').value;
-  const message = document.getElementById('message').value;
-
-  let text = `مرحباً 👋\nالاسم: ${name}\nالخدمة المطلوبة: ${service}\nالتفاصيل: ${message}\n`;
-  const encodedText = encodeURIComponent(text);
-
-  // -- التعديل الرئيسي هنا --
-  // استبدال "wa.me/" بالرابط الرسمي والأكثر توافقاً
-  const phoneNumber = '966538053947';
-  const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedText}`;
-
-  window.open(whatsappUrl, '_blank');
-});
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const name = document.getElementById('name').value;
+                const service = document.getElementById('service').value;
+                const message = document.getElementById('message').value;
+                let text = `مرحباً،\nالاسم: ${name}\nالخدمة المطلوبة: ${service}\nالتفاصيل: ${message}\n`;
+                const encodedText = encodeURIComponent(text);
+                const whatsappUrl = `https://wa.me/966538053847?text=${encodedText}`;
+                window.open(whatsappUrl, '_blank');
+            });
 
             // --- NEW: SCROLLED HEADER & SCROLL-TO-TOP BUTTON LOGIC ---
             const header = document.getElementById('header');
