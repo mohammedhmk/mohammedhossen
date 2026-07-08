@@ -12,2041 +12,841 @@
         content="محمد حسين، خبير مستقل في التصميم الجرافيكي، تطوير المواقع، والتسويق الرقمي بخبرة تزيد عن 5 سنوات في الرياض. أقدم حلولاً إبداعية متكاملة تشمل تصميم الهويات البصرية، إنتاج الفيديو، إدارة حملات التسويق، وتحسين محركات البحث لمساعدتك على تحقيق أهدافك.">
     <meta name="keywords"
         content="مصمم جرافيك, مطور ويب, مسوق رقمي, الرياض, تصميم مواقع, تسويق الكتروني, هوية بصرية, إنتاج فيديو, إدارة سوشيال ميديا, محمد حسين, مصمم مستقل, السعودية">
-    <link rel="canonical" href="https://www.yourdomain.com/"> <!-- استبدل هذا برابط موقعك الفعلي -->
+    <!-- TODO: عند النشر ضع الرابط الحقيقي للموقع هنا وفي og:url أدناه -->
+    <!-- <link rel="canonical" href="https://USERNAME.github.io/REPO/"> -->
 
-    <!-- Open Graph Meta Tags (for social media sharing) -->
+    <!-- Open Graph -->
     <meta property="og:title" content="محمد حسين | مصمم جرافيك، مطور ويب، ومسوق رقمي في الرياض">
     <meta property="og:description" content="خبير مستقل في التصميم، التطوير، والتسويق الرقمي بخبرة تزيد عن 5 سنوات.">
-    <meta property="og:image" content="https://placehold.co/1200x630/0D1117/34D399?text=محمد+حسين">
-    <!-- استبدل هذا برابط صورة مناسبة لك -->
-    <meta property="og:url" content="https://www.yourdomain.com/"> <!-- استبدل هذا برابط موقعك الفعلي -->
     <meta property="og:type" content="website">
     <meta property="og:locale" content="ar_SA">
+    <!-- TODO: og:image يتطلب رابطاً مطلقاً — ضعه عند النشر -->
 
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="محمد حسين | مصمم جرافيك، مطور ويب، ومسوق رقمي في الرياض">
     <meta name="twitter:description" content="خبير مستقل في التصميم، التطوير، والتسويق الرقمي بخبرة تزيد عن 5 سنوات.">
-    <meta name="twitter:image" content="https://placehold.co/1200x630/0D1117/34D399?text=محمد+حسين">
-    <!-- استبدل هذا برابط صورة مناسبة لك -->
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" href="logo/logo.png">
+    <link rel="apple-touch-icon" href="logo/logo.png">
+    <meta name="theme-color" content="#F7F5F0">
 
-    <!-- Google Fonts: Cairo -->
+    <!-- Fonts: Cairo -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <!-- AOS (Animate On Scroll) Library for scroll animations -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-
-    <style>
-        :root {
-            --bg-dark: #0D1117;
-            --bg-card: #161B22;
-            --border-color: #30363d;
-            --text-primary: #e6edf3;
-            --text-secondary: #7d8590;
-            --mint: #00FFA3;
-            --mint-dark: #00CC82;
-            --purple: #9D4EDD;
-            --mint-light: rgba(0, 255, 163, 0.1);
-            --glow-shadow: 0 0 20px rgba(0, 255, 163, 0.4), 0 0 40px rgba(0, 255, 163, 0.2);
-            --card-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.3);
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Cairo', sans-serif;
-            background: linear-gradient(135deg, #0a0e1a 0%, #1a0a2e 25%, #16213e 50%, #0a0e1a 75%, #1a0a2e 100%);
-            background-size: 400% 400%;
-            animation: gradientMove 15s ease infinite;
-            color: var(--text-primary);
-            overflow-x: hidden;
-            line-height: 1.6;
-            position: relative;
-        }
-
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background:
-                radial-gradient(circle at 20% 30%, rgba(0, 255, 163, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 80% 70%, rgba(157, 78, 221, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 50% 50%, rgba(0, 255, 163, 0.05) 0%, transparent 70%);
-            pointer-events: none;
-            z-index: 0;
-            animation: floatGradient 20s ease-in-out infinite;
-        }
-
-        @keyframes gradientMove {
-
-            0%,
-            100% {
-                background-position: 0% 50%;
-            }
-
-            50% {
-                background-position: 100% 50%;
-            }
-        }
-
-        @keyframes floatGradient {
-
-            0%,
-            100% {
-                opacity: 0.6;
-                transform: scale(1);
-            }
-
-            50% {
-                opacity: 0.8;
-                transform: scale(1.1);
-            }
-        }
-
-        main {
-            position: relative;
-            z-index: 1;
-        }
-
-        /* ===== UTILITY CLASSES ===== */
-        .text-mint {
-            color: var(--mint);
-        }
-
-        .bg-mint {
-            background-color: var(--mint);
-        }
-
-        .hover\:bg-mint-dark:hover {
-            background-color: var(--mint-dark);
-        }
-
-        .border-mint {
-            border-color: var(--mint);
-        }
-
-        /* ===== BUTTON STYLES ===== */
-        .btn {
-            padding: 1rem 2rem;
-            border-radius: 0.75rem;
-            font-weight: 700;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            text-align: center;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .btn::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.1);
-            transform: translate(-50%, -50%);
-            transition: width 0.6s, height 0.6s;
-        }
-
-        .btn:hover::before {
-            width: 300px;
-            height: 300px;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, var(--mint) 0%, var(--mint-dark) 100%);
-            color: var(--bg-dark);
-            font-weight: 800;
-            box-shadow: 0 4px 15px rgba(0, 255, 163, 0.3);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--glow-shadow);
-        }
-
-        .btn-secondary {
-            background-color: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 2px solid var(--border-color);
-            color: var(--text-primary);
-        }
-
-        .btn-secondary:hover {
-            background-color: rgba(255, 255, 255, 0.08);
-            border-color: var(--mint);
-            color: var(--mint);
-            transform: translateY(-2px);
-        }
-
-        .btn-outline {
-            background-color: transparent;
-            border: 2px solid var(--mint);
-            color: var(--mint);
-            font-weight: 700;
-        }
-
-        .btn-outline:hover {
-            background-color: var(--mint);
-            color: var(--bg-dark);
-            transform: translateY(-2px);
-        }
-
-        /* ===== SECTION STYLES ===== */
-        .section-title {
-            font-size: 2.75rem;
-            font-weight: 800;
-            text-align: center;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, var(--mint) 0%, #fff 50%, var(--purple) 100%);
-            background-size: 200% 200%;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: gradientShift 3s ease infinite;
-            text-shadow: 0 0 40px rgba(0, 255, 163, 0.3);
-        }
-
-        @keyframes gradientShift {
-
-            0%,
-            100% {
-                background-position: 0% 50%;
-            }
-
-            50% {
-                background-position: 100% 50%;
-            }
-        }
-
-        .section-subtitle {
-            text-align: center;
-            color: var(--text-secondary);
-            max-width: 700px;
-            margin: 0 auto 4rem auto;
-            font-size: 1.1rem;
-            line-height: 1.8;
-        }
-
-        /* ===== CARD STYLES WITH GLASSMORPHISM ===== */
-        .service-card,
-        .project-card {
-            background: rgba(22, 27, 34, 0.6);
-            backdrop-filter: blur(10px);
-            border: 1px solid var(--border-color);
-            border-radius: 1.25rem;
-            box-shadow: var(--card-shadow);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            display: flex;
-            flex-direction: column;
-            position: relative;
-        }
-
-        .service-card::before,
-        .project-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            border-radius: 1.25rem;
-            padding: 2px;
-            background: linear-gradient(135deg, transparent, var(--mint), transparent);
-            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-            -webkit-mask-composite: xor;
-            mask-composite: exclude;
-            opacity: 0;
-            transition: opacity 0.4s;
-        }
-
-        .service-card:hover::before,
-        .project-card:hover::before {
-            opacity: 1;
-        }
-
-        .project-card {
-            padding: 0;
-            overflow: hidden;
-        }
-
-        .project-card-clickable {
-            cursor: pointer;
-        }
-
-        .project-card .p-6 {
-            flex-grow: 1;
-        }
-
-        .service-card:hover,
-        .project-card:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 20px 40px -10px rgba(0, 255, 163, 0.3);
-        }
-
-        .service-icon {
-            transition: all 0.4s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, var(--mint) 0%, var(--purple) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .service-card:hover .service-icon {
-            transform: scale(1.1) rotate(5deg);
-            filter: drop-shadow(0 0 20px var(--mint));
-        }
-
-        /* ===== FILTER BUTTONS ===== */
-        .filter-btn {
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .filter-btn.active {
-            background: linear-gradient(135deg, var(--mint) 0%, var(--mint-dark) 100%);
-            color: var(--bg-dark);
-            border-color: var(--mint);
-            box-shadow: var(--glow-shadow);
-        }
-
-        /* ===== HERO SECTION ===== */
-        .hero-title-glow {
-            background: linear-gradient(135deg, #fff 0%, var(--mint) 50%, #fff 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: shimmer 3s infinite;
-        }
-
-        @keyframes shimmer {
-
-            0%,
-            100% {
-                background-position: 0% 50%;
-            }
-
-            50% {
-                background-position: 100% 50%;
-            }
-        }
-
-        .hero-section {
-            position: relative;
-            overflow: hidden;
-            min-height: 100vh;
-        }
-
-        #hero-canvas {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 1;
-        }
-
-        /* ===== STATS SECTION ===== */
-        .stat-card {
-            background: rgba(22, 27, 34, 0.6);
-            backdrop-filter: blur(10px);
-            border: 1px solid var(--border-color);
-            border-radius: 1rem;
-            padding: 2rem;
-            text-align: center;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .stat-card::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(0, 255, 163, 0.1) 0%, transparent 70%);
-            opacity: 0;
-            transition: opacity 0.4s;
-        }
-
-        .stat-card:hover::before {
-            opacity: 1;
-        }
-
-        .stat-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--mint);
-            box-shadow: 0 10px 30px rgba(0, 255, 163, 0.3), 0 0 50px rgba(157, 78, 221, 0.2);
-        }
-
-        .stat-number {
-            font-size: 3rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, var(--mint) 0%, var(--purple) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            line-height: 1;
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            color: var(--text-secondary);
-            font-size: 1rem;
-        }
-
-        /* ===== PROJECT CARD IMAGE ===== */
-        .project-card img {
-            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .project-card:hover img {
-            transform: scale(1.1);
-        }
-
-        /* ===== FORM INPUTS ===== */
-        .form-input {
-            width: 100%;
-            background: rgba(13, 17, 23, 0.6);
-            backdrop-filter: blur(10px);
-            color: var(--text-primary);
-            padding: 1rem;
-            border-radius: 0.75rem;
-            border: 1px solid var(--border-color);
-            transition: all 0.3s ease;
-        }
-
-        .form-input:focus,
-        select.form-input:focus {
-            outline: none;
-            border-color: var(--mint);
-            box-shadow: 0 0 0 4px rgba(0, 255, 163, 0.2);
-            background: rgba(13, 17, 23, 0.8);
-        }
-
-        select.form-input {
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%237d8590' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: left 1rem center;
-        }
-
-        /* ===== MODAL STYLES ===== */
-        .modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(10, 10, 20, 0.9);
-            backdrop-filter: blur(8px);
-            z-index: 100;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s ease, visibility 0.3s ease;
-        }
-
-        .modal.active {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .modal-content {
-            background: rgba(22, 27, 34, 0.95);
-            backdrop-filter: blur(20px);
-            border: 1px solid var(--border-color);
-            padding: 1.5rem;
-            border-radius: 1.5rem;
-            width: 90%;
-            height: 90vh;
-            position: relative;
-            transform: scale(0.9);
-            transition: transform 0.3s ease;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .modal-content-gallery {
-            max-width: 1000px;
-        }
-
-        .modal-content-cv {
-            max-width: 900px;
-        }
-
-        .modal.active .modal-content {
-            transform: scale(1);
-        }
-
-        .modal-close-btn {
-            position: absolute;
-            top: 1rem;
-            left: 1rem;
-            background: var(--mint);
-            border-radius: 50%;
-            width: 3rem;
-            height: 3rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: var(--bg-dark);
-            box-shadow: 0 4px 15px rgba(0, 255, 163, 0.4);
-            z-index: 110;
-            border: none;
-            transition: all 0.3s;
-            font-weight: bold;
-        }
-
-        .modal-close-btn:hover {
-            transform: rotate(90deg) scale(1.1);
-            box-shadow: var(--glow-shadow);
-        }
-
-        .modal-gallery {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-            align-items: center;
-            padding: 1rem;
-        }
-
-        .gallery-item img {
-            width: 100%;
-            max-width: 800px;
-            height: auto;
-            border-radius: 1rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            opacity: 0;
-            animation: fadeIn 0.5s ease forwards;
-        }
-
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-            }
-        }
-
-        /* ===== PARTNER LOGOS ===== */
-        .partner-logo-container {
-            transition: all 0.3s ease;
-            padding: 1rem;
-            border-radius: 0.75rem;
-        }
-
-        .partner-logo-container:hover {
-            transform: translateY(-5px) scale(1.05);
-            background: rgba(255, 255, 255, 0.05);
-        }
-
-        .partner-logo-container:hover img {
-            filter: drop-shadow(0 0 10px var(--mint));
-        }
-
-        /* ===== NAVIGATION ===== */
-        nav a {
-            position: relative;
-            transition: all 0.3s ease;
-        }
-
-        nav a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--mint);
-            transition: width 0.3s ease;
-        }
-
-        nav a:hover::after {
-            width: 100%;
-        }
-
-        nav a:hover {
-            color: var(--mint);
-        }
-
-        /* ===== HEADER ===== */
-        #header {
-            transition: all 0.3s ease;
-        }
-
-        #header.scrolled {
-            background: rgba(22, 27, 34, 0.95);
-            backdrop-filter: blur(10px);
-            padding-top: 0.75rem;
-            padding-bottom: 0.75rem;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-        }
-
-        /* ===== SCROLL TO TOP BUTTON ===== */
-        #scrollTopBtn {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            background: linear-gradient(135deg, var(--mint) 0%, var(--mint-dark) 100%);
-            color: var(--bg-dark);
-            width: 55px;
-            height: 55px;
-            border-radius: 50%;
-            border: none;
-            font-size: 20px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 1000;
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(20px);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 4px 15px rgba(0, 255, 163, 0.4);
-        }
-
-        #scrollTopBtn.visible {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-
-        #scrollTopBtn:hover {
-            transform: translateY(-3px) scale(1.1);
-            box-shadow: var(--glow-shadow);
-        }
-
-        /* ===== ANIMATIONS ===== */
-        @keyframes float {
-
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-10px);
-            }
-        }
-
-        .float-animation {
-            animation: float 3s ease-in-out infinite;
-        }
-
-        /* ===== CUSTOM SCROLLBAR ===== */
-        ::-webkit-scrollbar {
-            width: 12px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: var(--bg-dark);
-            border-radius: 10px;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: linear-gradient(180deg, var(--mint) 0%, var(--purple) 100%);
-            border-radius: 10px;
-            border: 2px solid var(--bg-dark);
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: linear-gradient(180deg, var(--mint-dark) 0%, var(--purple) 80%);
-            box-shadow: 0 0 10px rgba(0, 255, 163, 0.5);
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css?v=2">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
 </head>
 
 <body>
 
-    <!-- Header & Navigation -->
-    <header id="header"
-        class="bg-black/30 backdrop-blur-sm fixed top-0 left-0 w-full z-50 transition-all duration-300 py-6">
-        <div class="container mx-auto px-6 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-white flex items-center gap-3">
-                <img src="logo/logo.png" alt="شعار محمد حسين" class="w-10 h-10">
+    <!-- Preloader -->
+    <div id="preloader" aria-hidden="true">
+        <div class="preloader-inner">
+            <img src="logo/logo.png" alt="" width="72" height="72" fetchpriority="high">
+            <div class="preloader-bar"><span></span></div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-inner">
+            <a href="#hero" class="brand nav-anchor">
+                <img src="logo/logo.png" alt="شعار محمد حسين" width="40" height="40" fetchpriority="high">
                 <span>محمد حسين</span>
             </a>
-            <nav class="hidden md:flex items-center space-x-8 space-x-reverse">
-                <a href="#about" class="text-gray-300 transition-all duration-300 font-semibold">نبذة عني</a>
-                <a href="#services" class="text-gray-300 transition-all duration-300 font-semibold">خدماتي</a>
-                <a href="#portfolio" class="text-gray-300 transition-all duration-300 font-semibold">أعمالي</a>
-                <a href="#partners" class="text-gray-300 transition-all duration-300 font-semibold">شركاء النجاح</a>
-                <a href="#contact" class="text-gray-300 transition-all duration-300 font-semibold">التواصل</a>
+            <nav class="main-nav" aria-label="التنقل الرئيسي">
+                <a href="#about" class="nav-anchor">نبذة عني</a>
+                <a href="#services" class="nav-anchor">خدماتي</a>
+                <a href="#portfolio" class="nav-anchor">أعمالي</a>
+                <a href="#partners" class="nav-anchor">شركاء النجاح</a>
+                <a href="#contact" class="nav-anchor">التواصل</a>
             </nav>
-            <a href="#contact" class="hidden md:block btn btn-primary">تواصل معي</a>
-            <button id="mobile-menu-btn" class="md:hidden text-2xl text-white"><i class="fas fa-bars"></i></button>
+            <a href="#contact" class="btn btn-primary header-cta nav-anchor">تواصل معي</a>
+            <button id="mobile-menu-btn" class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu"
+                aria-label="فتح القائمة"><i class="fas fa-bars" aria-hidden="true"></i></button>
         </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-gray-900 border-t border-gray-700">
-            <a href="#about" class="block py-3 px-6 text-white hover:bg-gray-800 font-semibold">نبذة عني</a>
-            <a href="#services" class="block py-3 px-6 text-white hover:bg-gray-800 font-semibold">خدماتي</a>
-            <a href="#portfolio" class="block py-3 px-6 text-white hover:bg-gray-800 font-semibold">أعمالي</a>
-            <a href="#partners" class="block py-3 px-6 text-white hover:bg-gray-800 font-semibold">شركاء النجاح</a>
-            <a href="#contact" class="block py-3 px-6 text-white hover:bg-gray-800 font-semibold">التواصل</a>
-            <div class="p-4">
-                <a href="#contact" class="block btn btn-primary w-full">تواصل معي</a>
-            </div>
+        <div id="mobile-menu" class="mobile-menu" hidden>
+            <a href="#about" class="nav-anchor">نبذة عني</a>
+            <a href="#services" class="nav-anchor">خدماتي</a>
+            <a href="#portfolio" class="nav-anchor">أعمالي</a>
+            <a href="#partners" class="nav-anchor">شركاء النجاح</a>
+            <a href="#contact" class="nav-anchor">التواصل</a>
+            <a href="#contact" class="btn btn-primary nav-anchor">تواصل معي</a>
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main>
-        <!-- Hero Section -->
-        <section class="hero-section relative flex items-center justify-center pt-32 pb-20">
-            <canvas id="hero-canvas"></canvas>
-            <div class="container mx-auto px-6 hero-content">
-                <div class="max-w-5xl mx-auto text-center">
-                    <!-- Hero Title -->
-                    <div class="mb-8" data-aos="fade-down">
-                        <h1 class="hero-title-glow text-5xl md:text-7xl font-extrabold leading-tight mb-6">
-                            محمد حسين
-                        </h1>
-                        <div class="h-1 w-32 bg-gradient-to-r from-transparent via-mint to-transparent mx-auto mb-6">
-                        </div>
+    <main id="page">
+
+        <!-- ═══════════ العالم الفاتح — النهار ═══════════ -->
+        <div class="world world-light">
+
+            <!-- Hero -->
+            <section id="hero" class="hero">
+                <canvas id="hero-canvas" aria-hidden="true"></canvas>
+                <div class="container hero-content">
+                    <p class="hero-eyebrow reveal">مصمم جرافيك • مطور ويب • مسوق رقمي</p>
+                    <h1 class="hero-title reveal">محمد حسين</h1>
+                    <div class="hero-rule reveal" aria-hidden="true"></div>
+                    <p class="hero-tagline reveal">مُبدع تجارب رقمية استثنائية</p>
+                    <p class="hero-sub reveal">تصميم جرافيكي • إنتاج فيديو • تسويق رقمي • تطوير مواقع</p>
+                    <div class="hero-ctas reveal">
+                        <a href="#portfolio" class="btn btn-primary btn-magnetic nav-anchor"><i class="fas fa-briefcase"
+                                aria-hidden="true"></i> استعرض أعمالي</a>
+                        <a href="#contact" class="btn btn-secondary btn-magnetic nav-anchor"><i
+                                class="fas fa-paper-plane" aria-hidden="true"></i> ابدأ مشروعك</a>
+                        <button type="button" class="btn btn-outline" data-modal-target="cv-modal"><i
+                                class="fas fa-file-alt" aria-hidden="true"></i> السيرة الذاتية</button>
                     </div>
-
-                    <!-- Tagline -->
-                    <p class="text-2xl md:text-3xl font-bold text-white mb-4" data-aos="fade-up" data-aos-delay="100">
-                        مُبدع تجارب رقمية استثنائية
-                    </p>
-                    <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-12 leading-relaxed"
-                        data-aos="fade-up" data-aos-delay="200">
-                        تصميم جرافيكي • إنتاج فيديو • تسويق رقمي • تطوير مواقع
-                    </p>
-
-                    <!-- CTA Buttons -->
-                    <div class="flex justify-center items-center flex-wrap gap-4 mb-16" data-aos="fade-up"
-                        data-aos-delay="300">
-                        <a href="#portfolio" class="btn btn-primary">
-                            <i class="fas fa-briefcase"></i>
-                            استعرض أعمالي
-                        </a>
-                        <a href="#contact" class="btn btn-secondary">
-                            <i class="fas fa-paper-plane"></i>
-                            ابدأ مشروعك
-                        </a>
-                        <button data-modal-target="cv-modal" class="btn btn-outline">
-                            <i class="fas fa-file-alt"></i>
-                            السيرة الذاتية
-                        </button>
-                    </div>
-
-                    <!-- Quick Stats -->
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6" data-aos="fade-up" data-aos-delay="400">
-                        <div class="stat-card">
-                            <div class="stat-number">5+</div>
-                            <div class="stat-label">سنوات خبرة</div>
+                    <div class="stats reveal">
+                        <div class="stat"><span class="stat-number" data-count="5">5</span><span
+                                class="stat-plus">+</span>
+                            <span class="stat-label">سنوات خبرة</span>
                         </div>
-                        <div class="stat-card">
-                            <div class="stat-number">200+</div>
-                            <div class="stat-label">مشروع منجز</div>
+                        <div class="stat"><span class="stat-number" data-count="200">200</span><span
+                                class="stat-plus">+</span>
+                            <span class="stat-label">مشروع منجز</span>
                         </div>
-                        <div class="stat-card">
-                            <div class="stat-number">150+</div>
-                            <div class="stat-label">عميل سعيد</div>
+                        <div class="stat"><span class="stat-number" data-count="150">150</span><span
+                                class="stat-plus">+</span>
+                            <span class="stat-label">عميل سعيد</span>
                         </div>
-                        <div class="stat-card">
-                            <div class="stat-number">10+</div>
-                            <div class="stat-label">خدمة احترافية</div>
+                        <div class="stat"><span class="stat-number" data-count="10">10</span><span
+                                class="stat-plus">+</span>
+                            <span class="stat-label">خدمة احترافية</span>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+                <div class="hero-scroll-cue" aria-hidden="true"><i class="fas fa-chevron-down"></i></div>
+            </section>
 
-        <!-- Featured Work Showcase Section -->
-        <section class="py-20 bg-gray-950/50">
-            <div class="container mx-auto px-6">
-                <h2 class="section-title" data-aos="fade-up">أعمال مميزة</h2>
-                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">تصفح أفضل أعمالي المختارة بعناية</p>
-
-                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6" data-aos="fade-up"
-                    data-aos-delay="200">
-                    <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer"
-                        data-modal-target="identity-modal">
-                        <img src="غلاف/هوية بصرية.jpeg" alt="هوية بصرية"
-                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                            <span class="text-white font-bold text-sm">هوية بصرية</span>
-                        </div>
-                    </div>
-                    <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer"
-                        data-modal-target="campaign-modal">
-                        <img src="غلاف/حملات سوشيال ميديا.jpeg" alt="حملات تسويق"
-                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                            <span class="text-white font-bold text-sm">حملات تسويقية</span>
-                        </div>
-                    </div>
-                    <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer"
-                        data-modal-target="ecommerce-modal">
-                        <img src="غلاف/برمجة وتطوير المواقع.jpeg" alt="تطوير مواقع"
-                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                            <span class="text-white font-bold text-sm">تطوير مواقع</span>
-                        </div>
-                    </div>
-                    <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer"
-                        data-modal-target="social-media-gallery">
-                        <img src="غلاف/تصاميم سوشيال ميديا.jpeg" alt="سوشيال ميديا"
-                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                            <span class="text-white font-bold text-sm">سوشيال ميديا</span>
-                        </div>
-                    </div>
-                    <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer"
-                        data-modal-target="sports-design-modal">
-                        <img src="غلاف/تصاميم رياضية.jpeg" alt="تصاميم رياضية"
-                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                            <span class="text-white font-bold text-sm">تصاميم رياضية</span>
-                        </div>
-                    </div>
-                    <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer"
-                        data-modal-target="photo-modal">
-                        <img src="غلاف/تصوير منتجات.jpeg" alt="تصوير منتجات"
-                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                            <span class="text-white font-bold text-sm">تصوير منتجات</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Me Section -->
-        <section id="about" class="py-20 bg-gray-950/50">
-            <div class="container mx-auto px-6">
-                <div class="grid grid-cols-1 md:grid-cols-5 gap-12 items-center">
-                    <div class="md:col-span-2" data-aos="zoom-in-right">
+            <!-- About -->
+            <section id="about" class="section">
+                <div class="container about-grid">
+                    <div class="about-photo reveal">
+                        <div class="about-blob" aria-hidden="true"></div>
                         <img id="personal-photo" src="personal/صورتي مفرغة.png" alt="صورة محمد حسين الشخصية"
-                            class="rounded-full shadow-xl w-full h-auto object-cover">
+                            loading="lazy" decoding="async">
                     </div>
-                    <div class="md:col-span-3" data-aos="zoom-in-left">
-                        <h2 class="text-3xl font-extrabold text-white mb-4 text-center md:text-right">نبذة عني</h2>
-                        <h3 class="text-xl font-bold text-mint mb-4 text-center md:text-right">شغفي هو تحويل الأفكار إلى
-                            واقع رقمي مبهر</h3>
-                        <p class="text-gray-400 leading-relaxed mb-6 text-center md:text-right">
-                            بخبرة تزيد عن 5 سنوات في عالم التصميم والتسويق الرقمي، أساعد الشركات والأفراد على بناء حضور
-                            قوي في العالم الرقمي من خلال تصاميم إبداعية واستراتيجيات تسويقية فعالة. أؤمن بأن كل مشروع له
-                            قصة فريدة، وأعمل على إيصال هذه القصة بطريقة بصرية مؤثرة تلامس قلوب الجمهور وتحقق الأهداف
-                            المرجوة.
-                        </p>
-                        <p class="text-gray-400 leading-relaxed mb-10 text-center md:text-right">
-                            من التصميم الجرافيكي إلى إنتاج الفيديو، ومن تطوير المواقع إلى إدارة الحملات الإعلانية، أقدم
-                            خدمات متكاملة تضمن تحقيق أقصى استفادة من استثمارك الرقمي.
-                        </p>
-                        <h3 class="text-xl font-bold text-white mb-6 text-center md:text-right">مهاراتي وخبراتي</h3>
-                        <div class="flex flex-wrap justify-center md:justify-end gap-3">
-                            <span class="bg-mint/10 text-mint font-semibold py-2 px-4 rounded-full">التسويق
-                                الالكتروني</span>
-                            <span class="bg-mint/10 text-mint font-semibold py-2 px-4 rounded-full">إنتاج الفيديو</span>
-                            <span class="bg-mint/10 text-mint font-semibold py-2 px-4 rounded-full">تصميم
-                                الجرافيك</span>
-                            <span class="bg-mint/10 text-mint font-semibold py-2 px-4 rounded-full">تطوير المواقع</span>
-                            <span class="bg-mint/10 text-mint font-semibold py-2 px-4 rounded-full">التصوير
-                                الفوتوغرافي</span>
-                            <span class="bg-mint/10 text-mint font-semibold py-2 px-4 rounded-full">كتابة المحتوى</span>
-                            <span class="bg-mint/10 text-mint font-semibold py-2 px-4 rounded-full">إدارة وسائل
-                                التواصل</span>
-                            <span class="bg-mint/10 text-mint font-semibold py-2 px-4 rounded-full">تصميم صفحات
-                                الويب</span>
-                            <span class="bg-mint/10 text-mint font-semibold py-2 px-4 rounded-full">تحسين محركات
-                                البحث</span>
-                            <span class="bg-mint/10 text-mint font-semibold py-2 px-4 rounded-full">حملات جوجل
-                                الإعلانية</span>
-                            <span class="bg-mint/10 text-mint font-semibold py-2 px-4 rounded-full">تحليل
-                                البيانات</span>
-                        </div>
+                    <div class="about-text">
+                        <h2 class="section-title reveal">نبذة عني</h2>
+                        <h3 class="about-lead reveal">شغفي هو تحويل الأفكار إلى واقع رقمي مبهر</h3>
+                        <p class="reveal">بخبرة تزيد عن 5 سنوات في عالم التصميم والتسويق الرقمي، أساعد الشركات والأفراد
+                            على بناء حضور قوي في العالم الرقمي من خلال تصاميم إبداعية واستراتيجيات تسويقية فعالة. أؤمن
+                            بأن كل مشروع له قصة فريدة، وأعمل على إيصال هذه القصة بطريقة بصرية مؤثرة تلامس قلوب الجمهور
+                            وتحقق الأهداف المرجوة.</p>
+                        <p class="reveal">من التصميم الجرافيكي إلى إنتاج الفيديو، ومن تطوير المواقع إلى إدارة الحملات
+                            الإعلانية، أقدم خدمات متكاملة تضمن تحقيق أقصى استفادة من استثمارك الرقمي.</p>
+                        <h3 class="about-skills-title reveal">مهاراتي وخبراتي</h3>
+                        <ul class="chips reveal">
+                            <li class="chip">التسويق الالكتروني</li>
+                            <li class="chip">إنتاج الفيديو</li>
+                            <li class="chip">تصميم الجرافيك</li>
+                            <li class="chip">تطوير المواقع</li>
+                            <li class="chip">التصوير الفوتوغرافي</li>
+                            <li class="chip">كتابة المحتوى</li>
+                            <li class="chip">إدارة وسائل التواصل</li>
+                            <li class="chip">تصميم صفحات الويب</li>
+                            <li class="chip">تحسين محركات البحث</li>
+                            <li class="chip">حملات جوجل الإعلانية</li>
+                            <li class="chip">تحليل البيانات</li>
+                        </ul>
                     </div>
                 </div>
+            </section>
+
+            <!-- Services -->
+            <section id="services" class="section section-alt">
+                <div class="container">
+                    <h2 class="section-title reveal">خدماتي</h2>
+                    <p class="section-subtitle reveal">أقدم مجموعة شاملة من الخدمات الإبداعية والتقنية لتلبية جميع
+                        احتياجاتك الرقمية.</p>
+                    <div class="services-grid">
+                        <article class="service-card reveal">
+                            <div class="service-icon"><i class="fas fa-palette" aria-hidden="true"></i></div>
+                            <h3>تصميم الجرافيك</h3>
+                            <p>تصاميم إبداعية للهويات البصرية، الشعارات، المطبوعات، والمواد التسويقية.</p>
+                            <ul class="service-list">
+                                <li>تصميم الهويات البصرية</li>
+                                <li>الشعارات والعلامات التجارية</li>
+                                <li>المطبوعات والكروت</li>
+                                <li>تصاميم السوشيال ميديا</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-outline nav-anchor">اطلب الخدمة</a>
+                        </article>
+                        <article class="service-card reveal">
+                            <div class="service-icon"><i class="fas fa-video" aria-hidden="true"></i></div>
+                            <h3>إنتاج الفيديو</h3>
+                            <p>إنتاج فيديوهات احترافية تسويقية وتعليمية ومونتاج متقدم.</p>
+                            <ul class="service-list">
+                                <li>الفيديوهات التسويقية</li>
+                                <li>المونتاج والمعالجة</li>
+                                <li>الرسوم المتحركة</li>
+                                <li>الفيديوهات التعليمية</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-outline nav-anchor">اطلب الخدمة</a>
+                        </article>
+                        <article class="service-card reveal">
+                            <div class="service-icon"><i class="fas fa-bullhorn" aria-hidden="true"></i></div>
+                            <h3>التسويق الالكتروني</h3>
+                            <p>استراتيجيات تسويقية متكاملة لزيادة المبيعات والوصول للجمهور المستهدف.</p>
+                            <ul class="service-list">
+                                <li>استراتيجيات التسويق</li>
+                                <li>تحليل السوق والمنافسين</li>
+                                <li>التسويق عبر البريد</li>
+                                <li>الإعلانات المدفوعة</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-outline nav-anchor">اطلب الخدمة</a>
+                        </article>
+                        <article class="service-card reveal">
+                            <div class="service-icon"><i class="fas fa-code" aria-hidden="true"></i></div>
+                            <h3>تصميم وتطوير المواقع</h3>
+                            <p>تطوير مواقع ويب حديثة وسريعة ومتجاوبة مع جميع الأجهزة.</p>
+                            <ul class="service-list">
+                                <li>المواقع التفاعلية</li>
+                                <li>التجارة الالكترونية</li>
+                                <li>التحسين للسرعة</li>
+                                <li>الأمان والحماية</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-outline nav-anchor">اطلب الخدمة</a>
+                        </article>
+                        <article class="service-card reveal">
+                            <div class="service-icon"><i class="fas fa-camera-retro" aria-hidden="true"></i></div>
+                            <h3>التصوير الفوتوغرافي</h3>
+                            <p>تصوير احترافي للمنتجات والفعاليات والبورتريه.</p>
+                            <ul class="service-list">
+                                <li>تصوير المنتجات</li>
+                                <li>التصوير التجاري</li>
+                                <li>تصوير الفعاليات</li>
+                                <li>معالجة الصور</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-outline nav-anchor">اطلب الخدمة</a>
+                        </article>
+                        <article class="service-card reveal">
+                            <div class="service-icon"><i class="fas fa-pencil-alt" aria-hidden="true"></i></div>
+                            <h3>كتابة المحتوى</h3>
+                            <p>محتوى جذاب ومؤثر للمواقع ووسائل التواصل الاجتماعي.</p>
+                            <ul class="service-list">
+                                <li>محتوى المواقع</li>
+                                <li>منشورات السوشيال ميديا</li>
+                                <li>المقالات التسويقية</li>
+                                <li>النصوص الإعلانية</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-outline nav-anchor">اطلب الخدمة</a>
+                        </article>
+                        <article class="service-card reveal">
+                            <div class="service-icon"><i class="fas fa-users" aria-hidden="true"></i></div>
+                            <h3>إدارة التواصل الاجتماعي</h3>
+                            <p>إدارة شاملة لحسابات التواصل الاجتماعي وتنمية المتابعين.</p>
+                            <ul class="service-list">
+                                <li>إدارة الحسابات</li>
+                                <li>تخطيط المحتوى</li>
+                                <li>التفاعل مع الجمهور</li>
+                                <li>تحليل الأداء</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-outline nav-anchor">اطلب الخدمة</a>
+                        </article>
+                        <article class="service-card reveal">
+                            <div class="service-icon"><i class="fab fa-youtube" aria-hidden="true"></i></div>
+                            <h3>إدارة قنوات اليوتيوب</h3>
+                            <p>إدارة متكاملة للقناة، من تصوير ومونتاج إلى النشر والتحسين.</p>
+                            <ul class="service-list">
+                                <li>إنتاج المحتوى</li>
+                                <li>المونتاج الاحترافي</li>
+                                <li>تحسين SEO للفيديو</li>
+                                <li>إدارة التعليقات</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-outline nav-anchor">اطلب الخدمة</a>
+                        </article>
+                        <article class="service-card reveal">
+                            <div class="service-icon"><i class="fas fa-search" aria-hidden="true"></i></div>
+                            <h3>تحسين محركات البحث</h3>
+                            <p>تحسين ظهور موقعك في نتائج البحث وزيادة الزيارات الطبيعية.</p>
+                            <ul class="service-list">
+                                <li>تحليل الكلمات المفتاحية</li>
+                                <li>تحسين المحتوى</li>
+                                <li>الروابط الخلفية</li>
+                                <li>تقارير الأداء</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-outline nav-anchor">اطلب الخدمة</a>
+                        </article>
+                        <article class="service-card reveal">
+                            <div class="service-icon"><i class="fas fa-chart-line" aria-hidden="true"></i></div>
+                            <h3>تحليل البيانات</h3>
+                            <p>تحويل البيانات إلى رؤى قابلة للتنفيذ لدعم اتخاذ القرار وتحسين الأداء.</p>
+                            <ul class="service-list">
+                                <li>جمع وتنظيف البيانات</li>
+                                <li>تحليل البيانات الاستكشافي</li>
+                                <li>تصور البيانات</li>
+                                <li>إعداد التقارير واللوحات</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-outline nav-anchor">اطلب الخدمة</a>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ═══════════ البوابة: الكاميرا تدخل الشاشة ═══════════ -->
+        <section id="portal" class="portal" aria-label="أعمال مميزة">
+            <div class="portal-daylight" aria-hidden="true">
+                <p class="portal-copy">وهنا يبدأ العرض…</p>
+                <p class="portal-hint"><i class="fas fa-chevron-down" aria-hidden="true"></i> تابع التمرير للدخول</p>
             </div>
+            <div class="portal-viewport">
+                <div class="portal-scene" id="showcase-hall">
+                    <h2 class="hall-title" style="color:#fff; text-shadow:0 0 20px rgba(255,255,255,0.5); opacity:1 !important;">أعمال مميزة</h2>
+                    <p class="hall-sub" style="color:rgba(255,255,255,0.8); opacity:1 !important;">استعد للدخول في عالم أعمالي...</p>
+                </div>
+                <div class="portal-bezel" aria-hidden="true"></div>
+            </div>
+            <div class="portal-vignette" aria-hidden="true"></div>
         </section>
 
-        <!-- شركاء النجاح Section -->
-        <section id="partners" class="py-24 bg-gray-900 relative overflow-hidden">
-            <div class="container mx-auto px-6">
-                <h2 class="section-title" data-aos="fade-up">شركاء النجاح</h2>
-                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">فخورون بثقة عملائنا ومشاريعنا
-                    الناجحة معهم</p>
+        <!-- ═══════════ العالم الغامق — عالم الأعمال ═══════════ -->
+        <div class="world world-dark">
 
-                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8" data-aos="fade-up"
-                    data-aos-delay="200">
-                    <div
-                        class="partner-logo-container bg-white/5 p-6 rounded-xl border border-white/10 hover:border-mint/50 transition-all duration-300">
-                        <img src="شركاء النجاح/thlat-Photoroom.png" alt="ثلاث" class="w-full h-20 object-contain">
-                    </div>
-                    <div
-                        class="partner-logo-container bg-white/5 p-6 rounded-xl border border-white/10 hover:border-mint/50 transition-all duration-300">
-                        <img src="شركاء النجاح/قمة ميزاب.png" alt="قمة ميزاب" class="w-full h-20 object-contain">
-                    </div>
-                    <div
-                        class="partner-logo-container bg-white/5 p-6 rounded-xl border border-white/10 hover:border-mint/50 transition-all duration-300">
-                        <img src="شركاء النجاح/مية هلا.png" alt="مية هلا" class="w-full h-20 object-contain">
-                    </div>
-                    <div
-                        class="partner-logo-container bg-white/5 p-6 rounded-xl border border-white/10 hover:border-mint/50 transition-all duration-300">
-                        <img src="شركاء النجاح/xpdBo3AcziJFFAtsPlBTfCBPFvf4jU0JBY09XQSv.webp" alt="شريك"
-                            class="w-full h-20 object-contain">
-                    </div>
-                    <div
-                        class="partner-logo-container bg-white/5 p-6 rounded-xl border border-white/10 hover:border-mint/50 transition-all duration-300">
-                        <img src="شركاء النجاح/حلول ميزاب.png" alt="حلول ميزاب" class="w-full h-20 object-contain">
-                    </div>
-                    <div
-                        class="partner-logo-container bg-white/5 p-6 rounded-xl border border-white/10 hover:border-mint/50 transition-all duration-300">
-                        <img src="شركاء النجاح/قولاتو.png" alt="قولاتو" class="w-full h-20 object-contain">
-                    </div>
-                    <div
-                        class="partner-logo-container bg-white/5 p-6 rounded-xl border border-white/10 hover:border-mint/50 transition-all duration-300">
-                        <img src="شركاء النجاح/المسافر.png" alt="المسافر" class="w-full h-20 object-contain">
-                    </div>
-                    <div
-                        class="partner-logo-container bg-white/5 p-6 rounded-xl border border-white/10 hover:border-mint/50 transition-all duration-300">
-                        <img src="شركاء النجاح/فورت.png" alt="فورت" class="w-full h-20 object-contain">
-                    </div>
-                    <div
-                        class="partner-logo-container bg-white/5 p-6 rounded-xl border border-white/10 hover:border-mint/50 transition-all duration-300">
-                        <img src="شركاء النجاح/بيرين.png" alt="بيرين" class="w-full h-20 object-contain">
-                    </div>
-                    <div
-                        class="partner-logo-container bg-white/5 p-6 rounded-xl border border-white/10 hover:border-mint/50 transition-all duration-300">
-                        <img src="شركاء النجاح/مطعم هني.png" alt="مطعم هني" class="w-full h-20 object-contain">
-                    </div>
-                    <div
-                        class="partner-logo-container bg-white/5 p-6 rounded-xl border border-white/10 hover:border-mint/50 transition-all duration-300">
-                        <img src="شركاء النجاح/طابونة.png" alt="طابونة" class="w-full h-20 object-contain">
-                    </div>
-                    <div
-                        class="partner-logo-container bg-white/5 p-6 rounded-xl border border-white/10 hover:border-mint/50 transition-all duration-300">
-                        <img src="شركاء النجاح/وسيم قدها.png" alt="وسيم قدها" class="w-full h-20 object-contain">
-                    </div>
-                    <div
-                        class="partner-logo-container bg-white/5 p-6 rounded-xl border border-white/10 hover:border-mint/50 transition-all duration-300">
-                        <img src="شركاء النجاح/عالم ابو راكان.png" alt="عالم ابو راكان"
-                            class="w-full h-20 object-contain">
-                    </div>
-                    <div
-                        class="partner-logo-container bg-white/5 p-6 rounded-xl border border-white/10 hover:border-mint/50 transition-all duration-300">
-                        <img src="شركاء النجاح/بادية الشام.png" alt="بادية الشام" class="w-full h-20 object-contain">
-                    </div>
-                    <div
-                        class="partner-logo-container bg-white/5 p-6 rounded-xl border border-white/10 hover:border-mint/50 transition-all duration-300">
-                        <img src="شركاء النجاح/الوصل.png" alt="الوصل" class="w-full h-20 object-contain">
-                    </div>
-                    <div
-                        class="partner-logo-container bg-white/5 p-6 rounded-xl border border-white/10 hover:border-mint/50 transition-all duration-300">
-                        <img src="شركاء النجاح/الاولى.png" alt="الأولى" class="w-full h-20 object-contain">
-                    </div>
-                    <div
-                        class="partner-logo-container bg-white/5 p-6 rounded-xl border border-white/10 hover:border-mint/50 transition-all duration-300">
-                        <img src="شركاء النجاح/اسطول كمأة للمقاولات.png" alt="اسطول كمأة للمقاولات"
-                            class="w-full h-20 object-contain">
-                    </div>
-                    <div
-                        class="partner-logo-container bg-white/5 p-6 rounded-xl border border-white/10 hover:border-mint/50 transition-all duration-300">
-                        <img src="شركاء النجاح/شعار_نادي_الفيحاء_2022.svg.png" alt="نادي الفيحاء"
-                            class="w-full h-20 object-contain">
-                    </div>
-                    <div
-                        class="partner-logo-container bg-white/5 p-6 rounded-xl border border-white/10 hover:border-mint/50 transition-all duration-300">
-                        <img src="شركاء النجاح/عميل.jpg.png" alt="عميل" class="w-full h-20 object-contain">
-                    </div>
-                    <div
-                        class="partner-logo-container bg-white/5 p-6 rounded-xl border border-white/10 hover:border-mint/50 transition-all duration-300">
-                        <img src="شركاء النجاح/لقطة شاشة 2025-08-26 022857.png" alt="شريك"
-                            class="w-full h-20 object-contain">
-                    </div>
-                </div>
-            </div>
-        </section>
+            <!-- Portfolio -->
 
-        <!-- Services Section -->
-        <section id="services" class="py-20 bg-gray-950/50">
-            <div class="container mx-auto px-6">
-                <h2 class="section-title" data-aos="fade-up">خدماتي</h2>
-                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">أقدم مجموعة شاملة من الخدمات
-                    الإبداعية والتقنية لتلبية جميع احتياجاتك الرقمية.</p>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Service: تصميم الجرافيك -->
-                    <div class="service-card p-8" data-aos="fade-up-right">
-                        <div
-                            class="service-icon bg-mint/10 text-mint w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-4">
-                            <i class="fas fa-palette"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-2">تصميم الجرافيك</h3>
-                        <p class="text-gray-400 mb-4 flex-grow">تصاميم إبداعية للهويات البصرية، الشعارات، المطبوعات،
-                            والمواد التسويقية.</p>
-                        <ul class="space-y-2 text-gray-300 mb-6 text-right">
-                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>تصميم
-                                    الهويات البصرية</span></li>
-                            <li class="flex items-center"><i
-                                    class="fas fa-check-circle text-mint ml-2"></i><span>الشعارات والعلامات
-                                    التجارية</span></li>
-                            <li class="flex items-center"><i
-                                    class="fas fa-check-circle text-mint ml-2"></i><span>المطبوعات والكروت</span></li>
-                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>تصاميم
-                                    السوشيال ميديا</span></li>
-                        </ul>
-                        <a href="#contact" class="btn btn-outline mt-auto">اطلب الخدمة</a>
-                    </div>
-                    <!-- Service: إنتاج الفيديو -->
-                    <div class="service-card p-8" data-aos="fade-up" data-aos-delay="100">
-                        <div
-                            class="service-icon bg-mint/10 text-mint w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-4">
-                            <i class="fas fa-video"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-2">إنتاج الفيديو</h3>
-                        <p class="text-gray-400 mb-4 flex-grow">إنتاج فيديوهات احترافية تسويقية وتعليمية ومونتاج متقدم.
-                        </p>
-                        <ul class="space-y-2 text-gray-300 mb-6 text-right">
-                            <li class="flex items-center"><i
-                                    class="fas fa-check-circle text-mint ml-2"></i><span>الفيديوهات التسويقية</span>
-                            </li>
-                            <li class="flex items-center"><i
-                                    class="fas fa-check-circle text-mint ml-2"></i><span>المونتاج والمعالجة</span></li>
-                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>الرسوم
-                                    المتحركة</span></li>
-                            <li class="flex items-center"><i
-                                    class="fas fa-check-circle text-mint ml-2"></i><span>الفيديوهات التعليمية</span>
-                            </li>
-                        </ul>
-                        <a href="#contact" class="btn btn-outline mt-auto">اطلب الخدمة</a>
-                    </div>
-                    <!-- Service: التسويق الالكتروني -->
-                    <div class="service-card p-8" data-aos="fade-up-left" data-aos-delay="200">
-                        <div
-                            class="service-icon bg-mint/10 text-mint w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-4">
-                            <i class="fas fa-bullhorn"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-2">التسويق الالكتروني</h3>
-                        <p class="text-gray-400 mb-4 flex-grow">استراتيجيات تسويقية متكاملة لزيادة المبيعات والوصول
-                            للجمهور المستهدف.</p>
-                        <ul class="space-y-2 text-gray-300 mb-6 text-right">
-                            <li class="flex items-center"><i
-                                    class="fas fa-check-circle text-mint ml-2"></i><span>استراتيجيات التسويق</span></li>
-                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>تحليل
-                                    السوق والمنافسين</span></li>
-                            <li class="flex items-center"><i
-                                    class="fas fa-check-circle text-mint ml-2"></i><span>التسويق عبر البريد</span></li>
-                            <li class="flex items-center"><i
-                                    class="fas fa-check-circle text-mint ml-2"></i><span>الإعلانات المدفوعة</span></li>
-                        </ul>
-                        <a href="#contact" class="btn btn-outline mt-auto">اطلب الخدمة</a>
-                    </div>
-                    <!-- Service: تصميم وتطوير المواقع -->
-                    <div class="service-card p-8" data-aos="fade-up-right">
-                        <div
-                            class="service-icon bg-mint/10 text-mint w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-4">
-                            <i class="fas fa-code"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-2">تصميم وتطوير المواقع</h3>
-                        <p class="text-gray-400 mb-4 flex-grow">تطوير مواقع ويب حديثة وسريعة ومتجاوبة مع جميع الأجهزة.
-                        </p>
-                        <ul class="space-y-2 text-gray-300 mb-6 text-right">
-                            <li class="flex items-center"><i
-                                    class="fas fa-check-circle text-mint ml-2"></i><span>المواقع التفاعلية</span></li>
-                            <li class="flex items-center"><i
-                                    class="fas fa-check-circle text-mint ml-2"></i><span>التجارة الالكترونية</span></li>
-                            <li class="flex items-center"><i
-                                    class="fas fa-check-circle text-mint ml-2"></i><span>التحسين للسرعة</span></li>
-                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>الأمان
-                                    والحماية</span></li>
-                        </ul>
-                        <a href="#contact" class="btn btn-outline mt-auto">اطلب الخدمة</a>
-                    </div>
-                    <!-- Service: التصوير الفوتوغرافي -->
-                    <div class="service-card p-8" data-aos="fade-up" data-aos-delay="100">
-                        <div
-                            class="service-icon bg-mint/10 text-mint w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-4">
-                            <i class="fas fa-camera-retro"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-2">التصوير الفوتوغرافي</h3>
-                        <p class="text-gray-400 mb-4 flex-grow">تصوير احترافي للمنتجات والفعاليات والبورتريه.</p>
-                        <ul class="space-y-2 text-gray-300 mb-6 text-right">
-                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>تصوير
-                                    المنتجات</span></li>
-                            <li class="flex items-center"><i
-                                    class="fas fa-check-circle text-mint ml-2"></i><span>التصوير التجاري</span></li>
-                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>تصوير
-                                    الفعاليات</span></li>
-                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>معالجة
-                                    الصور</span></li>
-                        </ul>
-                        <a href="#contact" class="btn btn-outline mt-auto">اطلب الخدمة</a>
-                    </div>
-                    <!-- Service: كتابة المحتوى -->
-                    <div class="service-card p-8" data-aos="fade-up-left" data-aos-delay="200">
-                        <div
-                            class="service-icon bg-mint/10 text-mint w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-4">
-                            <i class="fas fa-pencil-alt"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-2">كتابة المحتوى</h3>
-                        <p class="text-gray-400 mb-4 flex-grow">محتوى جذاب ومؤثر للمواقع ووسائل التواصل الاجتماعي.</p>
-                        <ul class="space-y-2 text-gray-300 mb-6 text-right">
-                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>محتوى
-                                    المواقع</span></li>
-                            <li class="flex items-center"><i
-                                    class="fas fa-check-circle text-mint ml-2"></i><span>منشورات السوشيال ميديا</span>
-                            </li>
-                            <li class="flex items-center"><i
-                                    class="fas fa-check-circle text-mint ml-2"></i><span>المقالات التسويقية</span></li>
-                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>النصوص
-                                    الإعلانية</span></li>
-                        </ul>
-                        <a href="#contact" class="btn btn-outline mt-auto">اطلب الخدمة</a>
-                    </div>
-                    <!-- Service: ادارة التواصل الاجتماعي -->
-                    <div class="service-card p-8" data-aos="fade-up-right">
-                        <div
-                            class="service-icon bg-mint/10 text-mint w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-4">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-2">إدارة التواصل الاجتماعي</h3>
-                        <p class="text-gray-400 mb-4 flex-grow">إدارة شاملة لحسابات التواصل الاجتماعي وتنمية المتابعين.
-                        </p>
-                        <ul class="space-y-2 text-gray-300 mb-6 text-right">
-                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>إدارة
-                                    الحسابات</span></li>
-                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>تخطيط
-                                    المحتوى</span></li>
-                            <li class="flex items-center"><i
-                                    class="fas fa-check-circle text-mint ml-2"></i><span>التفاعل مع الجمهور</span></li>
-                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>تحليل
-                                    الأداء</span></li>
-                        </ul>
-                        <a href="#contact" class="btn btn-outline mt-auto">اطلب الخدمة</a>
-                    </div>
-                    <!-- Service: ادارة قنوات اليوتيوب -->
-                    <div class="service-card p-8" data-aos="fade-up" data-aos-delay="100">
-                        <div
-                            class="service-icon bg-mint/10 text-mint w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-4">
-                            <i class="fab fa-youtube"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-2">إدارة قنوات اليوتيوب</h3>
-                        <p class="text-gray-400 mb-4 flex-grow">إدارة متكاملة للقناة، من تصوير ومونتاج إلى النشر
-                            والتحسين.</p>
-                        <ul class="space-y-2 text-gray-300 mb-6 text-right">
-                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>إنتاج
-                                    المحتوى</span></li>
-                            <li class="flex items-center"><i
-                                    class="fas fa-check-circle text-mint ml-2"></i><span>المونتاج الاحترافي</span></li>
-                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>تحسين
-                                    SEO للفيديو</span></li>
-                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>إدارة
-                                    التعليقات</span></li>
-                        </ul>
-                        <a href="#contact" class="btn btn-outline mt-auto">اطلب الخدمة</a>
-                    </div>
-                    <!-- Service: تحسين محركات البحث -->
-                    <div class="service-card p-8" data-aos="fade-up-left" data-aos-delay="200">
-                        <div
-                            class="service-icon bg-mint/10 text-mint w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-4">
-                            <i class="fas fa-search"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-2">تحسين محركات البحث</h3>
-                        <p class="text-gray-400 mb-4 flex-grow">تحسين ظهور موقعك في نتائج البحث وزيادة الزيارات
-                            الطبيعية.</p>
-                        <ul class="space-y-2 text-gray-300 mb-6 text-right">
-                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>تحليل
-                                    الكلمات المفتاحية</span></li>
-                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>تحسين
-                                    المحتوى</span></li>
-                            <li class="flex items-center"><i
-                                    class="fas fa-check-circle text-mint ml-2"></i><span>الروابط الخلفية</span></li>
-                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>تقارير
-                                    الأداء</span></li>
-                        </ul>
-                        <a href="#contact" class="btn btn-outline mt-auto">اطلب الخدمة</a>
-                    </div>
-                    <!-- Service: تحليل البيانات -->
-                    <div class="service-card p-8" data-aos="fade-up-right">
-                        <div
-                            class="service-icon bg-mint/10 text-mint w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-4">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-2">تحليل البيانات</h3>
-                        <p class="text-gray-400 mb-4 flex-grow">تحويل البيانات إلى رؤى قابلة للتنفيذ لدعم اتخاذ القرار
-                            وتحسين الأداء.</p>
-                        <ul class="space-y-2 text-gray-300 mb-6 text-right">
-                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>جمع
-                                    وتنظيف البيانات</span></li>
-                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>تحليل
-                                    البيانات الاستكشافي</span></li>
-                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>تصور
-                                    البيانات</span></li>
-                            <li class="flex items-center"><i class="fas fa-check-circle text-mint ml-2"></i><span>إعداد
-                                    التقارير واللوحات</span></li>
-                        </ul>
-                        <a href="#contact" class="btn btn-outline mt-auto">اطلب الخدمة</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Portfolio Section -->
-        <section id="portfolio" class="py-24 bg-gray-900">
-            <div class="container mx-auto px-6">
-                <h2 class="section-title" data-aos="fade-up">أعمالي</h2>
-                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">مجموعة مختارة من أفضل المشاريع التي
-                    أنجزتها بشغف وإبداع</p>
-
-
-                <div id="filter-buttons" class="flex flex-wrap justify-center gap-3 mb-16" data-aos="fade-up">
-                    <button class="filter-btn active btn btn-secondary px-6" data-filter="all">الكل</button>
-                    <button class="filter-btn btn btn-secondary px-6" data-filter="design">تصميم</button>
-                    <button class="filter-btn btn btn-secondary px-6" data-filter="web">مواقع</button>
-                    <button class="filter-btn btn btn-secondary px-6" data-filter="marketing">تسويق</button>
-                    <button class="filter-btn btn btn-secondary px-6" data-filter="video">فيديو</button>
-                    <button class="filter-btn btn btn-secondary px-6" data-filter="photo">تصوير</button>
-                </div>
-
-                <div id="portfolio-grid" class="grid grid-cols-1 lg:grid-cols-2 gap-10">
-                    <!-- Project: هوية بصرية -->
-                    <div class="project-card project-card-clickable" data-category="design"
-                        data-modal-target="identity-modal" data-aos="zoom-in">
-                        <div class="overflow-hidden">
-                            <img src="غلاف/هوية بصرية.jpeg" alt="تصميم هوية بصرية متكاملة"
-                                class="w-full h-64 object-cover">
-                        </div>
-                        <div class="p-6">
-                            <div class="flex items-center gap-2 mb-3">
-                                <i class="fas fa-palette text-mint text-xl"></i>
-                                <h3 class="text-2xl font-bold text-white">هوية بصرية متكاملة</h3>
-                            </div>
-                            <p class="text-gray-400 mb-4 leading-relaxed">تصميم هوية بصرية شاملة تتضمن الشعار، الألوان،
-                                والخطوط المطبقة على الموقع والمطبوعات</p>
-                            <div class="flex flex-wrap gap-2">
-                                <span
-                                    class="text-xs font-semibold bg-mint/20 text-mint py-2 px-4 rounded-full border border-mint/30">Illustrator</span>
-                                <span
-                                    class="text-xs font-semibold bg-mint/20 text-mint py-2 px-4 rounded-full border border-mint/30">Photoshop</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Project: حملة سوشيال ميديا -->
-                    <div class="project-card project-card-clickable" data-category="marketing"
-                        data-modal-target="campaign-modal" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="overflow-hidden">
-                            <img src="غلاف/حملات سوشيال ميديا.jpeg" alt="حملة إعلانية على وسائل التواصل"
-                                class="w-full h-64 object-cover">
-                        </div>
-                        <div class="p-6">
-                            <div class="flex items-center gap-2 mb-3">
-                                <i class="fab fa-facebook text-mint text-xl"></i>
-                                <h3 class="text-2xl font-bold text-white">حملة سوشيال ميديا</h3>
-                            </div>
-                            <p class="text-gray-400 mb-4 leading-relaxed">حملة تسويقية متكاملة حققت نتائج استثنائية
-                                وزيادة ملحوظة في التفاعل والمبيعات</p>
-                            <div class="flex flex-wrap gap-2">
-                                <span
-                                    class="text-xs font-semibold bg-mint/20 text-mint py-2 px-4 rounded-full border border-mint/30">Facebook
-                                    Ads</span>
-                                <span
-                                    class="text-xs font-semibold bg-mint/20 text-mint py-2 px-4 rounded-full border border-mint/30">Analytics</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Project: حملة إعلانية جوجل -->
-                    <div class="project-card project-card-clickable" data-category="marketing"
-                        data-modal-target="google-ads-modal" data-aos="zoom-in-up" data-aos-delay="200">
-                        <img src="غلاف/حملات جوجل.jpeg" alt="حملة إعلانية بجوجل" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-white">حملة إعلانية بجوجل</h3>
-                            <p class="text-gray-400 my-2">إدارة حملات إعلانية مستهدفة على شبكة جوجل البحثية والإعلانية.
-                            </p>
-                            <div class="flex flex-wrap gap-2 mt-4">
-                                <span
-                                    class="text-xs font-semibold bg-gray-700 text-gray-300 py-1 px-3 rounded-full">Google
-                                    Ads</span>
-                                <span
-                                    class="text-xs font-semibold bg-gray-700 text-gray-300 py-1 px-3 rounded-full">SEM</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Project: موقع تجارة -->
-                    <div class="project-card project-card-clickable" data-category="web"
-                        data-modal-target="ecommerce-modal" data-aos="zoom-in-up">
-                        <img src="غلاف/برمجة وتطوير المواقع.jpeg" alt="موقع تجارة إلكترونية"
-                            class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-white">تصميم وتطوير مواقع </h3>
-                            <p class="text-gray-400 my-2">تطوير منصات ومشاريع رقمية متكاملة مع أنظمة مرنة تلبي احتياجات
-                                مختلفة وتضمن تجربة سلسة وآمنة.</p>
-                            <div class="flex flex-wrap gap-2 mt-4">
-                                <span
-                                    class="text-xs font-semibold bg-gray-700 text-gray-300 py-1 px-3 rounded-full">React</span>
-                                <span
-                                    class="text-xs font-semibold bg-gray-700 text-gray-300 py-1 px-3 rounded-full">Node.js</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Project: الفيديوهات -->
-                    <a href="https://drive.google.com/drive/folders/1G9dVvt9mNiqAa3ZW9LlaODJWk2c5PsM0?usp=sharing"
-                        target="_blank" class="block" data-category="video" data-aos="zoom-in-up" data-aos-delay="100">
-                        <div class="project-card h-full">
-                            <img src="غلاف/مونتاج مقاطع.jpeg" alt="الفيديوهات" class="w-full h-48 object-cover">
-                            <div class="p-6">
-                                <h3 class="text-xl font-bold text-white">الفيديوهات</h3>
-                                <p class="text-gray-400 my-2">مجموعة من أعمالي في إنتاج ومونتاج الفيديو. اضغط للمشاهدة.
-                                </p>
-                                <div class="flex flex-wrap gap-2 mt-4">
-                                    <span
-                                        class="text-xs font-semibold bg-gray-700 text-gray-300 py-1 px-3 rounded-full">After
-                                        Effects</span>
-                                    <span
-                                        class="text-xs font-semibold bg-gray-700 text-gray-300 py-1 px-3 rounded-full">Premiere
-                                        Pro</span>
+                                    <!-- ═══════════ المعرض الأفقي السينمائي (Horizontal Parallax Portfolio) ═══════════ -->
+            <section id="horizontal-portfolio" class="horizontal-portfolio">
+                <div class="h-track-container">
+                    <div class="h-track" id="h-track">
+                        
+                        <!-- Panel 1 -->
+                        <div class="h-panel">
+                            <div class="h-panel-inner">
+                                <div class="h-image-wrap">
+                                    <img src="هويات بصرية/Untitled-1.png" alt="هوية بصرية" class="parallax-img">
+                                </div>
+                                <div class="h-content">
+                                    <h2>هوية بصرية</h2>
+                                    <p>بناء علامة تجارية لا تُنسى عبر تصاميم مدروسة.</p>
+                                    <a href="هويات بصرية/Untitled-1.png" class="btn btn-outline" data-fancybox="identity-modal">استكشف العمل</a>
+                                    <div style="display: none;">
+                                        <a href="هويات بصرية/Untitled-12.png" data-fancybox="identity-modal"></a>
+                                        <a href="هويات بصرية/Untitled-13.png" data-fancybox="identity-modal"></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </a>
-                    <!-- Project: تصوير منتجات -->
-                    <div class="project-card project-card-clickable" data-category="photo"
-                        data-modal-target="photo-modal" data-aos="zoom-in-up" data-aos-delay="200">
-                        <img src="غلاف/تصوير منتجات.jpeg" alt="جلسة تصوير منتجات" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-white">تصوير منتجات</h3>
-                            <p class="text-gray-400 my-2">تصوير احترافي لمجموعة منتجات مع إضاءة استوديو ومعالجة متقدمة.
-                            </p>
-                            <div class="flex flex-wrap gap-2 mt-4">
-                                <span
-                                    class="text-xs font-semibold bg-gray-700 text-gray-300 py-1 px-3 rounded-full">Photography</span>
-                                <span
-                                    class="text-xs font-semibold bg-gray-700 text-gray-300 py-1 px-3 rounded-full">Lightroom</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Project: تصوير رياضي -->
-                    <div class="project-card project-card-clickable" data-category="photo"
-                        data-modal-target="sports-photo-modal" data-aos="zoom-in-up">
-                        <img src="غلاف/تصوير رياضي.jpg" alt="تصوير رياضي" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-white">تصوير رياضي</h3>
-                            <p class="text-gray-400 my-2">تغطية وتصوير الفعاليات والمباريات الرياضية باحترافية عالية.
-                            </p>
-                            <div class="flex flex-wrap gap-2 mt-4">
-                                <span
-                                    class="text-xs font-semibold bg-gray-700 text-gray-300 py-1 px-3 rounded-full">Sports</span>
-                                <span
-                                    class="text-xs font-semibold bg-gray-700 text-gray-300 py-1 px-3 rounded-full">Action
-                                    Photography</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Project: سوشيال ميديا -->
-                    <div class="project-card project-card-clickable" data-category="design"
-                        data-modal-target="social-media-gallery" data-aos="zoom-in-up" data-aos-delay="100">
-                        <img src="غلاف/تصاميم سوشيال ميديا.jpeg" alt="تصاميم سوشيال ميديا"
-                            class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-white">تصاميم سوشيال ميديا</h3>
-                            <p class="text-gray-400 my-2">مجموعة من التصاميم الجذابة لمنصات التواصل الاجتماعي لزيادة
-                                التفاعل.</p>
-                            <div class="flex flex-wrap gap-2 mt-4">
-                                <span
-                                    class="text-xs font-semibold bg-gray-700 text-gray-300 py-1 px-3 rounded-full">Social
-                                    Media</span>
-                                <span
-                                    class="text-xs font-semibold bg-gray-700 text-gray-300 py-1 px-3 rounded-full">Canva</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Project: تصاميم رياضية -->
-                    <div class="project-card project-card-clickable" data-category="design"
-                        data-modal-target="sports-design-modal" data-aos="zoom-in-up" data-aos-delay="200">
-                        <img src="غلاف/تصاميم رياضية.jpeg" alt="تصاميم رياضية" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-white">تصاميم رياضية</h3>
-                            <p class="text-gray-400 my-2">تصاميم إبداعية خاصة بالأندية والفعاليات الرياضية المختلفة.</p>
-                            <div class="flex flex-wrap gap-2 mt-4">
-                                <span
-                                    class="text-xs font-semibold bg-gray-700 text-gray-300 py-1 px-3 rounded-full">Sports
-                                    Design</span>
-                                <span
-                                    class="text-xs font-semibold bg-gray-700 text-gray-300 py-1 px-3 rounded-full">Photoshop</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Project: انفوجرافيك -->
-                    <div class="project-card project-card-clickable" data-category="design"
-                        data-modal-target="infographic-modal" data-aos="zoom-in-up">
-                        <img src="غلاف/برزنتيشن.jpeg" alt="تصميم انفوجرافيك" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-white">تصميم برزنتيشن</h3>
-                            <p class="text-gray-400 my-2">تصميم عروض تقديمية احترافية تجمع بين الجاذبية البصرية وسهولة
-                                عرض الأفكار، مع تنظيم المحتوى بشكل واضح ومؤثر.</p>
 
-                            <div class="flex flex-wrap gap-2 mt-4">
-                                <span
-                                    class="text-xs font-semibold bg-gray-700 text-gray-300 py-1 px-3 rounded-full">Infographic</span>
-                                <span
-                                    class="text-xs font-semibold bg-gray-700 text-gray-300 py-1 px-3 rounded-full">Illustrator</span>
+                        <!-- Panel 2 -->
+                        <div class="h-panel">
+                            <div class="h-panel-inner">
+                                <div class="h-image-wrap">
+                                    <img src="حملات سوشيال ميديا/حملة سناب.png" alt="حملة تسويقية" class="parallax-img">
+                                </div>
+                                <div class="h-content">
+                                    <h2>حملات إعلانية</h2>
+                                    <p>حملات إبداعية تصل لجمهورك المستهدف بدقة.</p>
+                                    <a href="حملات سوشيال ميديا/حملة سناب.png" class="btn btn-outline" data-fancybox="campaign-modal">استكشف العمل</a>
+                                    <div style="display: none;">
+                                        <a href="حملات سوشيال ميديا/حملة شاشة.jpg" data-fancybox="campaign-modal"></a>
+                                        <a href="حملات سوشيال ميديا/حملة شاشة 1.jpg" data-fancybox="campaign-modal"></a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- Project: إعلانات -->
-                    <div class="project-card project-card-clickable" data-category="design"
-                        data-modal-target="ads-modal" data-aos="zoom-in-up" data-aos-delay="100">
-                        <img src="غلاف/لوحات.jpeg" alt="تصميم إعلانات" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-white">تصميم لوحات</h3>
-                            <p class="text-gray-400 my-2">تصميم لوحات مطبوعة</p>
-                            <div class="flex flex-wrap gap-2 mt-4">
-                                <span
-                                    class="text-xs font-semibold bg-gray-700 text-gray-300 py-1 px-3 rounded-full">Advertising</span>
-                                <span
-                                    class="text-xs font-semibold bg-gray-700 text-gray-300 py-1 px-3 rounded-full">InDesign</span>
+
+                        <!-- Panel 3 -->
+                        <div class="h-panel">
+                            <div class="h-panel-inner">
+                                <div class="h-image-wrap">
+                                    <img src="مواقع/متجر.jpg" alt="تطوير مواقع" class="parallax-img">
+                                </div>
+                                <div class="h-content">
+                                    <h2>تطوير مواقع</h2>
+                                    <p>منصات رقمية متكاملة بتجارب مستخدم استثنائية.</p>
+                                    <a href="مواقع/متجر.jpg" class="btn btn-outline" data-fancybox="ecommerce-modal">استكشف العمل</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- Project: شعارات ومطبوعات -->
-                    <div class="project-card project-card-clickable" data-category="design"
-                        data-modal-target="logo-modal" data-aos="zoom-in-up" data-aos-delay="200">
-                        <img src="غلاف/لوجو.jpeg" alt="تصميم شعارات ومطبوعات" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-white">تصميم شعارات ومطبوعات</h3>
-                            <p class="text-gray-400 my-2"> تصميم شعارات ومطبوعات متنوعة مثل البروشورات، المنيوهات،
-                                البزنس كارد، وغيرها، بأسلوب احترافي يبرز هوية العلامة.</p>
-                            <div class="flex flex-wrap gap-2 mt-4">
-                                <span
-                                    class="text-xs font-semibold bg-gray-700 text-gray-300 py-1 px-3 rounded-full">Logo
-                                    Design</span>
-                                <span
-                                    class="text-xs font-semibold bg-gray-700 text-gray-300 py-1 px-3 rounded-full">Branding</span>
+
+                        <!-- Panel 4 -->
+                        <div class="h-panel">
+                            <div class="h-panel-inner">
+                                <div class="h-image-wrap">
+                                    <img src="اعمال سوشيال ميديا/مية هلا.jpg" alt="تصاميم سوشيال ميديا" class="parallax-img">
+                                </div>
+                                <div class="h-content">
+                                    <h2>سوشيال ميديا</h2>
+                                    <p>تصاميم عصرية تزيد التفاعل وتبني حضوراً قوياً.</p>
+                                    <a href="اعمال سوشيال ميديا/مية هلا.jpg" class="btn btn-outline" data-fancybox="social-media-gallery">استكشف العمل</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- Project: تصاميم تيشرتات -->
-                    <div class="project-card project-card-clickable" data-category="design"
-                        data-modal-target="t-shirt-design-modal" data-aos="zoom-in-up" data-aos-delay="300">
-                        <img src="غلاف/تيشرت.jpeg" alt="تصاميم تيشرتات" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-white">تصاميم تيشرتات</h3>
-                            <p class="text-gray-400 my-2">مجموعة متنوعة من تصاميم التيشرتات العصرية والفريدة.</p>
-                            <div class="flex flex-wrap gap-2 mt-4">
-                                <span
-                                    class="text-xs font-semibold bg-gray-700 text-gray-300 py-1 px-3 rounded-full">T-shirt
-                                    Design</span>
-                                <span
-                                    class="text-xs font-semibold bg-gray-700 text-gray-300 py-1 px-3 rounded-full">Photoshop</span>
+
+                        <!-- Panel 5 -->
+                        <div class="h-panel">
+                            <div class="h-panel-inner">
+                                <div class="h-image-wrap">
+                                    <img src="منتجات/منتجات هلا.jpg" alt="تصوير منتجات" class="parallax-img">
+                                </div>
+                                <div class="h-content">
+                                    <h2>تصوير منتجات</h2>
+                                    <p>إبراز تفاصيل منتجك بأفضل إضاءة وأعلى جودة.</p>
+                                    <a href="منتجات/منتجات هلا.jpg" class="btn btn-outline" data-fancybox="photo-modal">استكشف العمل</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- Project: جلسة تصوير -->
-                    <div class="project-card project-card-clickable" data-category="photo"
-                        data-modal-target="photo-session-modal" data-aos="zoom-in-up">
-                        <img src="جلسة تصوير/IMG_1004.jpg" alt="جلسة تصوير" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-white">جلسة تصوير</h3>
-                            <p class="text-gray-400 my-2">جلسة تصوير احترافية بإضاءة مثالية وزوايا فنية مبدعة</p>
-                            <div class="flex flex-wrap gap-2 mt-4">
-                                <span
-                                    class="text-xs font-semibold bg-gray-700 text-gray-300 py-1 px-3 rounded-full">Photography</span>
-                                <span
-                                    class="text-xs font-semibold bg-gray-700 text-gray-300 py-1 px-3 rounded-full">Portrait</span>
+
+                        <!-- Panel 6 -->
+                        <div class="h-panel">
+                            <div class="h-panel-inner">
+                                <div class="h-image-wrap">
+                                    <img src="هويات بصرية/Untitled-12.png" alt="تصميم برزنتيشن" class="parallax-img">
+                                </div>
+                                <div class="h-content">
+                                    <h2>تصميم العروض</h2>
+                                    <p>عروض تقديمية تجمع بين الجاذبية البصرية وسهولة إيصال الأفكار.</p>
+                                    <a href="هويات بصرية/Untitled-12.png" class="btn btn-outline" data-fancybox="identity-modal">استكشف العمل</a>
+                                </div>
                             </div>
                         </div>
+
+                        <!-- Panel 7 -->
+                        <div class="h-panel">
+                            <div class="h-panel-inner">
+                                <div class="h-image-wrap">
+                                    <img src="اعمال رياضية/تصاميم رياضية.jpg" alt="تصاميم رياضية" class="parallax-img">
+                                </div>
+                                <div class="h-content">
+                                    <h2>تصاميم رياضية</h2>
+                                    <p>لوحات وتصاميم حماسية تعكس الشغف وتواكب الأحداث.</p>
+                                    <a href="اعمال رياضية/تصاميم رياضية.jpg" class="btn btn-outline" data-fancybox="sports-design-modal">استكشف العمل</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Panel 8 -->
+                        <div class="h-panel">
+                            <div class="h-panel-inner">
+                                <div class="h-image-wrap">
+                                    <img src="جلسة تصوير/IMG_1026.jpg" alt="جلسات تصوير" class="parallax-img">
+                                </div>
+                                <div class="h-content">
+                                    <h2>جلسات تصوير</h2>
+                                    <p>التقاط أجمل اللحظات بعدسات احترافية وزوايا سينمائية.</p>
+                                    <a href="جلسة تصوير/IMG_1026.jpg" class="btn btn-outline" data-fancybox="photo-session-modal">استكشف العمل</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Panel 9 -->
+                        <div class="h-panel">
+                            <div class="h-panel-inner">
+                                <div class="h-image-wrap">
+                                    <img src="تصوير رياضي/2.jpg" alt="تصوير رياضي" class="parallax-img">
+                                </div>
+                                <div class="h-content">
+                                    <h2>تصوير رياضي</h2>
+                                    <p>توثيق الحماس والحركة السريعة بدقة لا تضاهى.</p>
+                                    <a href="تصوير رياضي/2.jpg" class="btn btn-outline" data-fancybox="sports-photo-modal">استكشف العمل</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Panel 10 -->
+                        <div class="h-panel">
+                            <div class="h-panel-inner">
+                                <div class="h-image-wrap">
+                                    <img src="لوحات/Adversiment-Billboard-mockup-vol4.jpg" alt="إعلانات طرقية" class="parallax-img">
+                                </div>
+                                <div class="h-content">
+                                    <h2>إعلانات طرقية</h2>
+                                    <p>لوحات إعلانية خارجية تلفت الانتباه وتسيطر على الشارع.</p>
+                                    <a href="لوحات/Adversiment-Billboard-mockup-vol4.jpg" class="btn btn-outline" data-fancybox="ads-modal">استكشف العمل</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Panel 11 -->
+                        <div class="h-panel">
+                            <div class="h-panel-inner">
+                                <div class="h-image-wrap">
+                                    <img src="مطبوعات/منيو مطعم.jpg" alt="مطبوعات" class="parallax-img">
+                                </div>
+                                <div class="h-content">
+                                    <h2>مطبوعات وقوائم</h2>
+                                    <p>تصميم المطبوعات التجارية وقوائم الطعام بأسلوب يفتح الشهية.</p>
+                                    <a href="مطبوعات/منيو مطعم.jpg" class="btn btn-outline" data-fancybox="logo-modal">استكشف العمل</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Panel 12 -->
+                        <div class="h-panel">
+                            <div class="h-panel-inner">
+                                <div class="h-image-wrap">
+                                    <img src="تصاميم تيشرتات/photo_5848305690081348269_y.jpg" alt="تيشرتات" class="parallax-img">
+                                </div>
+                                <div class="h-content">
+                                    <h2>تصاميم أزياء</h2>
+                                    <p>رسومات وتصاميم تيشرتات فريدة تواكب أحدث صيحات الموضة.</p>
+                                    <a href="تصاميم تيشرتات/photo_5848305690081348269_y.jpg" class="btn btn-outline" data-fancybox="t-shirt-design-modal">استكشف العمل</a>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-            </div>
+            </section>
+            <!-- Partners -->
+            <section id="partners" class="section">
+                <div class="container">
+                    <h2 class="section-title reveal">شركاء النجاح</h2>
+                    <p class="section-subtitle reveal">نجوم رافقونا في الرحلة — فخورون بثقة عملائنا ومشاريعنا الناجحة
+                        معهم</p>
+                </div>
+                <div class="marquee reveal" data-direction="rtl">
+                    <div class="marquee-track">
+                        <div class="marquee-group">
+                            <div class="partner-chip"><img src="شركاء النجاح/thlat-Photoroom.png" alt="ثلاث"
+                                    loading="lazy" decoding="async"></div>
+                            <div class="partner-chip"><img src="شركاء النجاح/قمة ميزاب.png" alt="قمة ميزاب"
+                                    loading="lazy" decoding="async"></div>
+                            <div class="partner-chip"><img src="شركاء النجاح/مية هلا.png" alt="مية هلا" loading="lazy"
+                                    decoding="async"></div>
+                            <div class="partner-chip"><img src="شركاء النجاح/xpdBo3AcziJFFAtsPlBTfCBPFvf4jU0JBY09XQSv.webp"
+                                    alt="شريك" loading="lazy" decoding="async"></div>
+                            <div class="partner-chip"><img src="شركاء النجاح/حلول ميزاب.png" alt="حلول ميزاب"
+                                    loading="lazy" decoding="async"></div>
+                            <div class="partner-chip"><img src="شركاء النجاح/قولاتو.png" alt="قولاتو" loading="lazy"
+                                    decoding="async"></div>
+                            <div class="partner-chip"><img src="شركاء النجاح/المسافر.png" alt="المسافر" loading="lazy"
+                                    decoding="async"></div>
+                            <div class="partner-chip"><img src="شركاء النجاح/فورت.png" alt="فورت" loading="lazy"
+                                    decoding="async"></div>
+                            <div class="partner-chip"><img src="شركاء النجاح/بيرين.png" alt="بيرين" loading="lazy"
+                                    decoding="async"></div>
+                            <div class="partner-chip"><img src="شركاء النجاح/مطعم هني.png" alt="مطعم هني" loading="lazy"
+                                    decoding="async"></div>
+                        </div>
+                        <div class="marquee-group" aria-hidden="true"></div>
+                    </div>
+                </div>
+                <div class="marquee reveal" data-direction="ltr">
+                    <div class="marquee-track">
+                        <div class="marquee-group">
+                            <div class="partner-chip"><img src="شركاء النجاح/طابونة.png" alt="طابونة" loading="lazy"
+                                    decoding="async"></div>
+                            <div class="partner-chip"><img src="شركاء النجاح/وسيم قدها.png" alt="وسيم قدها"
+                                    loading="lazy" decoding="async"></div>
+                            <div class="partner-chip"><img src="شركاء النجاح/عالم ابو راكان.png" alt="عالم ابو راكان"
+                                    loading="lazy" decoding="async"></div>
+                            <div class="partner-chip"><img src="شركاء النجاح/بادية الشام.png" alt="بادية الشام"
+                                    loading="lazy" decoding="async"></div>
+                            <div class="partner-chip"><img src="شركاء النجاح/الوصل.png" alt="الوصل" loading="lazy"
+                                    decoding="async"></div>
+                            <div class="partner-chip"><img src="شركاء النجاح/الاولى.png" alt="الأولى" loading="lazy"
+                                    decoding="async"></div>
+                            <div class="partner-chip"><img src="شركاء النجاح/اسطول كمأة للمقاولات.png"
+                                    alt="اسطول كمأة للمقاولات" loading="lazy" decoding="async"></div>
+                            <div class="partner-chip"><img src="شركاء النجاح/شعار_نادي_الفيحاء_2022.svg.png"
+                                    alt="نادي الفيحاء" loading="lazy" decoding="async"></div>
+                            <div class="partner-chip"><img src="شركاء النجاح/عميل.jpg.png" alt="عميل" loading="lazy"
+                                    decoding="async"></div>
+                            <div class="partner-chip"><img src="شركاء النجاح/لقطة شاشة 2025-08-26 022857.png"
+                                    alt="شريك" loading="lazy" decoding="async"></div>
+                        </div>
+                        <div class="marquee-group" aria-hidden="true"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ═══════════ فاصل سينمائي قبل السيرة ═══════════ -->
+            <section class="cv-intro-scene" style="height: 80vh; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative;">
+                <h2 class="reveal" style="font-size: clamp(2rem, 5vw, 4rem); color: var(--teal-bright); text-align: center; text-shadow: 0 0 30px rgba(62,198,168,0.3);">خلف كل عمل إبداعي عظيم...</h2>
+                <h2 class="reveal" style="font-size: clamp(1.5rem, 3vw, 2.5rem); color: rgba(255,255,255,0.8); text-align: center; margin-top: 2rem;">مسيرة من التحديات، الشغف، والقيادة</h2>
+            </section>
+            
+        
+        <!-- ═══════════ عالم السيرة المهنية (CV World) ═══════════ -->
+        <div class="world world-cv" id="cv-world-wrapper">
+            <section id="cv-timeline" class="cv-timeline-section">
+                <div class="cv-timeline-header">
+                    <h2>رحلتي المهنية</h2>
+                    <p>أكثر من 5 سنوات من الإبداع والقيادة التسويقية</p>
+                </div>
+                <div class="cv-track-container">
+                    <div class="cv-track" id="cv-track">
+                        
+                        <!-- Node 1 -->
+                        <div class="cv-node">
+                            <div class="cv-node-content highlight-node">
+                                <span class="cv-year">الحاضر</span>
+                                <h3>مدير تسويق</h3>
+                                <h4>وكالة صدى الإنتاج</h4>
+                                <p>قيادة الاستراتيجيات التسويقية وإدارة الحملات الإعلانية لتحقيق أعلى معدلات العائد على الاستثمار للعملاء وتطوير الهوية البصرية والمبيعات.</p>
+                                <i class="fas fa-bullhorn cv-icon"></i>
+                            </div>
+                        </div>
+
+                        <!-- Node 2 -->
+                        <div class="cv-node">
+                            <div class="cv-node-content">
+                                <span class="cv-year">خبرة تراكمية</span>
+                                <h3>مصمم جرافيك وتطوير مواقع</h3>
+                                <h4>مستقل & وكالات</h4>
+                                <p>تصميم هويات بصرية متكاملة، تطوير مواقع وتطبيقات تفاعلية، وتقديم حلول تقنية وتصميمية شاملة تلبي احتياجات السوق العصرية.</p>
+                                <i class="fas fa-paint-brush cv-icon"></i>
+                            </div>
+                        </div>
+
+                        <!-- Node 3 -->
+                        <div class="cv-node">
+                            <div class="cv-node-content">
+                                <span class="cv-year">ترسانة المهارات</span>
+                                <h3>أدوات واحتراف</h3>
+                                <ul class="cv-skills-list">
+                                    <li>إدارة الحملات (Snapchat, Google Ads, Meta)</li>
+                                    <li>التصميم (Photoshop, Illustrator, InDesign)</li>
+                                    <li>المونتاج (Premiere Pro, After Effects)</li>
+                                    <li>تطوير ويب (HTML, CSS, React, Node.js)</li>
+                                </ul>
+                                <i class="fas fa-tools cv-icon"></i>
+                            </div>
+                        </div>
+
+                        <!-- Node 4 -->
+                        <div class="cv-node">
+                            <div class="cv-node-content highlight-node">
+                                <span class="cv-year">المستقبل</span>
+                                <h3>رؤية وطموح</h3>
+                                <p>صناعة تجارب رقمية لا تُنسى، وبناء علامات تجارية تتصدر المشهد في عالم يتطور لحظة بلحظة.</p>
+                                <a href="cv/محمد_حسين_سيرة_ذاتية.pdf" class="btn btn-primary" style="margin-top: 1rem;" download><i class="fas fa-download"></i> تحميل النسخة الورقية (PDF)</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+        </div> <!-- End of world-dark -->
+
+        <!-- ═══════════ الشروق: العودة للنور ═══════════ -->
+        <section id="dawn" class="dawn" aria-hidden="true">
+            <div class="sun-disc"></div>
+            <p class="dawn-copy">الآن… لنُشرق بمشروعك</p>
         </section>
 
-        <!-- Photo Session Modal -->
-        <div id="photo-session-modal" class="modal">
-            <div class="modal-content modal-content-gallery">
-                <button class="modal-close-btn">×</button>
-                <h3 class="text-3xl font-bold text-white mb-8 text-center">جلسة تصوير</h3>
-                <div class="modal-gallery overflow-y-auto" style="max-height: 80vh;">
-                    <div class="gallery-item"><img src="جلسة تصوير/IMG_1004.jpg" alt="صورة 1"></div>
-                    <div class="gallery-item"><img src="جلسة تصوير/IMG_1026.jpg" alt="صورة 2"></div>
-                    <div class="gallery-item"><img src="جلسة تصوير/IMG_1058.jpg" alt="صورة 3"></div>
-                    <div class="gallery-item"><img src="جلسة تصوير/IMG_1068.jpg" alt="صورة 4"></div>
-                    <div class="gallery-item"><img src="جلسة تصوير/IMG_1095-2.jpg" alt="صورة 5"></div>
-                    <div class="gallery-item"><img src="جلسة تصوير/IMG_1128.jpg" alt="صورة 6"></div>
-                    <div class="gallery-item"><img src="جلسة تصوير/IMG_1181.jpg" alt="صورة 7"></div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Contact Section -->
-        <section id="contact" class="py-20 bg-gray-950/50">
-            <div class="container mx-auto px-6">
-                <h2 class="section-title" data-aos="fade-up">تواصل معي</h2>
-                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">لديك مشروع في ذهنك؟ دعنا نتحدث ونحول
-                    فكرتك إلى واقع رقمي مذهل.</p>
-                <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-                    <!-- Left Column: Form -->
-                    <div class="bg-card border border-border-color p-8 rounded-2xl" data-aos="fade-right">
-                        <h3 class="text-2xl font-bold mb-6 text-white">أرسل رسالتك</h3>
-                        <form id="contact-form">
-                            <div class="mb-4">
-                                <label for="name" class="block text-gray-400 font-semibold mb-2">الاسم الكامل</label>
-                                <input type="text" id="name" placeholder="أدخل اسمك الكامل" class="form-input">
-                            </div>
-                            <div class="mb-4">
-                                <label for="service" class="block text-gray-400 font-semibold mb-2">الخدمة
-                                    المطلوبة</label>
-                                <select id="service" class="form-input">
-                                    <option>اختر الخدمة</option>
-                                    <option>تصميم الجرافيك</option>
-                                    <option>إنتاج الفيديو</option>
-                                    <option>التسويق الالكتروني</option>
-                                    <option>تطوير المواقع</option>
-                                    <option>التصوير الفوتوغرافي</option>
-                                    <option>كتابة المحتوى</option>
-                                    <option>إدارة التواصل الاجتماعي</option>
-                                    <option>إدارة قنوات اليوتيوب</option>
-                                    <option>تحسين محركات البحث</option>
-                                    <option>تحليل البيانات</option>
-                                    <option>أخرى</option>
-                                </select>
-                            </div>
-                            <div class="mb-6">
-                                <label for="message" class="block text-gray-400 font-semibold mb-2">تفاصيل
-                                    المشروع</label>
-                                <textarea id="message" placeholder="اكتب تفاصيل مشروعك وما تحتاجه بالضبط..." rows="5"
-                                    class="form-input"></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary w-full text-lg">
-                                <i class="fab fa-whatsapp ml-2"></i>
-                                إرسال الرسالة عبر واتساب
-                            </button>
-                        </form>
+        <!-- ═══════════ العالم الفاتح — التواصل ═══════════ -->
+        <div class="world world-light">
+            <section id="contact" class="section">
+                <div class="container">
+                    <h2 class="section-title reveal">تواصل معي</h2>
+                    <p class="section-subtitle reveal">لديك مشروع في ذهنك؟ دعنا نتحدث ونحول فكرتك إلى واقع رقمي مذهل.
+                    </p>
+                    <div class="contact-grid">
+                        <div class="contact-card reveal">
+                            <h3>أرسل رسالتك</h3>
+                            <form id="contact-form" novalidate>
+                                <div class="form-field">
+                                    <label for="name">الاسم الكامل</label>
+                                    <input type="text" id="name" name="name" placeholder="أدخل اسمك الكامل"
+                                        class="form-input" required minlength="2" autocomplete="name">
+                                </div>
+                                <div class="form-field">
+                                    <label for="service">الخدمة المطلوبة</label>
+                                    <select id="service" name="service" class="form-input">
+                                        <option value="" selected>اختر الخدمة (اختياري)</option>
+                                        <option>تصميم الجرافيك</option>
+                                        <option>إنتاج الفيديو</option>
+                                        <option>التسويق الالكتروني</option>
+                                        <option>تطوير المواقع</option>
+                                        <option>التصوير الفوتوغرافي</option>
+                                        <option>كتابة المحتوى</option>
+                                        <option>إدارة التواصل الاجتماعي</option>
+                                        <option>إدارة قنوات اليوتيوب</option>
+                                        <option>تحسين محركات البحث</option>
+                                        <option>تحليل البيانات</option>
+                                        <option>أخرى</option>
+                                    </select>
+                                </div>
+                                <div class="form-field">
+                                    <label for="message">تفاصيل المشروع</label>
+                                    <textarea id="message" name="message"
+                                        placeholder="اكتب تفاصيل مشروعك وما تحتاجه بالضبط..." rows="5"
+                                        class="form-input" required minlength="10"></textarea>
+                                </div>
+                                <p class="form-error" id="form-error" hidden>فضلاً أدخل اسمك وتفاصيل مشروعك قبل
+                                    الإرسال.</p>
+                                <button type="submit" class="btn btn-primary btn-block"><i class="fab fa-whatsapp"
+                                        aria-hidden="true"></i> إرسال الرسالة عبر واتساب</button>
+                            </form>
+                        </div>
+                        <div class="contact-why reveal">
+                            <h3>لماذا تختارني؟</h3>
+                            <ul class="why-list">
+                                <li><i class="fas fa-check-circle" aria-hidden="true"></i> خبرة 5+ سنوات في التصميم
+                                    والتسويق الرقمي</li>
+                                <li><i class="fas fa-check-circle" aria-hidden="true"></i> التزام بالمواعيد والجودة
+                                    العالية</li>
+                                <li><i class="fas fa-check-circle" aria-hidden="true"></i> دعم مستمر حتى بعد التسليم
+                                </li>
+                                <li><i class="fas fa-check-circle" aria-hidden="true"></i> أسعار تنافسية وباقات متنوعة
+                                </li>
+                                <li><i class="fas fa-check-circle" aria-hidden="true"></i> تواصل مباشر ومتابعة شخصية
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <!-- Right Column: Why Choose Me -->
-                    <div class="pt-8" data-aos="fade-left">
-                        <h3 class="text-2xl font-bold mb-6 text-white">لماذا تختارني؟</h3>
-                        <ul class="space-y-4">
-                            <li class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-mint text-xl mt-1"></i>
-                                <span class="font-semibold text-gray-300">خبرة 5+ سنوات في التصميم والتسويق
-                                    الرقمي</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-mint text-xl mt-1"></i>
-                                <span class="font-semibold text-gray-300">التزام بالمواعيد والجودة العالية</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-mint text-xl mt-1"></i>
-                                <span class="font-semibold text-gray-300">دعم مستمر حتى بعد التسليم</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-mint text-xl mt-1"></i>
-                                <span class="font-semibold text-gray-300">أسعار تنافسية وباقات متنوعة</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-mint text-xl mt-1"></i>
-                                <span class="font-semibold text-gray-300">تواصل مباشر ومتابعة شخصية</span>
-                            </li>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="container footer-grid">
+                    <div class="footer-about">
+                        <a href="#hero" class="brand nav-anchor">
+                            <img src="logo/logo.png" alt="شعار محمد حسين" width="40" height="40" loading="lazy">
+                            <span>محمد حسين</span>
+                        </a>
+                        <p>مصمم جرافيك ومطور ويب ومسوق رقمي، شغوف بتحويل الأفكار إلى حلول رقمية إبداعية. أساعد الشركات
+                            والأفراد على بناء حضور قوي ومؤثر في العالم الرقمي.</p>
+                    </div>
+                    <nav class="footer-links" aria-label="روابط سريعة">
+                        <h4>روابط سريعة</h4>
+                        <ul>
+                            <li><a href="#hero" class="nav-anchor">الرئيسية</a></li>
+                            <li><a href="#about" class="nav-anchor">نبذة عني</a></li>
+                            <li><a href="#services" class="nav-anchor">خدماتي</a></li>
+                            <li><a href="#portfolio" class="nav-anchor">أعمالي</a></li>
+                            <li><a href="#contact" class="nav-anchor">التواصل</a></li>
+                        </ul>
+                    </nav>
+                    <div class="footer-contact">
+                        <h4>معلومات التواصل</h4>
+                        <ul>
+                            <li><i class="fas fa-phone-alt" aria-hidden="true"></i> <span dir="ltr">+966 53 805
+                                    3847</span></li>
+                            <li><i class="fas fa-envelope" aria-hidden="true"></i> mm.housen77@gmail.com</li>
+                            <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> الرياض، المملكة العربية
+                                السعودية</li>
                         </ul>
                     </div>
                 </div>
-            </div>
-        </section>
+                <div class="container footer-copy">
+                    <p>&copy; 2025 | جميع الحقوق محفوظة لـ <strong>محمد حسين</strong></p>
+                </div>
+            </footer>
+        </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-bg-card border-t border-border-color text-gray-400">
-        <div class="container mx-auto px-6 py-12">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Footer Column 1: About -->
-                <div class="md:col-span-1">
-                    <a href="#" class="text-2xl font-bold text-white flex items-center gap-3 mb-4">
-                        <img src="logo/logo.png" alt="شعار محمد حسين" class="w-10 h-10">
-                        <span>محمد حسين</span>
-                    </a>
-                    <p class="text-sm">
-                        مصمم جرافيك ومطور ويب ومسوق رقمي، شغوف بتحويل الأفكار إلى حلول رقمية إبداعية. أساعد الشركات
-                        والأفراد على بناء حضور قوي ومؤثر في العالم الرقمي.
-                    </p>
-                </div>
-                <!-- Footer Column 2: Quick Links -->
-                <div>
-                    <h4 class="font-bold text-white text-lg mb-4">روابط سريعة</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-mint transition-colors">الرئيسية</a></li>
-                        <li><a href="#about" class="hover:text-mint transition-colors">نبذة عني</a></li>
-                        <li><a href="#services" class="hover:text-mint transition-colors">خدماتي</a></li>
-                        <li><a href="#portfolio" class="hover:text-mint transition-colors">أعمالي</a></li>
-                        <li><a href="#contact" class="hover:text-mint transition-colors">التواصل</a></li>
-                    </ul>
-                </div>
-                <!-- Footer Column 3: Contact Info -->
-                <div>
-                    <h4 class="font-bold text-white text-lg mb-4">معلومات التواصل</h4>
-                    <ul class="space-y-3">
-                        <li class="flex items-center gap-3">
-                            <i class="fas fa-phone-alt text-mint"></i>
-                            <span dir="ltr">+966 53 805 3847</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i class="fas fa-envelope text-mint"></i>
-                            <span>mm.housen77@gmail.com</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i class="fas fa-map-marker-alt text-mint"></i>
-                            <span>الرياض، المملكة العربية السعودية</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="border-t border-border-color mt-8 pt-6 text-center text-sm">
-                <p>&copy; 2025 | جميع الحقوق محفوظة لـ <span class="font-bold text-white">محمد حسين</span></p>
-            </div>
-        </div>
-    </footer>
+    <!-- Scroll to top -->
+    <button id="scrollTopBtn" title="العودة للأعلى" aria-label="العودة للأعلى"><i class="fas fa-arrow-up"
+            aria-hidden="true"></i></button>
 
-    <!-- Scroll to Top Button -->
-    <button id="scrollTopBtn" title="العودة للأعلى">
-        <i class="fas fa-arrow-up"></i>
-    </button>
+    <!-- ═══════════ المودالات (dialog) ═══════════ -->
 
-    <!-- Modals (The rest of your modals remain here unchanged...) -->
-    <!-- Social Media Modal -->
-    <div id="social-media-gallery" class="modal">
-        <div class="modal-content modal-content-gallery">
-            <div class="modal-close-btn">&times;</div>
-            <h2 class="text-2xl font-bold mb-6 text-center text-white">معرض تصاميم السوشيال ميديا</h2>
-            <div class="flex-grow overflow-y-auto pr-4">
-                <div class="modal-gallery">
-                    <div class="gallery-item"><img src="اعمال سوشيال ميديا/مية هلا.jpg" alt="تصميم سوشيال ميديا 1">
-                    </div>
-                    <div class="gallery-item"><img src="اعمال سوشيال ميديا/المسافر.jpg" alt="تصميم سوشيال ميديا 2">
-                    </div>
-                    <div class="gallery-item"><img src="اعمال سوشيال ميديا/الاولى.jpg" alt="تصميم سوشيال ميديا 3"></div>
-                    <div class="gallery-item"><img src="اعمال سوشيال ميديا/الفيحاء.jpg" alt="تصميم سوشيال ميديا 3">
-                    </div>
-                    <div class="gallery-item"><img src="اعمال سوشيال ميديا/سوشيال ميديا تصاميم.jpg"
-                            alt="تصميم سوشيال ميديا 3"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Identity Modal -->
-    <div id="identity-modal" class="modal">
-        <div class="modal-content modal-content-gallery">
-            <div class="modal-close-btn">&times;</div>
-            <h2 class="text-2xl font-bold mb-6 text-center text-white">معرض تصميم هوية بصرية</h2>
-            <div class="flex-grow overflow-y-auto pr-4">
-                <div class="modal-gallery">
-                    <div class="gallery-item"><img src="هويات بصرية/Untitled-1.png" alt="شعار"></div>
-                    <div class="gallery-item"><img src="هويات بصرية/Untitled-12.png" alt="بطاقة أعمال"></div>
-                    <div class="gallery-item"><img src="هويات بصرية/Untitled-13.png" alt="بطاقة أعمال"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Sports Design Modal -->
-    <div id="sports-design-modal" class="modal">
-        <div class="modal-content modal-content-gallery">
-            <div class="modal-close-btn">&times;</div>
-            <h2 class="text-2xl font-bold mb-6 text-center text-white">معرض تصاميم رياضية</h2>
-            <div class="flex-grow overflow-y-auto pr-4">
-                <div class="modal-gallery">
-                    <div class="gallery-item"><img src="اعمال رياضية/‏‏تصاميم رياضية - نسخة.jpg"
-                            alt="Three young football players in orange sports uniforms standing confidently on a stadium field with dynamic light trails swirling around them. The background features a dark stadium environment with a glowing effect, creating an energetic and motivational atmosphere. Arabic text on the left reads أكاديمية نادي الفيحاء, followed by رؤية, رسالة, الفئات العمرية, and other details about the sports academy." />
-                    </div>
-                    <div class="gallery-item"><img src="اعمال رياضية/تصاميم رياضية.jpg" alt="تصميم رياضي 2"></div>
-                    <div class="gallery-item"><img src="اعمال رياضية/[]d]mتصاميم رياضية.jpg" alt="تصميم رياضي 3"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Sports Photo Modal -->
-    <div id="sports-photo-modal" class="modal">
-        <div class="modal-content modal-content-gallery">
-            <div class="modal-close-btn">&times;</div>
-            <h2 class="text-2xl font-bold mb-6 text-center text-white">معرض تصوير رياضي</h2>
-            <div class="flex-grow overflow-y-auto pr-4">
-                <div class="modal-gallery">
-                    <div class="gallery-item"><img src="تصوير رياضي/1.jpg" alt="تصوير رياضي 1"></div>
-                    <div class="gallery-item"><img src="تصوير رياضي/2.jpg" alt="تصوير رياضي 2"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Google Ads Modal -->
-    <div id="google-ads-modal" class="modal">
-        <div class="modal-content modal-content-gallery">
-            <div class="modal-close-btn">&times;</div>
-            <h2 class="text-2xl font-bold mb-6 text-center text-white">معرض حملات جوجل الإعلانية</h2>
-            <div class="flex-grow overflow-y-auto pr-4">
-                <div class="modal-gallery">
-                    <div class="gallery-item"><img src="حملات جوجل/1.jpg" alt="مثال إعلان جوجل 1"></div>
-                    <div class="gallery-item"><img src="حملات جوجل/حملة جوجل قمة ميزاب.jpg" alt="مثال إعلان جوجل 2">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
 
-    <!-- Other Modals -->
-    <div id="campaign-modal" class="modal">
-        <div class="modal-content modal-content-gallery">
-            <div class="modal-close-btn">&times;</div>
-            <h2 class="text-2xl font-bold mb-6 text-center text-white">معرض حملة إعلانية (سوشيال ميديا)</h2>
-            <div class="flex-grow overflow-y-auto pr-4">
-                <div class="modal-gallery">
-                    <div class="gallery-item"><img src="حملات سوشيال ميديا/حملة سناب.png" alt="إعلان سوشيال ميديا 1">
-                    </div>
-                    <div class="gallery-item"><img src="حملات سوشيال ميديا/حملة سناب 1.jpg" alt="إعلان سوشيال ميديا 1">
-                    </div>
-                    <div class="gallery-item"><img src="حملات سوشيال ميديا/حملة انستا.jpg" alt="إعلان سوشيال ميديا 1">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="ecommerce-modal" class="modal">
-        <div class="modal-content modal-content-gallery">
-            <div class="modal-close-btn">&times;</div>
-            <h2 class="text-2xl font-bold mb-6 text-center text-white">معرض موقع تجارة إلكترونية</h2>
-            <div class="flex-grow overflow-y-auto pr-4">
-                <div class="modal-gallery">
-                    <div class="gallery-item"><img src="مواقع/متجر.jpg" alt="صفحة رئيسية لمتجر"></div>
-                    <div class="gallery-item"><img src="مواقع/موقع.jpg" alt="صفحة رئيسية لمتجر"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="photo-modal" class="modal">
-        <div class="modal-content modal-content-gallery">
-            <div class="modal-close-btn">&times;</div>
-            <h2 class="text-2xl font-bold mb-6 text-center text-white">معرض تصوير منتجات</h2>
-            <div class="flex-grow overflow-y-auto pr-4">
-                <div class="modal-gallery">
-                    <div class="gallery-item"><img src="منتجات/منتجات هلا.jpg" alt="صورة منتج 1"></div>
-                    <div class="gallery-item"><img src="منتجات/منتجات هني.jpg" alt="صورة منتج 2"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="infographic-modal" class="modal">
-        <div class="modal-content modal-content-gallery">
-            <div class="modal-close-btn">&times;</div>
-            <h2 class="text-2xl font-bold mb-6 text-center text-white">معرض تصميم برزنتيشن</h2>
-            <div class="flex-grow overflow-y-auto pr-4">
-                <div class="modal-gallery">
-                    <div class="gallery-item"><img src="برزنتيشن/برزمنيشن.jpg" alt="شريحة عرض تقديمي"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="ads-modal" class="modal">
-        <div class="modal-content modal-content-gallery">
-            <div class="modal-close-btn">&times;</div>
-            <h2 class="text-2xl font-bold mb-6 text-center text-white">معرض تصميم لوحات</h2>
-            <div class="flex-grow overflow-y-auto pr-4">
-                <div class="modal-gallery">
-                    <div class="gallery-item"><img src="لوحات/Mockup.jpg" alt="إعلان مطبوع"></div>
-                    <div class="gallery-item"><img src="لوحات/large_billboard_on_old_underground_subway_wall.jpg"
-                            alt="إعلان مطبوع"></div>
-                    <div class="gallery-item"><img src="لوحات/Free-High-Quality-Billboard-Mockup-PSD-File.jpg"
-                            alt="إعلان مطبوع"></div>
-                    <div class="gallery-item"><img src="لوحات/Free Roadside City Billboard PSD Mockup.jpg"
-                            alt="إعلان مطبوع"></div>
-                    <div class="gallery-item"><img src="لوحات/Free Outdoor Advertising Billboard PSD Mockup.jpg"
-                            alt="إعلان مطبوع"></div>
-                    <div class="gallery-item"><img src="لوحات/Adversiment-Billboard-mockup-vol4.jpg" alt="إعلان مطبوع">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="logo-modal" class="modal">
-        <div class="modal-content modal-content-gallery">
-            <div class="modal-close-btn">&times;</div>
-            <h2 class="text-2xl font-bold mb-6 text-center text-white">معرض تصميم شعارات</h2>
-            <div class="flex-grow overflow-y-auto pr-4">
-                <div class="modal-gallery">
-                    <div class="gallery-item"><img src="logo/photo_5848305690081348270_y.jpg" alt="تصميم شعار"></div>
-                    <div class="gallery-item"><img src="مطبوعات/الفيحاء.jpg" alt="تصميم فلاير "></div>
-                    <div class="gallery-item"><img src="/مطبوعات/بروشور الوصل.jpg" alt="تصميم بروشور "></div>
-                    <div class="gallery-item"><img src="/مطبوعات/منيو مطعم.jpg" alt="تصميم بروشور "></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="t-shirt-design-modal" class="modal">
-        <div class="modal-content modal-content-gallery">
-            <div class="modal-close-btn">&times;</div>
-            <h2 class="text-2xl font-bold mb-6 text-center text-white">معرض تصاميم تيشرتات</h2>
-            <div class="flex-grow overflow-y-auto pr-4">
-                <div class="modal-gallery">
-                    <div class="gallery-item"><img src="تصاميم تيشرتات/Gemini_Generated_Image_d9yvjpd9yvjpd9yv.png"
-                            alt="تصميم شعار"></div>
-                    <div class="gallery-item"><img src="تصاميم تيشرتات/Gemini_Generated_Image_j16ef9j16ef9j16e.jpg"
-                            alt="تصميم تيشرت 1"></div>
-                    <div class="gallery-item"><img src="تصاميم تيشرتات/Gemini_Generated_Image_s352gks352gks352.png"
-                            alt="تصميم تيشرت 2"></div>
-                    <div class="gallery-item"><img src="تصاميم تيشرتات/photo_5848305690081348269_y.jpg"
-                            alt="تصميم تيشرت 2"></div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
 
-    <!-- CV Modal -->
-    <div id="cv-modal" class="modal">
-        <div class="modal-content modal-content-cv">
-            <div class="modal-close-btn">&times;</div>
-            <embed src="cv/محمد_حسين_سيرة_ذاتية.pdf" type="application/pdf" width="100%" height="100%">
-        </div>
-    </div>
+    
 
-    <!-- AOS (Animate On Scroll) Library JS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
 
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <dialog id="cv-modal" class="modal modal-cv">
+        <button type="button" class="modal-close" aria-label="إغلاق">&times;</button>
+        <h2>السيرة الذاتية</h2>
+        <embed src="cv/محمد_حسين_سيرة_ذاتية.pdf" type="application/pdf">
+        <a class="btn btn-primary cv-download" href="cv/محمد_حسين_سيرة_ذاتية.pdf" download>
+            <i class="fas fa-download" aria-hidden="true"></i> تحميل السيرة الذاتية PDF</a>
+    </dialog>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // --- Initialize AOS (Animate on Scroll) ---
-            AOS.init({
-                duration: 800, // animation duration in ms
-                once: true,    // whether animation should happen only once - while scrolling down
-                offset: 100,   // offset (in px) from the original trigger point
-            });
-
-            // --- Animated Canvas Background (Your existing code is good) ---
-            const canvas = document.getElementById('hero-canvas');
-            const ctx = canvas.getContext('2d');
-            let particlesArray;
-            let animationFrameId;
-
-            const mouse = { x: null, y: null, radius: 120 }
-            window.addEventListener('mousemove', function (event) { mouse.x = event.x; mouse.y = event.y; });
-            window.addEventListener('mouseout', function () { mouse.x = undefined; mouse.y = undefined; });
-
-            function setCanvasSize() {
-                canvas.width = window.innerWidth;
-                canvas.height = document.querySelector('.hero-section').offsetHeight;
-            }
-
-            class Particle {
-                constructor(x, y, directionX, directionY, size) {
-                    this.x = x; this.y = y; this.directionX = directionX;
-                    this.directionY = directionY; this.size = size;
-                }
-                draw() {
-                    ctx.beginPath();
-                    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
-                    ctx.fillStyle = 'rgba(52, 211, 153, 0.2)';
-                    ctx.fill();
-                }
-                update() {
-                    if (this.x > canvas.width || this.x < 0) this.directionX = -this.directionX;
-                    if (this.y > canvas.height || this.y < 0) this.directionY = -this.directionY;
-                    this.x += this.directionX; this.y += this.directionY;
-                    this.draw();
-                }
-            }
-
-            function init() {
-                setCanvasSize();
-                particlesArray = [];
-                let numberOfParticles = (canvas.height * canvas.width) / 15000;
-                for (let i = 0; i < numberOfParticles; i++) {
-                    let size = (Math.random() * 2) + 1;
-                    let x = (Math.random() * ((innerWidth - size * 2) - (size * 2)) + size * 2);
-                    let y = (Math.random() * ((innerHeight - size * 2) - (size * 2)) + size * 2);
-                    let directionX = (Math.random() * 0.4) - 0.2;
-                    let directionY = (Math.random() * 0.4) - 0.2;
-                    particlesArray.push(new Particle(x, y, directionX, directionY, size));
-                }
-            }
-
-            function connect() {
-                for (let a = 0; a < particlesArray.length; a++) {
-                    let distanceToMouse = Math.sqrt(Math.pow(mouse.x - particlesArray[a].x, 2) + Math.pow(mouse.y - particlesArray[a].y, 2));
-                    if (distanceToMouse < mouse.radius) {
-                        for (let b = a; b < particlesArray.length; b++) {
-                            let distance = Math.sqrt(Math.pow(particlesArray[a].x - particlesArray[b].x, 2) + Math.pow(particlesArray[a].y - particlesArray[b].y, 2));
-                            if (distance < mouse.radius / 1.5) {
-                                let opacity = 1 - (distance / (mouse.radius / 1.5));
-                                ctx.strokeStyle = 'rgba(52, 211, 153,' + opacity + ')';
-                                ctx.lineWidth = 1;
-                                ctx.beginPath();
-                                ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
-                                ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
-                                ctx.stroke();
-                            }
-                        }
+        Fancybox.bind('[data-fancybox]', {
+            Toolbar: {
+                display: {
+                    left: ["infobar"],
+                    middle: ["zoomIn", "zoomOut", "toggle1to1", "rotateCCW", "rotateCW", "flipX", "flipY"],
+                    right: ["slideshow", "thumbs", "close"],
+                },
+            },
+            mobile: {
+                Toolbar: {
+                    display: {
+                        left: ["infobar"],
+                        middle: [],
+                        right: ["close"],
                     }
                 }
-            }
-
-            function animate() {
-                animationFrameId = requestAnimationFrame(animate);
-                ctx.clearRect(0, 0, innerWidth, innerHeight);
-                for (let i = 0; i < particlesArray.length; i++) {
-                    particlesArray[i].update();
-                }
-                if (mouse.x !== undefined && mouse.y !== undefined) {
-                    connect();
-                }
-            }
-            window.addEventListener('resize', () => {
-                cancelAnimationFrame(animationFrameId);
-                init();
-                animate();
-            });
-            init();
-            animate();
-
-            // --- Mobile Menu Toggle ---
-            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-            const mobileMenu = document.getElementById('mobile-menu');
-            mobileMenuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-            mobileMenu.addEventListener('click', (e) => {
-                if (e.target.tagName === 'A') { mobileMenu.classList.add('hidden'); }
-            });
-
-            // --- Portfolio Filter Logic ---
-            const filterButtons = document.querySelectorAll('#filter-buttons .filter-btn');
-            const portfolioGrid = document.getElementById('portfolio-grid');
-            if (portfolioGrid) {
-                const projects = Array.from(portfolioGrid.children);
-                filterButtons.forEach(button => {
-                    button.addEventListener('click', () => {
-                        filterButtons.forEach(btn => btn.classList.remove('active'));
-                        button.classList.add('active');
-                        const filter = button.getAttribute('data-filter');
-                        projects.forEach(project => {
-                            const projectCategory = project.getAttribute('data-category');
-                            const isAnchor = project.tagName === 'A';
-                            const elementToShow = isAnchor ? project : project;
-
-                            elementToShow.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
-                            elementToShow.style.opacity = '0';
-                            elementToShow.style.transform = 'scale(0.95)';
-
-                            setTimeout(() => {
-                                if (filter === 'all' || projectCategory === filter) {
-                                    elementToShow.style.display = isAnchor ? 'block' : 'flex';
-                                    setTimeout(() => {
-                                        elementToShow.style.opacity = '1';
-                                        elementToShow.style.transform = 'scale(1)';
-                                    }, 20);
-                                } else {
-                                    elementToShow.style.display = 'none';
-                                }
-                            }, 300);
-                        });
-                    });
-                });
-            }
-
-            // --- Unified Modal Logic ---
-            const modalTriggers = document.querySelectorAll('[data-modal-target]');
-            const closeButtons = document.querySelectorAll('.modal-close-btn');
-            const modals = document.querySelectorAll('.modal');
-            modalTriggers.forEach(trigger => {
-                trigger.addEventListener('click', () => {
-                    const modalId = trigger.getAttribute('data-modal-target');
-                    const modal = document.getElementById(modalId);
-                    if (modal) { modal.classList.add('active'); }
-                });
-            });
-            closeButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    button.closest('.modal').classList.remove('active');
-                });
-            });
-            modals.forEach(modal => {
-                modal.addEventListener('click', (e) => {
-                    if (e.target === modal) { modal.classList.remove('active'); }
-                });
-            });
-
-            // --- Contact Form to WhatsApp ---
-            const contactForm = document.getElementById('contact-form');
-            contactForm.addEventListener('submit', function (e) {
-                e.preventDefault();
-                const name = document.getElementById('name').value;
-                const service = document.getElementById('service').value;
-                const message = document.getElementById('message').value;
-                let text = `مرحباً،\nالاسم: ${name}\nالخدمة المطلوبة: ${service}\nالتفاصيل: ${message}\n`;
-                const encodedText = encodeURIComponent(text);
-                const whatsappUrl = `https://wa.me/966538053847?text=${encodedText}`;
-                window.open(whatsappUrl, '_blank');
-            });
-
-            // --- NEW: SCROLLED HEADER & SCROLL-TO-TOP BUTTON LOGIC ---
-            const header = document.getElementById('header');
-            const scrollTopBtn = document.getElementById('scrollTopBtn');
-            window.onscroll = function () {
-                // Header style change
-                if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-                    header.classList.add('scrolled');
-                } else {
-                    header.classList.remove('scrolled');
-                }
-                // Scroll to top button visibility
-                if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-                    scrollTopBtn.classList.add('visible');
-                } else {
-                    scrollTopBtn.classList.remove('visible');
-                }
-            };
-            // Scroll to top button click event
-            scrollTopBtn.addEventListener('click', () => {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
-
-            // --- Parallax effect for personal photo ---
-            const personalPhoto = document.getElementById('personal-photo');
-            if (personalPhoto) {
-                window.addEventListener('scroll', function () {
-                    let offset = window.pageYOffset;
-                    // Adjust the multiplier (e.g., 0.1) to control the parallax speed
-                    personalPhoto.style.transform = 'translateY(' + offset * 0.1 + 'px)';
-                });
+            },
+            Images: {
+                zoom: true,
+            },
+            Carousel: {
+                transition: "crossfade",
             }
         });
     </script>
+    <script src="js/main.js?v=3"></script>
+
+
+<!-- Hidden Fancybox Images -->
+<div class='hidden-galleries' style='position:absolute; width:0; height:0; overflow:hidden; opacity:0; pointer-events:none;'>
+  <a data-fancybox="photo-session-modal" href="جلسة تصوير/IMG_1026.jpg" data-caption="صورة 2"></a>
+  <a data-fancybox="photo-session-modal" href="جلسة تصوير/IMG_1058.jpg" data-caption="صورة 3"></a>
+  <a data-fancybox="photo-session-modal" href="جلسة تصوير/IMG_1068.jpg" data-caption="صورة 4"></a>
+  <a data-fancybox="photo-session-modal" href="جلسة تصوير/IMG_1095-2.jpg" data-caption="صورة 5"></a>
+  <a data-fancybox="photo-session-modal" href="جلسة تصوير/IMG_1128.jpg" data-caption="صورة 6"></a>
+  <a data-fancybox="photo-session-modal" href="جلسة تصوير/IMG_1181.jpg" data-caption="صورة 7"></a>
+  <a data-fancybox="social-media-gallery" href="اعمال سوشيال ميديا/المسافر.jpg" data-caption="تصميم سوشيال ميديا 2"></a>
+  <a data-fancybox="social-media-gallery" href="اعمال سوشيال ميديا/الاولى.jpg" data-caption="تصميم سوشيال ميديا 3"></a>
+  <a data-fancybox="social-media-gallery" href="اعمال سوشيال ميديا/الفيحاء.jpg" data-caption="تصميم سوشيال ميديا 4"></a>
+  <a data-fancybox="social-media-gallery" href="اعمال سوشيال ميديا/سوشيال ميديا تصاميم.jpg" data-caption="تصميم سوشيال ميديا 5"></a>
+  <a data-fancybox="identity-modal" href="هويات بصرية/Untitled-12.png" data-caption="بطاقة أعمال"></a>
+  <a data-fancybox="identity-modal" href="هويات بصرية/Untitled-13.png" data-caption="بطاقة أعمال"></a>
+  <a data-fancybox="sports-design-modal" href="اعمال رياضية/تصاميم رياضية.jpg" data-caption="تصميم رياضي 2"></a>
+  <a data-fancybox="sports-design-modal" href="اعمال رياضية/[]d]mتصاميم رياضية.jpg" data-caption="تصميم رياضي 3"></a>
+  <a data-fancybox="sports-photo-modal" href="تصوير رياضي/2.jpg" data-caption="تصوير رياضي 2"></a>
+  <a data-fancybox="campaign-modal" href="حملات سوشيال ميديا/حملة سناب 1.jpg" data-caption="إعلان سناب شات 2"></a>
+  <a data-fancybox="campaign-modal" href="حملات سوشيال ميديا/حملة انستا.jpg" data-caption="إعلان انستقرام"></a>
+  <a data-fancybox="ecommerce-modal" href="مواقع/موقع.jpg" data-caption="صفحة رئيسية لموقع"></a>
+  <a data-fancybox="photo-modal" href="منتجات/منتجات هني.jpg" data-caption="صورة منتج 2"></a>
+  <a data-fancybox="ads-modal" href="لوحات/large_billboard_on_old_underground_subway_wall.jpg" data-caption="إعلان مطبوع"></a>
+  <a data-fancybox="ads-modal" href="لوحات/Free-High-Quality-Billboard-Mockup-PSD-File.jpg" data-caption="إعلان مطبوع"></a>
+  <a data-fancybox="ads-modal" href="لوحات/Free Roadside City Billboard PSD Mockup.jpg" data-caption="إعلان مطبوع"></a>
+  <a data-fancybox="ads-modal" href="لوحات/Free Outdoor Advertising Billboard PSD Mockup.jpg" data-caption="إعلان مطبوع"></a>
+  <a data-fancybox="ads-modal" href="لوحات/Adversiment-Billboard-mockup-vol4.jpg" data-caption="إعلان مطبوع"></a>
+  <a data-fancybox="logo-modal" href="مطبوعات/الفيحاء.jpg" data-caption="تصميم فلاير"></a>
+  <a data-fancybox="logo-modal" href="مطبوعات/بروشور الوصل.jpg" data-caption="تصميم بروشور"></a>
+  <a data-fancybox="logo-modal" href="مطبوعات/منيو مطعم.jpg" data-caption="تصميم منيو مطعم"></a>
+  <a data-fancybox="t-shirt-design-modal" href="تصاميم تيشرتات/Gemini_Generated_Image_j16ef9j16ef9j16e.jpg" data-caption="تصميم تيشرت 2"></a>
+  <a data-fancybox="t-shirt-design-modal" href="تصاميم تيشرتات/Gemini_Generated_Image_s352gks352gks352.png" data-caption="تصميم تيشرت 3"></a>
+  <a data-fancybox="t-shirt-design-modal" href="تصاميم تيشرتات/photo_5848305690081348269_y.jpg" data-caption="تصميم تيشرت 4"></a>
+</div>
+
 </body>
 
 </html>
