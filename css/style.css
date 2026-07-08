@@ -1406,7 +1406,7 @@ dialog.modal h2 {
 /* ───────────── 17. Reveal (حالة أولية تُدار من JS) ───────────── */
 html.fx .reveal {
     opacity: 0;
-    transform: translateY(28px);
+    transform: translateY(35px) scale(0.96);
 }
 
 /* بدون JS أو مع تقليل الحركة: كل شيء ظاهر */

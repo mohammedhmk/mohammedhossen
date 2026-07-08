@@ -262,7 +262,7 @@
         /* — حركة افتتاحية للهيرو + العدادات — */
         const intro = gsap.timeline({ paused: true });
         intro.to('#hero .reveal', {
-            opacity: 1, y: 0, duration: 0.9, ease: 'power3.out', stagger: 0.12,
+            opacity: 1, y: 0, scale: 1, duration: 1.2, ease: 'power4.out', stagger: 0.15,
         });
         qsa('.stat-number').forEach((el) => {
             const end = parseInt(el.dataset.count, 10);
@@ -279,7 +279,7 @@
             start: 'top 88%',
             once: true,
             onEnter: (batch) => gsap.to(batch, {
-                opacity: 1, y: 0, duration: 0.8, ease: 'power3.out', stagger: 0.1,
+                opacity: 1, y: 0, scale: 1, duration: 0.8, ease: 'power3.out', stagger: 0.1,
             }),
         });
 
