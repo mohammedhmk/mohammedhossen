@@ -396,6 +396,10 @@ html.in-dark .main-nav a:hover {
     gap: 0.2rem;
 }
 
+.mobile-menu[hidden] {
+    display: none !important;
+}
+
 html.in-dark .mobile-menu {
     background: rgba(11, 20, 32, 0.98);
 }
