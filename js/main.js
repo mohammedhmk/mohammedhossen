@@ -516,7 +516,7 @@
             pre.classList.add('done');
             setTimeout(() => pre.remove(), 700);
             if (hasGSAP && !PRM) {
-                ScrollTrigger.refresh(); console.log('Refresh OK');
+                ScrollTrigger.refresh();
                 if (window.__heroIntro) window.__heroIntro.play();
             }
         });
