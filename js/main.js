@@ -149,14 +149,21 @@
             const service = qs('#service').value.trim();
             const message = qs('#message').value.trim();
             if (name.length < 2 || message.length < 10) {
-                error.hidden = false;
+                if (error) error.hidden = false;
                 return;
             }
-            error.hidden = true;
+            if (error) error.hidden = true;
             let text = 'مرحباً،\nالاسم: ' + name + '\n';
             if (service) text += 'الخدمة المطلوبة: ' + service + '\n';
             text += 'التفاصيل: ' + message;
-            window.open('https://wa.me/966538053847?text=' + encodeURIComponent(text), '_blank', 'noopener');
+            
+            const url = 'https://wa.me/966538053847?text=' + encodeURIComponent(text);
+            // استخدم click() على رابط بدلاً من window.open لتفادي حظر النوافذ المنبثقة في الجوال
+            const a = document.createElement('a');
+            a.href = url;
+            a.target = '_blank';
+            a.rel = 'noopener';
+            a.click();
         });
     }
 
