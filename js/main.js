@@ -148,7 +148,7 @@
             const name = qs('#name').value.trim();
             const service = qs('#service').value.trim();
             const message = qs('#message').value.trim();
-            if (name.length < 2 || message.length < 10) {
+            if (name.length < 2 || message.length < 5) {
                 if (error) error.hidden = false;
                 return;
             }
