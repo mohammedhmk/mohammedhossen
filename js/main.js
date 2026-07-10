@@ -108,6 +108,9 @@
         menu.addEventListener('click', (e) => {
             if (e.target.closest('a')) close();
         });
+        window.addEventListener('scroll', () => {
+            if (!menu.hidden) close();
+        }, { passive: true });
     }
 
     /* ── 6. المودالات (dialog أصلي) ──────────────────────────── */

@@ -1437,17 +1437,17 @@ html.fx .reveal {
         gap: 2rem;
     }
 }
-
-@media (max-width: 768px) {
-
+@media (max-width: 991px) {
     .main-nav,
     .header-cta {
         display: none;
     }
-
     .menu-toggle {
         display: block;
     }
+}
+
+@media (max-width: 768px) {
 
     .stats {
         grid-template-columns: repeat(2, 1fr);
@@ -1466,7 +1466,7 @@ html.fx .reveal {
     }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 992px) {
     .mobile-menu {
         display: none !important;
     }
