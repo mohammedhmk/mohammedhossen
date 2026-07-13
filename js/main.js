@@ -36,7 +36,7 @@
 
     /* ── 3. التنقل عبر الأنكورات (يمر دائماً عبر Lenis إن وُجد) ── */
     function initAnchors() {
-        const headerH = 88;
+        const headerH = 76; // يطابق --header-h في CSS
         qsa('.nav-anchor').forEach((a) => {
             a.addEventListener('click', (e) => {
                 const id = a.getAttribute('href');
@@ -115,13 +115,27 @@
 
     /* ── 6. المودالات (dialog أصلي) ──────────────────────────── */
     function initModals() {
-        
+        qsa('[data-modal-target]').forEach((btn) => {
+            const dlg = qs('#' + btn.dataset.modalTarget);
+            if (!dlg || typeof dlg.showModal !== 'function') return;
+            btn.addEventListener('click', () => dlg.showModal());
+        });
+        qsa('dialog.modal').forEach((dlg) => {
+            const closeBtn = qs('.modal-close', dlg);
+            if (closeBtn) closeBtn.addEventListener('click', () => dlg.close());
+            // النقر على الخلفية (العنصر dialog نفسه) يغلق
+            dlg.addEventListener('click', (e) => {
+                if (e.target === dlg) dlg.close();
+            });
+        });
     }
 
-    /* ── 7. فلاتر الأعمال ────────────────────────────────────── */
-    function initFilters() {
-        const buttons = qsa('#filter-buttons .filter-btn');
-        const cards = qsa('#portfolio-grid .project-card');
+    /* ── 7. فلاتر شبكة الأعمال ───────────────────────────────── */
+    function initWorksFilter() {
+        const wrap = qs('#works-filters');
+        if (!wrap) return;
+        const buttons = qsa('.filter-btn', wrap);
+        const cards = qsa('#works-grid .work-card');
         buttons.forEach((btn) => {
             btn.addEventListener('click', () => {
                 buttons.forEach((b) => {
@@ -131,9 +145,9 @@
                 const filter = btn.dataset.filter;
                 cards.forEach((card) => {
                     card.classList.toggle('is-hidden',
-                        filter !== 'all' && card.dataset.category !== filter);
+                        filter !== 'all' && card.dataset.cat !== filter);
                 });
-                if (hasGSAP) ScrollTrigger.refresh(); console.log('Refresh OK'); // تغيّر ارتفاع الشبكة يحرّك حدود الأقسام
+                if (hasGSAP) ScrollTrigger.refresh(); // تغيّر ارتفاع الشبكة يحرّك حدود الأقسام
             });
         });
     }
@@ -285,12 +299,31 @@
         window.__heroIntro = intro; // يشغَّل بعد البريلودر
 
         /* — reveal لبقية الأقسام (خارج البوابة فقط) — */
-        ScrollTrigger.batch('.section .reveal', {
+        ScrollTrigger.batch('.section .reveal, .cv-intro-scene .reveal', {
             start: 'top 88%',
             once: true,
             onEnter: (batch) => gsap.to(batch, {
                 opacity: 1, y: 0, scale: 1, duration: 0.8, ease: 'power3.out', stagger: 0.1,
             }),
+        });
+
+        /* — عدّادات أرقام دراسات الحالة (تدعم +، %، x، M) — */
+        qsa('.cs-num[data-count]').forEach((el) => {
+            const end = parseFloat(el.dataset.count);
+            if (isNaN(end)) return;
+            const dec = parseInt(el.dataset.decimals || '0', 10);
+            const prefix = el.dataset.prefix || '';
+            const suffix = el.dataset.suffix || '';
+            const fmt = (v) => prefix + (dec ? v.toFixed(dec) : Math.round(v).toLocaleString('en-US')) + suffix;
+            const counter = { v: 0 };
+            gsap.to(counter, {
+                v: end,
+                duration: 1.6,
+                ease: 'power1.out',
+                scrollTrigger: { trigger: el, start: 'top 88%', once: true },
+                onUpdate: () => { el.textContent = fmt(counter.v); },
+                onComplete: () => { el.textContent = fmt(end); },
+            });
         });
 
         /* — البوابة: الكاميرا تدخل الشاشة — */
@@ -306,18 +339,16 @@
 
             const tl = gsap.timeline({
                 defaults: { ease: 'power2.inOut' },
-                onUpdate: function() { applyDark(this.progress() > 0.65); },
                 scrollTrigger: {
                     trigger: '#portal',
                     start: 'top top',
                     end: () => '+=' + window.innerHeight * (isDesktop ? 1.5 : 1.0),
                     pin: true,
-                    toggleActions: 'play none none reverse',
+                    scrub: true,
                     anticipatePin: 1,
                     invalidateOnRefresh: true,
-                    
-                    onRefresh: (self) => applyDark(self.progress > 0.85),
-                    onUpdate: (self) => { /* handled by timeline */ },
+                    onUpdate: (self) => applyDark(self.progress > 0.65),
+                    onRefresh: (self) => applyDark(self.progress > 0.65),
                     // إعادة الرسم بحدة كاملة عند الاستقرار على 1 (لا transform في CSS
                     // لذا clearProps يعادل scale:1 تماماً — بلا قفزة)
                     onLeave: () => gsap.set(viewport, { clearProps: 'transform' }),
@@ -360,7 +391,7 @@
             }
 
             /* — المعرض الأفقي السينمائي (Horizontal Parallax Portfolio) — */
-            const hPortfolio = qs('#horizontal-portfolio');
+            const hPortfolio = qs('#portfolio');
             const hTrack = qs('#h-track');
             const hPanels = qsa('.h-panel');
             
@@ -369,7 +400,14 @@
                     // For RTL, scrolling should translate positively to show left items
                     return hTrack.scrollWidth - window.innerWidth;
                 };
-                
+
+                // عدّاد التقدم السينمائي (01 / 12 + شريط)
+                const hCurrent = qs('#h-current');
+                const hTotal = qs('#h-total');
+                const hBarFill = qs('#h-bar-fill');
+                const pad2 = (n) => String(n).padStart(2, '0');
+                if (hTotal) hTotal.textContent = pad2(hPanels.length);
+
                 const hTl = gsap.to(hTrack, {
                     x: getScrollAmount,
                     ease: "none",
@@ -379,7 +417,12 @@
                         end: () => `+=${hTrack.scrollWidth}`,
                         pin: true,
                         scrub: 1.5,
-                        invalidateOnRefresh: true
+                        invalidateOnRefresh: true,
+                        onUpdate: (self) => {
+                            if (hBarFill) hBarFill.style.transform = 'scaleX(' + self.progress + ')';
+                            if (hCurrent) hCurrent.textContent =
+                                pad2(Math.min(hPanels.length, Math.floor(self.progress * hPanels.length) + 1));
+                        }
                     }
                 });
 
@@ -452,36 +495,6 @@
                 { autoAlpha: 1, y: 0, color: '#16283C', duration: 0.2, ease: 'power1.out' }, 0.58);
             dawnTl.to({}, { duration: 0.2 }, 0.8); // هضبة ختامية
 
-            
-            /* — معرض الأعمال الأفقي السينمائي (Horizontal Scroll) — */
-            const track = qs('#cinematic-track');
-            const slides = qsa('.cinematic-slide');
-            if (track && slides.length > 0) {
-                // Ensure track width is relative to slides
-                gsap.set(track, { width: (slides.length * 100) + 'vw' });
-                
-                const horizontalTl = gsap.to(slides, {
-                    xPercent: -100 * (slides.length - 1),
-                    ease: 'none',
-                    scrollTrigger: {
-                        trigger: '#portfolio-cinematic',
-                        pin: true,
-                        scrub: 1,
-                        snap: {
-                            snapTo: 1 / (slides.length - 1),
-                            duration: {min: 0.2, max: 0.6},
-                            delay: 0.1,
-                            ease: 'power1.inOut'
-                        },
-                        end: () => '+=' + track.offsetWidth,
-                        invalidateOnRefresh: true,
-                    }
-                });
-            }
-
-            
-            
-
             return () => applyDark(false);
         });
 
@@ -547,12 +560,14 @@
         initHeaderAndScrollTop();
         initMobileMenu();
         initModals();
-        initFilters();
+        initWorksFilter();
         initContactForm();
         initMarquee();
         initHeroCanvas();
         initScrollFX();
         initPreloader();
+        const year = qs('#copy-year');
+        if (year) year.textContent = new Date().getFullYear();
     }
 
     if (document.readyState === 'loading') {

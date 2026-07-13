@@ -1,0 +1,8 @@
+node_modules
+.git
+.claude
+.agents
+SKILL.md
+skills-lock.json
+package-lock.json
+package.json

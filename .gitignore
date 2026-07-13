@@ -3,3 +3,9 @@ package-lock.json
 package.json
 
 .vercel
+
+# أدوات Claude Code الداخلية
+.claude/
+.agents/
+SKILL.md
+skills-lock.json

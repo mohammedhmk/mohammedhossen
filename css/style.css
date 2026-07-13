@@ -819,201 +819,31 @@ html.fx .portal-vignette {
     text-align: center;
 }
 
-.hall-screens {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: clamp(0.9rem, 2.2vw, 1.8rem);
-    width: min(1000px, 100%);
-    perspective: 900px;
-}
-
-.hall-screen button {
-    display: block;
-    width: 100%;
-    border: 1px solid rgba(79, 227, 193, 0.25);
-    border-radius: 0.9rem;
-    overflow: hidden;
-    background: var(--surface);
-    padding: 0;
-    position: relative;
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.4), 0 14px 34px -12px rgba(0, 0, 0, 0.7),
-        0 0 26px rgba(79, 227, 193, 0.18);
-    transition: box-shadow 0.35s, border-color 0.35s;
-}
-
-.hall-screen button:hover {
-    border-color: rgba(79, 227, 193, 0.7);
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.4), 0 18px 40px -12px rgba(0, 0, 0, 0.8),
-        0 0 44px rgba(79, 227, 193, 0.4);
-}
-
-/* قوس سينمائي خفيف حول المركز */
-.hall-screen:nth-child(1) button,
-.hall-screen:nth-child(4) button {
-    transform: rotateY(-6deg);
-}
-
-.hall-screen:nth-child(3) button,
-.hall-screen:nth-child(6) button {
-    transform: rotateY(6deg);
-}
-
-.hall-screen img {
-    width: 100%;
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
-}
-
-.hall-screen span {
-    position: absolute;
-    inset-inline: 0;
-    bottom: 0;
-    padding: 1.6rem 0.8rem 0.55rem;
-    font-weight: 700;
-    font-size: clamp(0.78rem, 1.4vw, 0.95rem);
-    color: #EAF2F1;
-    background: linear-gradient(to top, rgba(4, 8, 14, 0.92), transparent);
-    text-align: center;
-}
-
-.hall-floor-glow {
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at center, rgba(79, 227, 193, 0.4) 0%, transparent 70%);
-    pointer-events: none;
-    z-index: 0;
-    mix-blend-mode: screen;
-    opacity: 0;
-}
-
-/* ───────────── 10. Portfolio (dark) ───────────── */
-.filters {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.7rem;
-    margin-bottom: 3rem;
-}
-
-.filter-btn {
-    padding: 0.6rem 1.6rem;
-    border-radius: 99px;
-    border: 1px solid var(--line);
-    background: var(--surface);
-    color: var(--text);
-    font-weight: 700;
-    font-size: 0.95rem;
-    transition: all 0.3s var(--ease-smooth);
-}
-
-.filter-btn:hover {
-    border-color: var(--accent-fill);
-    color: var(--accent);
-}
-
-.filter-btn.is-active {
-    background: linear-gradient(135deg, var(--teal), var(--teal-bright));
-    color: #0B1420;
-    border-color: transparent;
-    box-shadow: var(--glow, none);
-}
-
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 1.8rem;
-}
-
-.project-card {
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    transition: opacity 0.35s ease, transform 0.35s ease;
-}
-
-.project-card.is-hidden {
-    display: none;
-}
-
-.project-open {
+/* ───────────── 10. الفاصل السينمائي قبل السيرة ───────────── */
+.cv-intro-scene {
+    height: 80vh;
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 100%;
-    text-align: start;
-    background: var(--surface);
-    border: 1px solid var(--line);
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    padding: 0;
-    color: var(--text);
-    box-shadow: var(--shadow);
-    transition: transform 0.4s var(--ease-smooth), box-shadow 0.4s, border-color 0.4s;
-}
-
-.project-open:hover {
-    transform: translateY(-8px);
-    border-color: rgba(79, 227, 193, 0.5);
-    box-shadow: 0 24px 48px -16px rgba(0, 0, 0, 0.6), 0 0 34px rgba(79, 227, 193, 0.18);
-}
-
-.project-media {
-    overflow: hidden;
-    aspect-ratio: 16 / 9;
-}
-
-.project-media img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.6s var(--ease-smooth);
-}
-
-.project-open:hover .project-media img {
-    transform: scale(1.07);
-}
-
-.project-body {
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-}
-
-.project-body h3 {
-    font-size: 1.25rem;
-    font-weight: 900;
-    display: flex;
     align-items: center;
-    gap: 0.6rem;
-    margin-bottom: 0.5rem;
+    justify-content: center;
+    position: relative;
+    padding-inline: 1.5rem;
 }
 
-.project-body h3 i {
-    color: var(--accent);
-    font-size: 1.05rem;
+.cv-intro-lead {
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 900;
+    color: var(--teal-bright);
+    text-align: center;
+    text-shadow: 0 0 30px rgba(62, 198, 168, 0.3);
 }
 
-.project-body p {
-    color: var(--muted);
-    font-size: 0.95rem;
-    margin-bottom: 1rem;
-    flex-grow: 1;
-}
-
-.tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-}
-
-.tags span {
-    font-size: 0.75rem;
+.cv-intro-sub {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
     font-weight: 700;
-    padding: 0.3rem 0.9rem;
-    border-radius: 99px;
-    background: rgba(79, 227, 193, 0.10);
-    color: var(--accent);
-    border: 1px solid rgba(79, 227, 193, 0.22);
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    margin-top: 2rem;
 }
 
 /* ───────────── 11. Partners marquee ───────────── */
@@ -1378,20 +1208,6 @@ dialog.modal h2 {
     transform: rotate(90deg) scale(1.08);
 }
 
-.modal-gallery {
-    display: flex;
-    flex-direction: column;
-    gap: 1.4rem;
-    align-items: center;
-}
-
-.modal-gallery img {
-    width: 100%;
-    max-width: 780px;
-    border-radius: var(--radius);
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
-}
-
 .modal-cv embed {
     width: 100%;
     height: 70svh;
@@ -1452,18 +1268,6 @@ html.fx .reveal {
     .stats {
         grid-template-columns: repeat(2, 1fr);
     }
-
-    .hall-screens {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .hall-screen:nth-child(n) button {
-        transform: none;
-    }
-
-    .hall-sub {
-        display: none;
-    }
 }
 
 @media (min-width: 992px) {
@@ -1506,22 +1310,8 @@ html.fx .reveal {
     .portal-scene {
         padding: 1rem;
     }
-    .hall-screens {
-        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-        gap: 1rem;
-    }
-    .hall-screen a {
-        padding: 0.5rem;
-    }
     .hall-title {
         font-size: 1.8rem;
-    }
-    .portfolio-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-    .project-card {
-        margin: 0;
     }
 }
 
@@ -1547,229 +1337,6 @@ html.fx .reveal {
 
 
 
-
-
-/* ───────────── Cinematic Hover for Real Works ───────────── */
-.project-card .project-img img {
-    transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1), filter 0.8s ease;
-    filter: brightness(0.85) contrast(1.1);
-}
-.project-card:hover .project-img img {
-    transform: scale(1.08);
-    filter: brightness(1.1) contrast(1.1);
-}
-.hall-screen a img {
-    transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1), filter 0.8s ease;
-    filter: brightness(0.85);
-}
-.hall-screen a:hover img {
-    transform: scale(1.1);
-    filter: brightness(1.1) drop-shadow(0 0 15px rgba(79, 227, 193, 0.4));
-}
-
-
-/* ───────────── Cinematic Horizontal Gallery ───────────── */
-.cinematic-portfolio {
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
-    background: #0b1420;
-}
-
-.cinematic-track {
-    display: flex;
-    height: 100vh;
-    width: 600vw; /* 6 slides */
-    will-change: transform;
-}
-
-.cinematic-slide {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    padding: 5vw;
-}
-
-.cinematic-slide-inner {
-    width: 100%;
-    height: 80vh;
-    position: relative;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
-    display: flex;
-    align-items: center;
-    background: #000;
-}
-
-.slide-image-wrapper {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-}
-
-.slide-image-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.6;
-    transition: opacity 0.5s ease, transform 10s ease;
-}
-
-.cinematic-slide-inner:hover .slide-image-wrapper img {
-    opacity: 0.9;
-    transform: scale(1.05);
-}
-
-.slide-content {
-    position: relative;
-    z-index: 2;
-    padding: 4rem;
-    max-width: 600px;
-}
-
-.slide-content h2 {
-    font-size: 3.5rem;
-    color: #fff;
-    margin-bottom: 1rem;
-    text-shadow: 0 4px 20px rgba(0,0,0,0.8);
-}
-
-.slide-content p {
-    font-size: 1.2rem;
-    color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 2rem;
-    line-height: 1.6;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.8);
-}
-
-.slide-content .btn {
-    backdrop-filter: blur(5px);
-    border-color: rgba(255,255,255,0.4);
-    color: #fff;
-}
-
-.slide-content .btn:hover {
-    background: #fff;
-    color: #0b1420;
-}
-
-@media (max-width: 768px) {
-    .slide-content {
-        padding: 2rem;
-    }
-    .slide-content h2 {
-        font-size: 2.5rem;
-    }
-    .cinematic-slide-inner {
-        height: 70vh;
-    }
-}
-
-
-/* ───────────── Stacked Sticky Cards ───────────── */
-.stacked-portfolio {
-    padding-bottom: 10vh;
-    position: relative;
-    z-index: 10;
-    width: 100%;
-}
-
-.stacked-card {
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-    overflow: hidden;
-    will-change: transform;
-}
-
-/* Add a bit of top margin per card index so they stack with a slight visual offset if we want, 
-   but since they are full height, they will just cover each other completely like pages. */
-.card-inner {
-    width: 100%;
-    max-width: 1200px;
-    height: 85vh;
-    position: relative;
-    border-radius: 24px;
-    overflow: hidden;
-    box-shadow: 0 -10px 40px rgba(0,0,0,0.5); /* shadow on top to separate from the card below it */
-    display: flex;
-    align-items: center;
-    justify-content: flex-start; /* Align text to the right in RTL, so flex-start in LTR layout? Wait, in RTL flex-start is right */
-    padding: 4rem;
-    background: #000;
-}
-
-.card-inner img {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 1;
-    filter: brightness(0.5);
-    transition: filter 0.5s ease, transform 0.5s ease;
-}
-
-.stacked-card:hover .card-inner img {
-    filter: brightness(0.7);
-    transform: scale(1.03);
-}
-
-.card-content {
-    position: relative;
-    z-index: 2;
-    max-width: 600px;
-}
-
-.card-content h2 {
-    font-size: 3.5rem;
-    color: #fff;
-    margin-bottom: 1rem;
-    text-shadow: 0 4px 15px rgba(0,0,0,0.8);
-}
-
-.card-content p {
-    font-size: 1.2rem;
-    color: rgba(255,255,255,0.9);
-    margin-bottom: 2rem;
-    line-height: 1.6;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.8);
-}
-
-.card-content .btn {
-    border-color: rgba(255,255,255,0.6);
-    color: #fff;
-    backdrop-filter: blur(4px);
-}
-.card-content .btn:hover {
-    background: #fff;
-    color: #0b1420;
-}
-
-@media (max-width: 768px) {
-    .stacked-card {
-        padding: 1rem;
-    }
-    .card-inner {
-        padding: 2rem;
-        height: 75vh;
-        align-items: flex-end; /* Text at the bottom on mobile */
-    }
-    .card-content h2 {
-        font-size: 2.2rem;
-    }
-}
 
 
 /* ───────────── CV Timeline World ───────────── */
@@ -2005,22 +1572,20 @@ html.fx .reveal {
     filter: brightness(0.9);
 }
 
+/* المحتوى ظاهر دائماً (الهوفر يعمّق التدرج فقط) — الإخفاء الكامل كان يضر اكتشاف الأعمال */
 .h-content {
     position: absolute;
     bottom: 0; left: 0; right: 0;
     padding: 3rem;
-    background: linear-gradient(to top, rgba(11,20,32,0.95), transparent);
+    background: linear-gradient(to top, rgba(11,20,32,0.88), transparent);
     color: white;
     text-align: right;
     direction: rtl;
-    transform: translateY(20px);
-    opacity: 0;
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .h-panel-inner:hover .h-content {
-    transform: translateY(0);
-    opacity: 1;
+    background: linear-gradient(to top, rgba(11,20,32,0.97), transparent);
 }
 
 .h-content h2 {
@@ -2038,9 +1603,429 @@ html.fx .reveal {
 
 @media (max-width: 768px) {
     .h-panel { padding: 5vw; }
-    .h-content { 
-        transform: translateY(0); 
-        opacity: 1; 
+    .h-content {
         padding: 2rem;
     }
+}
+
+/* ───────────── ترقية السينما: وسم تصنيف + عدّاد تقدم + شارة فيديو ───────────── */
+.h-tag {
+    position: absolute;
+    top: 1.2rem;
+    inset-inline-start: 1.2rem;
+    z-index: 3;
+    background: rgba(11, 20, 32, 0.72);
+    color: var(--teal-bright);
+    border: 1px solid rgba(79, 227, 193, 0.35);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 0.3rem 0.95rem;
+    border-radius: 99px;
+}
+
+.h-progress {
+    position: absolute;
+    bottom: clamp(1.2rem, 3.5vh, 2.2rem);
+    inset-inline: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.55rem;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.h-counter {
+    color: #EAF2F1;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    opacity: 0.85;
+}
+
+.h-counter b {
+    color: var(--teal-bright);
+    font-weight: 900;
+}
+
+.h-bar {
+    width: min(320px, 40vw);
+    height: 3px;
+    border-radius: 3px;
+    background: rgba(234, 242, 241, 0.15);
+    overflow: hidden;
+    display: block;
+}
+
+.h-bar i {
+    display: block;
+    height: 100%;
+    background: linear-gradient(90deg, var(--teal), var(--teal-bright));
+    transform: scaleX(0);
+    transform-origin: right center; /* RTL: يمتلئ من اليمين */
+}
+
+@keyframes play-pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(79, 227, 193, 0.5); }
+    50% { box-shadow: 0 0 0 22px rgba(79, 227, 193, 0); }
+}
+
+/* ───────────── غلاف الفيديو والمونتاج السينمائي ───────────── */
+.video-hero {
+    position: relative;
+    display: block;
+    height: clamp(320px, 52vh, 520px);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid rgba(79, 227, 193, 0.25);
+    box-shadow: 0 30px 70px -24px rgba(0, 0, 0, 0.8), 0 0 40px rgba(79, 227, 193, 0.10);
+    isolation: isolate;
+}
+
+.video-hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+    filter: brightness(0.5) saturate(1.1);
+    transition: transform 1.1s var(--ease-smooth), filter 0.6s ease;
+}
+
+.video-hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+        radial-gradient(circle at 50% 42%, transparent 30%, rgba(11, 20, 32, 0.55) 100%),
+        linear-gradient(to top, rgba(11, 20, 32, 0.92) 0%, rgba(11, 20, 32, 0.15) 55%, rgba(11, 20, 32, 0.4) 100%);
+}
+
+.video-hero:hover .video-hero-bg {
+    transform: scale(1.06);
+    filter: brightness(0.58) saturate(1.2);
+}
+
+/* لمعان سينمائي يمر عند الهوفر */
+.video-hero-shine {
+    position: absolute;
+    top: 0;
+    left: -60%;
+    width: 45%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.14), transparent);
+    transform: skewX(-18deg);
+    transition: left 0.9s var(--ease-smooth);
+}
+
+.video-hero:hover .video-hero-shine {
+    left: 130%;
+}
+
+.video-hero-play {
+    position: absolute;
+    top: 34%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: clamp(72px, 9vw, 96px);
+    height: clamp(72px, 9vw, 96px);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(62, 198, 168, 0.16);
+    border: 2px solid var(--teal-bright);
+    color: var(--teal-bright);
+    font-size: clamp(1.4rem, 2.4vw, 2rem);
+    padding-inline-start: 0.35rem; /* توسيط أيقونة المثلث بصرياً */
+    z-index: 2;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    animation: play-pulse 2.4s ease-in-out infinite;
+    transition: transform 0.4s var(--ease-smooth), background-color 0.4s;
+}
+
+.video-hero:hover .video-hero-play {
+    transform: translate(-50%, -50%) scale(1.12);
+    background: rgba(62, 198, 168, 0.32);
+}
+
+.video-hero-text {
+    position: absolute;
+    inset-inline: 0;
+    bottom: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: clamp(1.5rem, 4vw, 3rem);
+    text-align: center;
+    align-items: center;
+    color: #EAF2F1;
+}
+
+.video-hero-title {
+    font-size: clamp(1.6rem, 4vw, 2.8rem);
+    font-weight: 900;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+.video-hero-title i {
+    color: var(--teal-bright);
+    margin-inline-end: 0.4rem;
+}
+
+.video-hero-sub {
+    color: rgba(234, 242, 241, 0.82);
+    max-width: 620px;
+    font-size: clamp(0.9rem, 1.6vw, 1.05rem);
+}
+
+.video-hero-cta {
+    margin-top: 0.6rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 800;
+    color: #0B1420;
+    background: linear-gradient(135deg, var(--teal), var(--teal-bright));
+    padding: 0.7rem 1.6rem;
+    border-radius: 99px;
+    box-shadow: 0 8px 22px -8px rgba(62, 198, 168, 0.7);
+    transition: transform 0.35s var(--ease-smooth), box-shadow 0.35s;
+}
+
+.video-hero:hover .video-hero-cta {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 30px -8px rgba(62, 198, 168, 0.85);
+}
+
+@media (max-width: 480px) {
+    .video-hero { height: clamp(300px, 62vh, 460px); }
+    .video-hero-play { top: 26%; }
+}
+
+/* ───────────── شبكة كل الأعمال (Bento) ───────────── */
+.works-filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.7rem;
+    margin-bottom: 2.6rem;
+}
+
+.filter-btn {
+    padding: 0.55rem 1.5rem;
+    border-radius: 99px;
+    border: 1px solid var(--line);
+    background: transparent;
+    color: var(--text);
+    font-weight: 700;
+    font-size: 0.92rem;
+    transition: border-color 0.3s, color 0.3s, background-color 0.3s, box-shadow 0.3s;
+}
+
+.filter-btn:hover {
+    border-color: var(--accent-fill);
+    color: var(--accent);
+}
+
+.filter-btn.is-active {
+    background: linear-gradient(135deg, var(--teal), var(--teal-bright));
+    color: #0B1420;
+    border-color: transparent;
+    box-shadow: var(--glow, none);
+}
+
+.works-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 190px;
+    grid-auto-flow: dense;
+    gap: 1rem;
+}
+
+.work-card {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: var(--radius);
+    border: 1px solid var(--line);
+    background: var(--surface-2);
+    transition: border-color 0.35s, box-shadow 0.35s, transform 0.35s var(--ease-smooth);
+}
+
+.work-card:hover {
+    border-color: rgba(79, 227, 193, 0.55);
+    box-shadow: 0 18px 40px -14px rgba(0, 0, 0, 0.7), 0 0 26px rgba(79, 227, 193, 0.16);
+    transform: translateY(-4px);
+}
+
+.work-card.w-wide { grid-column: span 2; }
+.work-card.w-tall { grid-row: span 2; }
+
+.work-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s var(--ease-smooth), filter 0.7s;
+    filter: brightness(0.88);
+}
+
+.work-card:hover img {
+    transform: scale(1.07);
+    filter: brightness(1.05);
+}
+
+.work-label {
+    position: absolute;
+    inset-inline: 0;
+    bottom: 0;
+    padding: 2rem 1rem 0.8rem;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #EAF2F1;
+    background: linear-gradient(to top, rgba(4, 8, 14, 0.9), transparent);
+    z-index: 2;
+}
+
+.work-card.is-hidden { display: none; }
+
+@media (max-width: 900px) {
+    .works-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 160px;
+    }
+}
+
+@media (max-width: 480px) {
+    .works-grid {
+        grid-auto-rows: 140px;
+        gap: 0.7rem;
+    }
+}
+
+/* ───────────── دراسات الحالة ───────────── */
+.case-study {
+    display: grid;
+    grid-template-columns: 1.08fr 1fr;
+    gap: clamp(1.8rem, 4vw, 4rem);
+    align-items: center;
+    padding-block: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.case-study + .case-study {
+    border-top: 1px solid var(--line);
+    margin-top: clamp(1.2rem, 2.5vw, 2rem);
+}
+
+.case-study:nth-of-type(even) .cs-board { order: 2; }
+
+.cs-board {
+    display: block;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid rgba(79, 227, 193, 0.22);
+    box-shadow: 0 24px 50px -18px rgba(0, 0, 0, 0.7), 0 0 34px rgba(79, 227, 193, 0.10);
+    transition: transform 0.45s var(--ease-smooth), box-shadow 0.45s, border-color 0.45s;
+}
+
+.cs-board:hover {
+    transform: translateY(-6px) scale(1.01);
+    border-color: rgba(79, 227, 193, 0.5);
+    box-shadow: 0 30px 60px -18px rgba(0, 0, 0, 0.8), 0 0 46px rgba(79, 227, 193, 0.22);
+}
+
+.cs-board img {
+    width: 100%;
+    height: auto;
+}
+
+.cs-kicker {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.9rem;
+}
+
+.cs-chip {
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 0.28rem 0.9rem;
+    border-radius: 99px;
+    background: rgba(79, 227, 193, 0.10);
+    color: var(--accent);
+    border: 1px solid rgba(79, 227, 193, 0.25);
+}
+
+.cs-content h3 {
+    font-size: clamp(1.5rem, 3vw, 2.1rem);
+    font-weight: 900;
+    margin-bottom: 0.7rem;
+}
+
+.cs-content > p {
+    color: var(--muted);
+    margin-bottom: 1.2rem;
+}
+
+.cs-services {
+    margin-bottom: 1.6rem;
+}
+
+.cs-metrics {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+}
+
+.cs-metric {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 1rem 1.1rem;
+    transition: border-color 0.3s, transform 0.3s var(--ease-smooth);
+}
+
+.cs-metric:hover {
+    border-color: rgba(79, 227, 193, 0.45);
+    transform: translateY(-3px);
+}
+
+.cs-num {
+    display: block;
+    font-size: clamp(1.5rem, 2.6vw, 2rem);
+    font-weight: 900;
+    color: var(--accent);
+    line-height: 1.2;
+    direction: ltr; /* يحافظ على ترتيب +420% بصرياً داخل نص RTL */
+    unicode-bidi: embed;
+}
+
+.cs-metric small {
+    display: block;
+    color: var(--muted);
+    font-weight: 600;
+    margin-top: 0.2rem;
+    font-size: 0.85rem;
+}
+
+@media (max-width: 900px) {
+    .case-study {
+        grid-template-columns: 1fr;
+    }
+
+    /* اللوحة أولاً دائماً على الموبايل */
+    .case-study:nth-of-type(even) .cs-board { order: 0; }
+}
+
+@media (max-width: 480px) {
+    .cs-metrics { gap: 0.6rem; }
+    .cs-metric { padding: 0.8rem; }
 }

@@ -38,7 +38,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <link rel="stylesheet" href="css/style.css?v=3">
+    <link rel="stylesheet" href="css/style.css?v=8">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
 </head>
 
@@ -63,6 +63,7 @@
                 <a href="#about" class="nav-anchor">نبذة عني</a>
                 <a href="#services" class="nav-anchor">خدماتي</a>
                 <a href="#portfolio" class="nav-anchor">أعمالي</a>
+                <a href="#case-studies" class="nav-anchor">دراسات حالة</a>
                 <a href="#partners" class="nav-anchor">شركاء النجاح</a>
                 <a href="#contact" class="nav-anchor">التواصل</a>
             </nav>
@@ -74,6 +75,7 @@
             <a href="#about" class="nav-anchor">نبذة عني</a>
             <a href="#services" class="nav-anchor">خدماتي</a>
             <a href="#portfolio" class="nav-anchor">أعمالي</a>
+            <a href="#case-studies" class="nav-anchor">دراسات حالة</a>
             <a href="#partners" class="nav-anchor">شركاء النجاح</a>
             <a href="#contact" class="nav-anchor">التواصل</a>
             <a href="#contact" class="btn btn-primary nav-anchor">تواصل معي</a>
@@ -308,8 +310,8 @@
             </div>
             <div class="portal-viewport">
                 <div class="portal-scene" id="showcase-hall">
-                    <h2 class="hall-title" style="color:#fff; text-shadow:0 0 20px rgba(255,255,255,0.5); opacity:1 !important;">أعمال مميزة</h2>
-                    <p class="hall-sub" style="color:rgba(255,255,255,0.8); opacity:1 !important;">استعد للدخول في عالم أعمالي...</p>
+                    <h2 class="hall-title">أعمال مميزة</h2>
+                    <p class="hall-sub">استعد للدخول في عالم أعمالي...</p>
                 </div>
                 <div class="portal-bezel" aria-hidden="true"></div>
             </div>
@@ -322,24 +324,21 @@
             <!-- Portfolio -->
 
                                     <!-- ═══════════ المعرض الأفقي السينمائي (Horizontal Parallax Portfolio) ═══════════ -->
-            <section id="horizontal-portfolio" class="horizontal-portfolio">
+            <section id="portfolio" class="horizontal-portfolio" aria-label="أعمالي">
                 <div class="h-track-container">
                     <div class="h-track" id="h-track">
                         
                         <!-- Panel 1 -->
                         <div class="h-panel">
                             <div class="h-panel-inner">
+                                <span class="h-tag">تصميم</span>
                                 <div class="h-image-wrap">
-                                    <img src="هويات بصرية/Untitled-1.png" alt="هوية بصرية" class="parallax-img">
+                                    <img src="هويات بصرية/Untitled-1.png" alt="هوية بصرية" class="parallax-img" loading="lazy" decoding="async">
                                 </div>
                                 <div class="h-content">
                                     <h2>هوية بصرية</h2>
                                     <p>بناء علامة تجارية لا تُنسى عبر تصاميم مدروسة.</p>
                                     <a href="هويات بصرية/Untitled-1.png" class="btn btn-outline" data-fancybox="identity-modal">استكشف العمل</a>
-                                    <div style="display: none;">
-                                        <a href="هويات بصرية/Untitled-12.png" data-fancybox="identity-modal"></a>
-                                        <a href="هويات بصرية/Untitled-13.png" data-fancybox="identity-modal"></a>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -347,17 +346,14 @@
                         <!-- Panel 2 -->
                         <div class="h-panel">
                             <div class="h-panel-inner">
+                                <span class="h-tag">تسويق</span>
                                 <div class="h-image-wrap">
-                                    <img src="حملات سوشيال ميديا/حملة سناب.png" alt="حملة تسويقية" class="parallax-img">
+                                    <img src="حملات سوشيال ميديا/حملة سناب.png" alt="حملة تسويقية" class="parallax-img" loading="lazy" decoding="async">
                                 </div>
                                 <div class="h-content">
                                     <h2>حملات إعلانية</h2>
                                     <p>حملات إبداعية تصل لجمهورك المستهدف بدقة.</p>
                                     <a href="حملات سوشيال ميديا/حملة سناب.png" class="btn btn-outline" data-fancybox="campaign-modal">استكشف العمل</a>
-                                    <div style="display: none;">
-                                        <a href="حملات سوشيال ميديا/حملة شاشة.jpg" data-fancybox="campaign-modal"></a>
-                                        <a href="حملات سوشيال ميديا/حملة شاشة 1.jpg" data-fancybox="campaign-modal"></a>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -365,8 +361,9 @@
                         <!-- Panel 3 -->
                         <div class="h-panel">
                             <div class="h-panel-inner">
+                                <span class="h-tag">تطوير</span>
                                 <div class="h-image-wrap">
-                                    <img src="مواقع/متجر.jpg" alt="تطوير مواقع" class="parallax-img">
+                                    <img src="مواقع/متجر.jpg" alt="تطوير مواقع" class="parallax-img" loading="lazy" decoding="async">
                                 </div>
                                 <div class="h-content">
                                     <h2>تطوير مواقع</h2>
@@ -379,8 +376,9 @@
                         <!-- Panel 4 -->
                         <div class="h-panel">
                             <div class="h-panel-inner">
+                                <span class="h-tag">تصميم</span>
                                 <div class="h-image-wrap">
-                                    <img src="اعمال سوشيال ميديا/مية هلا.jpg" alt="تصاميم سوشيال ميديا" class="parallax-img">
+                                    <img src="اعمال سوشيال ميديا/مية هلا.jpg" alt="تصاميم سوشيال ميديا" class="parallax-img" loading="lazy" decoding="async">
                                 </div>
                                 <div class="h-content">
                                     <h2>سوشيال ميديا</h2>
@@ -393,8 +391,9 @@
                         <!-- Panel 5 -->
                         <div class="h-panel">
                             <div class="h-panel-inner">
+                                <span class="h-tag">تصوير</span>
                                 <div class="h-image-wrap">
-                                    <img src="منتجات/منتجات هلا.jpg" alt="تصوير منتجات" class="parallax-img">
+                                    <img src="منتجات/منتجات هلا.jpg" alt="تصوير منتجات" class="parallax-img" loading="lazy" decoding="async">
                                 </div>
                                 <div class="h-content">
                                     <h2>تصوير منتجات</h2>
@@ -407,13 +406,14 @@
                         <!-- Panel 6 -->
                         <div class="h-panel">
                             <div class="h-panel-inner">
+                                <span class="h-tag">تصميم</span>
                                 <div class="h-image-wrap">
-                                    <img src="هويات بصرية/Untitled-12.png" alt="تصميم برزنتيشن" class="parallax-img">
+                                    <img src="برزنتيشن/برزمنيشن.jpg" alt="تصميم برزنتيشن" class="parallax-img" loading="lazy" decoding="async">
                                 </div>
                                 <div class="h-content">
                                     <h2>تصميم العروض</h2>
                                     <p>عروض تقديمية تجمع بين الجاذبية البصرية وسهولة إيصال الأفكار.</p>
-                                    <a href="هويات بصرية/Untitled-12.png" class="btn btn-outline" data-fancybox="identity-modal">استكشف العمل</a>
+                                    <a href="برزنتيشن/برزمنيشن.jpg" class="btn btn-outline" data-fancybox="presentation-modal">استكشف العمل</a>
                                 </div>
                             </div>
                         </div>
@@ -421,8 +421,9 @@
                         <!-- Panel 7 -->
                         <div class="h-panel">
                             <div class="h-panel-inner">
+                                <span class="h-tag">تصميم</span>
                                 <div class="h-image-wrap">
-                                    <img src="اعمال رياضية/تصاميم رياضية.jpg" alt="تصاميم رياضية" class="parallax-img">
+                                    <img src="اعمال رياضية/تصاميم رياضية.jpg" alt="تصاميم رياضية" class="parallax-img" loading="lazy" decoding="async">
                                 </div>
                                 <div class="h-content">
                                     <h2>تصاميم رياضية</h2>
@@ -435,8 +436,9 @@
                         <!-- Panel 8 -->
                         <div class="h-panel">
                             <div class="h-panel-inner">
+                                <span class="h-tag">تصوير</span>
                                 <div class="h-image-wrap">
-                                    <img src="جلسة تصوير/IMG_1026.jpg" alt="جلسات تصوير" class="parallax-img">
+                                    <img src="جلسة تصوير/IMG_1026.jpg" alt="جلسات تصوير" class="parallax-img" loading="lazy" decoding="async">
                                 </div>
                                 <div class="h-content">
                                     <h2>جلسات تصوير</h2>
@@ -449,8 +451,9 @@
                         <!-- Panel 9 -->
                         <div class="h-panel">
                             <div class="h-panel-inner">
+                                <span class="h-tag">تصوير</span>
                                 <div class="h-image-wrap">
-                                    <img src="تصوير رياضي/2.jpg" alt="تصوير رياضي" class="parallax-img">
+                                    <img src="تصوير رياضي/2.jpg" alt="تصوير رياضي" class="parallax-img" loading="lazy" decoding="async">
                                 </div>
                                 <div class="h-content">
                                     <h2>تصوير رياضي</h2>
@@ -463,8 +466,9 @@
                         <!-- Panel 10 -->
                         <div class="h-panel">
                             <div class="h-panel-inner">
+                                <span class="h-tag">إعلانات</span>
                                 <div class="h-image-wrap">
-                                    <img src="لوحات/Adversiment-Billboard-mockup-vol4.jpg" alt="إعلانات طرقية" class="parallax-img">
+                                    <img src="لوحات/Adversiment-Billboard-mockup-vol4.jpg" alt="إعلانات طرقية" class="parallax-img" loading="lazy" decoding="async">
                                 </div>
                                 <div class="h-content">
                                     <h2>إعلانات طرقية</h2>
@@ -477,8 +481,9 @@
                         <!-- Panel 11 -->
                         <div class="h-panel">
                             <div class="h-panel-inner">
+                                <span class="h-tag">تصميم</span>
                                 <div class="h-image-wrap">
-                                    <img src="مطبوعات/منيو مطعم.jpg" alt="مطبوعات" class="parallax-img">
+                                    <img src="مطبوعات/منيو مطعم.jpg" alt="مطبوعات" class="parallax-img" loading="lazy" decoding="async">
                                 </div>
                                 <div class="h-content">
                                     <h2>مطبوعات وقوائم</h2>
@@ -491,8 +496,9 @@
                         <!-- Panel 12 -->
                         <div class="h-panel">
                             <div class="h-panel-inner">
+                                <span class="h-tag">تصميم</span>
                                 <div class="h-image-wrap">
-                                    <img src="تصاميم تيشرتات/photo_5848305690081348269_y.jpg" alt="تيشرتات" class="parallax-img">
+                                    <img src="تصاميم تيشرتات/photo_5848305690081348269_y.jpg" alt="تيشرتات" class="parallax-img" loading="lazy" decoding="async">
                                 </div>
                                 <div class="h-content">
                                     <h2>تصاميم أزياء</h2>
@@ -503,6 +509,272 @@
                         </div>
 
                     </div>
+                </div>
+                <div class="h-progress" aria-hidden="true">
+                    <span class="h-counter"><b id="h-current">01</b> / <b id="h-total">12</b></span>
+                    <span class="h-bar"><i id="h-bar-fill"></i></span>
+                </div>
+            </section>
+
+            <!-- ═══════════ شبكة كل الأعمال (Bento سريعة المسح) ═══════════ -->
+            <section id="works" class="section section-alt">
+                <div class="container">
+                    <h2 class="section-title reveal">كل الأعمال</h2>
+                    <p class="section-subtitle reveal">تصفّح الأرشيف الكامل بسرعة — اختر تصنيفاً أو استكشف الكل، وكل بطاقة تفتح معرضاً كاملاً.</p>
+                    <div id="works-filters" class="works-filters reveal" role="group" aria-label="تصفية الأعمال">
+                        <button type="button" class="filter-btn is-active" data-filter="all" aria-pressed="true">الكل</button>
+                        <button type="button" class="filter-btn" data-filter="identity" aria-pressed="false">هويات وعروض</button>
+                        <button type="button" class="filter-btn" data-filter="social" aria-pressed="false">سوشيال ميديا</button>
+                        <button type="button" class="filter-btn" data-filter="campaigns" aria-pressed="false">حملات إعلانية</button>
+                        <button type="button" class="filter-btn" data-filter="photo" aria-pressed="false">تصوير</button>
+                        <button type="button" class="filter-btn" data-filter="web" aria-pressed="false">مواقع</button>
+                        <button type="button" class="filter-btn" data-filter="print" aria-pressed="false">مطبوعات وأزياء</button>
+                    </div>
+                    <div id="works-grid" class="works-grid reveal">
+                        <a class="work-card w-wide" data-cat="identity" href="هويات بصرية/Untitled-1.png" data-fancybox="grid-identity" data-caption="هوية بصرية متكاملة">
+                            <img src="هويات بصرية/Untitled-1.png" alt="هوية بصرية متكاملة" loading="lazy" decoding="async">
+                            <span class="work-label">هوية بصرية متكاملة</span>
+                        </a>
+                        <a class="work-card" data-cat="identity" href="هويات بصرية/Untitled-12.png" data-fancybox="grid-identity" data-caption="بطاقات أعمال">
+                            <img src="هويات بصرية/Untitled-12.png" alt="بطاقات أعمال" loading="lazy" decoding="async">
+                            <span class="work-label">بطاقات أعمال</span>
+                        </a>
+                        <a class="work-card" data-cat="identity" href="هويات بصرية/Untitled-13.png" data-fancybox="grid-identity" data-caption="تطبيقات الهوية">
+                            <img src="هويات بصرية/Untitled-13.png" alt="تطبيقات الهوية" loading="lazy" decoding="async">
+                            <span class="work-label">تطبيقات الهوية</span>
+                        </a>
+                        <a class="work-card" data-cat="identity" href="برزنتيشن/برزمنيشن.jpg" data-fancybox="grid-identity" data-caption="عرض تقديمي احترافي">
+                            <img src="برزنتيشن/برزمنيشن.jpg" alt="عرض تقديمي احترافي" loading="lazy" decoding="async">
+                            <span class="work-label">عرض تقديمي احترافي</span>
+                        </a>
+                        <a class="work-card w-tall" data-cat="social" href="اعمال سوشيال ميديا/مية هلا.jpg" data-fancybox="grid-social" data-caption="تصاميم مية هلا">
+                            <img src="اعمال سوشيال ميديا/مية هلا.jpg" alt="تصاميم مية هلا" loading="lazy" decoding="async">
+                            <span class="work-label">تصاميم مية هلا</span>
+                        </a>
+                        <a class="work-card" data-cat="social" href="اعمال سوشيال ميديا/المسافر.jpg" data-fancybox="grid-social" data-caption="تصاميم المسافر">
+                            <img src="اعمال سوشيال ميديا/المسافر.jpg" alt="تصاميم المسافر" loading="lazy" decoding="async">
+                            <span class="work-label">تصاميم المسافر</span>
+                        </a>
+                        <a class="work-card" data-cat="social" href="اعمال سوشيال ميديا/الفيحاء.jpg" data-fancybox="grid-social" data-caption="تصاميم نادي الفيحاء">
+                            <img src="اعمال سوشيال ميديا/الفيحاء.jpg" alt="تصاميم نادي الفيحاء" loading="lazy" decoding="async">
+                            <span class="work-label">تصاميم نادي الفيحاء</span>
+                        </a>
+                        <a class="work-card" data-cat="social" href="اعمال سوشيال ميديا/سوشيال ميديا تصاميم.jpg" data-fancybox="grid-social" data-caption="منشورات سوشيال ميديا">
+                            <img src="اعمال سوشيال ميديا/سوشيال ميديا تصاميم.jpg" alt="منشورات سوشيال ميديا" loading="lazy" decoding="async">
+                            <span class="work-label">منشورات سوشيال ميديا</span>
+                        </a>
+                        <a class="work-card w-wide" data-cat="social" href="اعمال رياضية/تصاميم رياضية.jpg" data-fancybox="grid-social" data-caption="تصاميم رياضية">
+                            <img src="اعمال رياضية/تصاميم رياضية.jpg" alt="تصاميم رياضية" loading="lazy" decoding="async">
+                            <span class="work-label">تصاميم رياضية</span>
+                        </a>
+                        <a class="work-card w-tall" data-cat="campaigns" href="حملات سوشيال ميديا/حملة سناب.png" data-fancybox="grid-campaigns" data-caption="حملة سناب شات">
+                            <img src="حملات سوشيال ميديا/حملة سناب.png" alt="حملة سناب شات" loading="lazy" decoding="async">
+                            <span class="work-label">حملة سناب شات</span>
+                        </a>
+                        <a class="work-card" data-cat="campaigns" href="حملات سوشيال ميديا/حملة انستا.jpg" data-fancybox="grid-campaigns" data-caption="حملة انستقرام">
+                            <img src="حملات سوشيال ميديا/حملة انستا.jpg" alt="حملة انستقرام" loading="lazy" decoding="async">
+                            <span class="work-label">حملة انستقرام</span>
+                        </a>
+                        <a class="work-card" data-cat="campaigns" href="حملات جوجل/حملة جوجل قمة ميزاب.jpg" data-fancybox="grid-campaigns" data-caption="حملة Google Ads">
+                            <img src="حملات جوجل/حملة جوجل قمة ميزاب.jpg" alt="حملة Google Ads" loading="lazy" decoding="async">
+                            <span class="work-label">حملة Google Ads</span>
+                        </a>
+                        <a class="work-card w-wide" data-cat="web" href="مواقع/متجر.jpg" data-fancybox="grid-web" data-caption="متجر إلكتروني">
+                            <img src="مواقع/متجر.jpg" alt="متجر إلكتروني" loading="lazy" decoding="async">
+                            <span class="work-label">متجر إلكتروني</span>
+                        </a>
+                        <a class="work-card" data-cat="web" href="مواقع/موقع.jpg" data-fancybox="grid-web" data-caption="موقع تعريفي">
+                            <img src="مواقع/موقع.jpg" alt="موقع تعريفي" loading="lazy" decoding="async">
+                            <span class="work-label">موقع تعريفي</span>
+                        </a>
+                        <a class="work-card" data-cat="photo" href="منتجات/منتجات هلا.jpg" data-fancybox="grid-photo" data-caption="تصوير منتجات">
+                            <img src="منتجات/منتجات هلا.jpg" alt="تصوير منتجات" loading="lazy" decoding="async">
+                            <span class="work-label">تصوير منتجات</span>
+                        </a>
+                        <a class="work-card w-tall" data-cat="photo" href="جلسة تصوير/IMG_1026.jpg" data-fancybox="grid-photo" data-caption="جلسة تصوير">
+                            <img src="جلسة تصوير/IMG_1026.jpg" alt="جلسة تصوير" loading="lazy" decoding="async">
+                            <span class="work-label">جلسة تصوير</span>
+                        </a>
+                        <a class="work-card" data-cat="photo" href="تصوير رياضي/2.jpg" data-fancybox="grid-photo" data-caption="تصوير رياضي">
+                            <img src="تصوير رياضي/2.jpg" alt="تصوير رياضي" loading="lazy" decoding="async">
+                            <span class="work-label">تصوير رياضي</span>
+                        </a>
+                        <a class="work-card w-wide" data-cat="print" href="لوحات/Adversiment-Billboard-mockup-vol4.jpg" data-fancybox="grid-print" data-caption="لوحة إعلانية طرقية">
+                            <img src="لوحات/Adversiment-Billboard-mockup-vol4.jpg" alt="لوحة إعلانية طرقية" loading="lazy" decoding="async">
+                            <span class="work-label">لوحة إعلانية طرقية</span>
+                        </a>
+                        <a class="work-card" data-cat="print" href="مطبوعات/منيو مطعم.jpg" data-fancybox="grid-print" data-caption="منيو مطعم">
+                            <img src="مطبوعات/منيو مطعم.jpg" alt="منيو مطعم" loading="lazy" decoding="async">
+                            <span class="work-label">منيو مطعم</span>
+                        </a>
+                        <a class="work-card" data-cat="print" href="تصاميم تيشرتات/photo_5848305690081348269_y.jpg" data-fancybox="grid-print" data-caption="تصميم تيشرت">
+                            <img src="تصاميم تيشرتات/photo_5848305690081348269_y.jpg" alt="تصميم تيشرت" loading="lazy" decoding="async">
+                            <span class="work-label">تصميم تيشرت</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ═══════════ غلاف الفيديو والمونتاج (يفتح مجلد الدرايف) ═══════════ -->
+            <section id="video-showcase" class="section">
+                <div class="container">
+                    <!-- الرابط: مجلد درايف «المقاطع المميزة» — حدّث محتواه بحرية دون لمس الموقع -->
+                    <a class="video-hero reveal" href="https://drive.google.com/drive/folders/1AavHEzPJerxT0A1z1xM8PDn9iUWby9au"
+                        target="_blank" rel="noopener" aria-label="شاهد أعمال الفيديو والمونتاج على Google Drive">
+                        <img class="video-hero-bg" src="غلاف/مونتاج مقاطع.jpeg" alt="" loading="lazy" decoding="async">
+                        <span class="video-hero-shine" aria-hidden="true"></span>
+                        <span class="video-hero-play" aria-hidden="true"><i class="fas fa-play"></i></span>
+                        <span class="video-hero-text">
+                            <span class="video-hero-title"><i class="fas fa-film" aria-hidden="true"></i> شاهد أعمال الفيديو والمونتاج</span>
+                            <span class="video-hero-sub">مجموعة من أبرز مقاطعي — إعلانات، ريلز، ومونتاج احترافي للعلامات التجارية</span>
+                            <span class="video-hero-cta">افتح المعرض الكامل <i class="fas fa-arrow-left" aria-hidden="true"></i></span>
+                        </span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- ═══════════ دراسات الحالة — قصص نجاح بالأرقام ═══════════ -->
+            <section id="case-studies" class="section">
+                <div class="container">
+                    <h2 class="section-title reveal">دراسات حالة</h2>
+                    <p class="section-subtitle reveal">ليست مجرد أعمال — قصص نجاح حقيقية مع عملائي: التحدي، الحل، والنتائج بالأرقام.</p>
+
+                    <article class="case-study reveal">
+                        <a class="cs-board" href="دراسة حالات/براند-web.jpg" data-fancybox="case-studies-gallery" data-caption="Maison MAS — عبايات فاخرة">
+                            <img src="دراسة حالات/براند-web.jpg" alt="دراسة حالة Maison MAS" loading="lazy" decoding="async">
+                        </a>
+                        <div class="cs-content">
+                            <div class="cs-kicker"><span class="cs-chip">عبايات فاخرة</span><span class="cs-chip">10 أشهر</span></div>
+                            <h3>Maison MAS</h3>
+                            <p>محتوى بصري راقٍ، متجر إلكتروني كامل، وحملات مدروسة على Meta وTikTok رفعت الوعي بالعلامة وضاعفت الطلب.</p>
+                            <ul class="chips cs-services">
+                                <li class="chip">متجر إلكتروني</li>
+                                <li class="chip">صناعة محتوى بصري</li>
+                                <li class="chip">جلسات تصوير</li>
+                                <li class="chip">حملات Meta + TikTok</li>
+                            </ul>
+                            <div class="cs-metrics">
+                                <div class="cs-metric"><span class="cs-num" data-count="420" data-prefix="+" data-suffix="%">+420%</span><small>زيادة الطلبات</small></div>
+                                <div class="cs-metric"><span class="cs-num" data-count="3.2" data-decimals="1" data-suffix="x">3.2x</span><small>عائد الإعلانات ROAS</small></div>
+                                <div class="cs-metric"><span class="cs-num" data-count="780" data-prefix="+" data-suffix="%">+780%</span><small>نمو الوعي بالعلامة</small></div>
+                                <div class="cs-metric"><span class="cs-num" data-count="12" data-prefix="+">+12</span><small>دولة وصلتها الحملة</small></div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="case-study reveal">
+                        <a class="cs-board" href="دراسة حالات/قمة ميزاب-web.jpg" data-fancybox="case-studies-gallery" data-caption="مؤسسة قمة ميزاب للمقاولات">
+                            <img src="دراسة حالات/قمة ميزاب-web.jpg" alt="دراسة حالة قمة ميزاب للمقاولات" loading="lazy" decoding="async">
+                        </a>
+                        <div class="cs-content">
+                            <div class="cs-kicker"><span class="cs-chip">مقاولات وغاز</span><span class="cs-chip">6 أشهر</span></div>
+                            <h3>قمة ميزاب للمقاولات</h3>
+                            <p>موقع إلكتروني احترافي وحملات Google Ads مستهدفة وضعت المؤسسة في صدارة نتائج البحث وضاعفت المبيعات.</p>
+                            <ul class="chips cs-services">
+                                <li class="chip">موقع إلكتروني</li>
+                                <li class="chip">حملات Google Ads</li>
+                                <li class="chip">تحسين محركات البحث</li>
+                            </ul>
+                            <div class="cs-metrics">
+                                <div class="cs-metric"><span class="cs-num" data-count="720" data-prefix="+" data-suffix="%">+720%</span><small>زيارات الموقع</small></div>
+                                <div class="cs-metric"><span class="cs-num" data-count="4.8" data-decimals="1" data-suffix="x">4.8x</span><small>عائد إعلانات Google</small></div>
+                                <div class="cs-metric"><span class="cs-num" data-count="290" data-prefix="+" data-suffix="%">+290%</span><small>ارتفاع المبيعات</small></div>
+                                <div class="cs-metric"><span class="cs-num" data-count="185" data-prefix="+">+185</span><small>كلمة في الصفحة الأولى</small></div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="case-study reveal">
+                        <a class="cs-board" href="دراسة حالات/كفي RULE-web.jpg" data-fancybox="case-studies-gallery" data-caption="RULE Specialty Café">
+                            <img src="دراسة حالات/كفي RULE-web.jpg" alt="دراسة حالة مقهى RULE" loading="lazy" decoding="async">
+                        </a>
+                        <div class="cs-content">
+                            <div class="cs-kicker"><span class="cs-chip">مقهى مختص</span><span class="cs-chip">7 أشهر</span></div>
+                            <h3>RULE Specialty Café</h3>
+                            <p>بنينا حضور المقهى على Instagram وTikTok بمحتوى بصري جذاب وقصص تفاعلية تعكس جودة القهوة وأجواء المكان.</p>
+                            <ul class="chips cs-services">
+                                <li class="chip">إدارة Instagram + TikTok</li>
+                                <li class="chip">ريلز وفيديوهات قصيرة</li>
+                                <li class="chip">جلسات تصوير دورية</li>
+                                <li class="chip">استراتيجية محتوى</li>
+                            </ul>
+                            <div class="cs-metrics">
+                                <div class="cs-metric"><span class="cs-num" data-count="520" data-prefix="+" data-suffix="%">+520%</span><small>تفاعل المتابعين</small></div>
+                                <div class="cs-metric"><span class="cs-num" data-count="340" data-prefix="+" data-suffix="%">+340%</span><small>زيارات المحل</small></div>
+                                <div class="cs-metric"><span class="cs-num" data-count="8.4" data-decimals="1" data-suffix="M">8.4M</span><small>وصول إجمالي</small></div>
+                                <div class="cs-metric"><span class="cs-num" data-count="1250" data-prefix="+" data-suffix="%">+1,250%</span><small>نمو TikTok</small></div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="case-study reveal">
+                        <a class="cs-board" href="دراسة حالات/مزارع السحيباني-web.jpg" data-fancybox="case-studies-gallery" data-caption="مزارع السحيباني">
+                            <img src="دراسة حالات/مزارع السحيباني-web.jpg" alt="دراسة حالة مزارع السحيباني" loading="lazy" decoding="async">
+                        </a>
+                        <div class="cs-content">
+                            <div class="cs-kicker"><span class="cs-chip">زراعة ومنتجات طازجة</span><span class="cs-chip">5 أشهر</span></div>
+                            <h3>مزارع السحيباني</h3>
+                            <p>محتوى وإعلانات على Meta وInstagram مع تطبيقات هوية للتغليف والملبوسات عززت الحضور الرقمي وزادت الطلبات.</p>
+                            <ul class="chips cs-services">
+                                <li class="chip">صناعة محتوى</li>
+                                <li class="chip">إعلانات Meta</li>
+                                <li class="chip">تصميم تغليف</li>
+                                <li class="chip">هوية ملبوسات</li>
+                            </ul>
+                            <div class="cs-metrics">
+                                <div class="cs-metric"><span class="cs-num" data-count="380" data-prefix="+" data-suffix="%">+380%</span><small>نمو المتابعين</small></div>
+                                <div class="cs-metric"><span class="cs-num" data-count="260" data-prefix="+" data-suffix="%">+260%</span><small>زيادة الطلبات</small></div>
+                                <div class="cs-metric"><span class="cs-num" data-count="92" data-prefix="+" data-suffix="%">+92%</span><small>تفاعل الجمهور</small></div>
+                                <div class="cs-metric"><span class="cs-num" data-count="150" data-prefix="+">+150</span><small>قطعة محتوى</small></div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="case-study reveal">
+                        <a class="cs-board" href="دراسة حالات/مطعم طابونة-web.jpg" data-fancybox="case-studies-gallery" data-caption="مطعم طابونة — TABOUNA">
+                            <img src="دراسة حالات/مطعم طابونة-web.jpg" alt="دراسة حالة مطعم طابونة" loading="lazy" decoding="async">
+                        </a>
+                        <div class="cs-content">
+                            <div class="cs-kicker"><span class="cs-chip">مطاعم</span><span class="cs-chip">6 أشهر</span></div>
+                            <h3>مطعم طابونة — TABOUNA</h3>
+                            <p>إدارة كاملة للحسابات مع تصوير دوري للأطباق وحملات سناب شات وجوجل رفعت المكالمات والطلبات وحسّنت الظهور على Google Maps.</p>
+                            <ul class="chips cs-services">
+                                <li class="chip">إدارة حسابات</li>
+                                <li class="chip">تصوير أطباق</li>
+                                <li class="chip">Snapchat + Google Ads</li>
+                                <li class="chip">Google Business</li>
+                            </ul>
+                            <div class="cs-metrics">
+                                <div class="cs-metric"><span class="cs-num" data-count="650" data-prefix="+" data-suffix="%">+650%</span><small>زيادة المكالمات</small></div>
+                                <div class="cs-metric"><span class="cs-num" data-count="420" data-prefix="+" data-suffix="%">+420%</span><small>ظهور Google Maps</small></div>
+                                <div class="cs-metric"><span class="cs-num" data-count="1.2" data-decimals="1" data-suffix="M">1.2M</span><small>وصول إجمالي</small></div>
+                                <div class="cs-metric"><span class="cs-num" data-count="185" data-prefix="+" data-suffix="%">+185%</span><small>نمو المتابعين</small></div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="case-study reveal">
+                        <a class="cs-board" href="دراسة حالات/نادي الأولى-web.jpg" data-fancybox="case-studies-gallery" data-caption="أكاديمية نادي الأولى — ALOULA">
+                            <img src="دراسة حالات/نادي الأولى-web.jpg" alt="دراسة حالة أكاديمية نادي الأولى" loading="lazy" decoding="async">
+                        </a>
+                        <div class="cs-content">
+                            <div class="cs-kicker"><span class="cs-chip">رياضة وتدريب</span><span class="cs-chip">9 أشهر</span></div>
+                            <h3>أكاديمية نادي الأولى — ALOULA</h3>
+                            <p>هوية بصرية متكاملة من الشعار إلى الأطقم، وإدارة رقمية شاملة عززت سمعة الأكاديمية وضاعفت تسجيلات الناشئين.</p>
+                            <ul class="chips cs-services">
+                                <li class="chip">هوية بصرية متكاملة</li>
+                                <li class="chip">تصميم أطقم</li>
+                                <li class="chip">إدارة حسابات</li>
+                                <li class="chip">محتوى رياضي</li>
+                            </ul>
+                            <div class="cs-metrics">
+                                <div class="cs-metric"><span class="cs-num" data-count="440" data-prefix="+" data-suffix="%">+440%</span><small>زيادة التسجيلات</small></div>
+                                <div class="cs-metric"><span class="cs-num" data-count="680" data-prefix="+" data-suffix="%">+680%</span><small>نمو المتابعين</small></div>
+                                <div class="cs-metric"><span class="cs-num" data-count="90" data-prefix="+">+90</span><small>قطعة محتوى</small></div>
+                                <div class="cs-metric"><span class="cs-num" data-count="100" data-suffix="%">100%</span><small>هوية متكاملة</small></div>
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </section>
             <!-- Partners -->
@@ -569,9 +841,9 @@
             </section>
 
             <!-- ═══════════ فاصل سينمائي قبل السيرة ═══════════ -->
-            <section class="cv-intro-scene" style="height: 80vh; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative;">
-                <h2 class="reveal" style="font-size: clamp(2rem, 5vw, 4rem); color: var(--teal-bright); text-align: center; text-shadow: 0 0 30px rgba(62,198,168,0.3);">خلف كل عمل إبداعي عظيم...</h2>
-                <h2 class="reveal" style="font-size: clamp(1.5rem, 3vw, 2.5rem); color: rgba(255,255,255,0.8); text-align: center; margin-top: 2rem;">مسيرة من التحديات، الشغف، والقيادة</h2>
+            <section class="cv-intro-scene">
+                <h2 class="cv-intro-lead reveal">خلف كل عمل إبداعي عظيم...</h2>
+                <h2 class="cv-intro-sub reveal">مسيرة من التحديات، الشغف، والقيادة</h2>
             </section>
             
         
@@ -639,8 +911,8 @@
         </div> <!-- End of world-dark -->
 
         <!-- ═══════════ الشروق: العودة للنور ═══════════ -->
-        <section id="dawn" class="dawn" aria-hidden="true">
-            <div class="sun-disc"></div>
+        <section id="dawn" class="dawn">
+            <div class="sun-disc" aria-hidden="true"></div>
             <p class="dawn-copy">الآن… لنُشرق بمشروعك</p>
         </section>
 
@@ -726,6 +998,7 @@
                             <li><a href="#about" class="nav-anchor">نبذة عني</a></li>
                             <li><a href="#services" class="nav-anchor">خدماتي</a></li>
                             <li><a href="#portfolio" class="nav-anchor">أعمالي</a></li>
+                            <li><a href="#case-studies" class="nav-anchor">دراسات حالة</a></li>
                             <li><a href="#contact" class="nav-anchor">التواصل</a></li>
                         </ul>
                     </nav>
@@ -741,7 +1014,7 @@
                     </div>
                 </div>
                 <div class="container footer-copy">
-                    <p>&copy; 2025 | جميع الحقوق محفوظة لـ <strong>محمد حسين</strong></p>
+                    <p>&copy; <span id="copy-year">2026</span> | جميع الحقوق محفوظة لـ <strong>محمد حسين</strong></p>
                 </div>
             </footer>
         </div>
@@ -819,41 +1092,38 @@
             }
         });
     </script>
-    <script src="js/main.js?v=4"></script>
+    <script src="js/main.js?v=7"></script>
 
 
-<!-- Hidden Fancybox Images -->
+<!-- Hidden Fancybox Images: بقية صور كل معرض (الصورة الأولى هي رابط اللوحة نفسه — لا تكرار) -->
 <div class='hidden-galleries' style='position:absolute; width:0; height:0; overflow:hidden; opacity:0; pointer-events:none;'>
-  <a data-fancybox="photo-session-modal" href="جلسة تصوير/IMG_1026.jpg" data-caption="صورة 2"></a>
-  <a data-fancybox="photo-session-modal" href="جلسة تصوير/IMG_1058.jpg" data-caption="صورة 3"></a>
-  <a data-fancybox="photo-session-modal" href="جلسة تصوير/IMG_1068.jpg" data-caption="صورة 4"></a>
-  <a data-fancybox="photo-session-modal" href="جلسة تصوير/IMG_1095-2.jpg" data-caption="صورة 5"></a>
-  <a data-fancybox="photo-session-modal" href="جلسة تصوير/IMG_1128.jpg" data-caption="صورة 6"></a>
-  <a data-fancybox="photo-session-modal" href="جلسة تصوير/IMG_1181.jpg" data-caption="صورة 7"></a>
+  <a data-fancybox="photo-session-modal" href="جلسة تصوير/IMG_1004.jpg" data-caption="جلسة تصوير 2"></a>
+  <a data-fancybox="photo-session-modal" href="جلسة تصوير/IMG_1058.jpg" data-caption="جلسة تصوير 3"></a>
+  <a data-fancybox="photo-session-modal" href="جلسة تصوير/IMG_1068.jpg" data-caption="جلسة تصوير 4"></a>
+  <a data-fancybox="photo-session-modal" href="جلسة تصوير/IMG_1095-2.jpg" data-caption="جلسة تصوير 5"></a>
+  <a data-fancybox="photo-session-modal" href="جلسة تصوير/IMG_1128.jpg" data-caption="جلسة تصوير 6"></a>
+  <a data-fancybox="photo-session-modal" href="جلسة تصوير/IMG_1181.jpg" data-caption="جلسة تصوير 7"></a>
   <a data-fancybox="social-media-gallery" href="اعمال سوشيال ميديا/المسافر.jpg" data-caption="تصميم سوشيال ميديا 2"></a>
   <a data-fancybox="social-media-gallery" href="اعمال سوشيال ميديا/الاولى.jpg" data-caption="تصميم سوشيال ميديا 3"></a>
   <a data-fancybox="social-media-gallery" href="اعمال سوشيال ميديا/الفيحاء.jpg" data-caption="تصميم سوشيال ميديا 4"></a>
   <a data-fancybox="social-media-gallery" href="اعمال سوشيال ميديا/سوشيال ميديا تصاميم.jpg" data-caption="تصميم سوشيال ميديا 5"></a>
   <a data-fancybox="identity-modal" href="هويات بصرية/Untitled-12.png" data-caption="بطاقة أعمال"></a>
   <a data-fancybox="identity-modal" href="هويات بصرية/Untitled-13.png" data-caption="بطاقة أعمال"></a>
-  <a data-fancybox="sports-design-modal" href="اعمال رياضية/تصاميم رياضية.jpg" data-caption="تصميم رياضي 2"></a>
-  <a data-fancybox="sports-design-modal" href="اعمال رياضية/[]d]mتصاميم رياضية.jpg" data-caption="تصميم رياضي 3"></a>
-  <a data-fancybox="sports-photo-modal" href="تصوير رياضي/2.jpg" data-caption="تصوير رياضي 2"></a>
+  <a data-fancybox="sports-design-modal" href="اعمال رياضية/[]d]mتصاميم رياضية.jpg" data-caption="تصميم رياضي 2"></a>
+  <a data-fancybox="sports-photo-modal" href="تصوير رياضي/1.jpg" data-caption="تصوير رياضي 2"></a>
   <a data-fancybox="campaign-modal" href="حملات سوشيال ميديا/حملة سناب 1.jpg" data-caption="إعلان سناب شات 2"></a>
   <a data-fancybox="campaign-modal" href="حملات سوشيال ميديا/حملة انستا.jpg" data-caption="إعلان انستقرام"></a>
+  <a data-fancybox="campaign-modal" href="حملات جوجل/حملة جوجل قمة ميزاب.jpg" data-caption="حملة إعلانات جوجل"></a>
   <a data-fancybox="ecommerce-modal" href="مواقع/موقع.jpg" data-caption="صفحة رئيسية لموقع"></a>
   <a data-fancybox="photo-modal" href="منتجات/منتجات هني.jpg" data-caption="صورة منتج 2"></a>
   <a data-fancybox="ads-modal" href="لوحات/large_billboard_on_old_underground_subway_wall.jpg" data-caption="إعلان مطبوع"></a>
   <a data-fancybox="ads-modal" href="لوحات/Free-High-Quality-Billboard-Mockup-PSD-File.jpg" data-caption="إعلان مطبوع"></a>
   <a data-fancybox="ads-modal" href="لوحات/Free Roadside City Billboard PSD Mockup.jpg" data-caption="إعلان مطبوع"></a>
   <a data-fancybox="ads-modal" href="لوحات/Free Outdoor Advertising Billboard PSD Mockup.jpg" data-caption="إعلان مطبوع"></a>
-  <a data-fancybox="ads-modal" href="لوحات/Adversiment-Billboard-mockup-vol4.jpg" data-caption="إعلان مطبوع"></a>
   <a data-fancybox="logo-modal" href="مطبوعات/الفيحاء.jpg" data-caption="تصميم فلاير"></a>
   <a data-fancybox="logo-modal" href="مطبوعات/بروشور الوصل.jpg" data-caption="تصميم بروشور"></a>
-  <a data-fancybox="logo-modal" href="مطبوعات/منيو مطعم.jpg" data-caption="تصميم منيو مطعم"></a>
   <a data-fancybox="t-shirt-design-modal" href="تصاميم تيشرتات/Gemini_Generated_Image_j16ef9j16ef9j16e.jpg" data-caption="تصميم تيشرت 2"></a>
   <a data-fancybox="t-shirt-design-modal" href="تصاميم تيشرتات/Gemini_Generated_Image_s352gks352gks352.png" data-caption="تصميم تيشرت 3"></a>
-  <a data-fancybox="t-shirt-design-modal" href="تصاميم تيشرتات/photo_5848305690081348269_y.jpg" data-caption="تصميم تيشرت 4"></a>
 </div>
 
 </body>
