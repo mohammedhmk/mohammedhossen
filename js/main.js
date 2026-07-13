@@ -189,6 +189,102 @@
         });
     }
 
+    /* ── 9b. المعرض الحر الأفقي (سحب + أسهم + snap + شريط تقدم) ── */
+    function initCinemaGallery() {
+        const track = qs('#h-track');
+        if (!track) return;
+        const panels = qsa('.h-panel', track);
+        const prev = qs('.cinema-prev');
+        const next = qs('.cinema-next');
+        const barFill = qs('#h-bar-fill');
+        if (!panels.length) return;
+
+        // نسبة التمرير (Math.abs يغطي RTL في المتصفحات الحديثة: scrollLeft سالب)
+        const maxScroll = () => track.scrollWidth - track.clientWidth;
+        const ratio = () => {
+            const m = maxScroll();
+            return m <= 0 ? 0 : Math.min(1, Math.abs(track.scrollLeft) / m);
+        };
+
+        let rafPending = false;
+        const render = () => {
+            rafPending = false;
+            const r = ratio();
+            if (barFill) barFill.style.transform = 'scaleX(' + Math.max(0.08, r) + ')';
+            if (prev) prev.disabled = r <= 0.01;
+            if (next) next.disabled = r >= 0.99;
+            // بارالاكس خفيف: كل صورة تنزاح حسب بُعد لوحتها عن مركز الشاشة
+            if (!PRM) {
+                const vpCenter = window.innerWidth / 2;
+                panels.forEach((p) => {
+                    const rect = p.getBoundingClientRect();
+                    if (rect.right < -80 || rect.left > window.innerWidth + 80) return;
+                    const off = ((rect.left + rect.width / 2) - vpCenter) / window.innerWidth; // ~[-1,1]
+                    const img = qs('.parallax-img', p);
+                    if (img) img.style.transform = 'translateX(calc(-50% + ' + (off * -5).toFixed(2) + '%))';
+                });
+            }
+        };
+        const onScroll = () => {
+            if (!rafPending) { rafPending = true; requestAnimationFrame(render); }
+        };
+        track.addEventListener('scroll', onScroll, { passive: true });
+
+        // الأسهم: مرّكز اللوحة المجاورة (لا حساب RTL يدوي)
+        const centeredIndex = () => {
+            const vpCenter = window.innerWidth / 2;
+            let best = 0, bestDist = Infinity;
+            panels.forEach((p, i) => {
+                const rect = p.getBoundingClientRect();
+                const d = Math.abs((rect.left + rect.width / 2) - vpCenter);
+                if (d < bestDist) { bestDist = d; best = i; }
+            });
+            return best;
+        };
+        // تمرير المسار أفقياً فقط (لا نلمس تمرير الصفحة العمودي — لذا لا scrollIntoView)
+        const goTo = (i) => {
+            const idx = Math.max(0, Math.min(panels.length - 1, i));
+            const tRect = track.getBoundingClientRect();
+            const pRect = panels[idx].getBoundingClientRect();
+            const delta = (pRect.left + pRect.width / 2) - (tRect.left + tRect.width / 2);
+            track.scrollBy({ left: delta, behavior: PRM ? 'auto' : 'smooth' });
+        };
+        // prev = سهم لليمين = نحو البداية (فهرس أقل)؛ next = سهم لليسار = نحو النهاية
+        if (prev) prev.addEventListener('click', () => goTo(centeredIndex() - 1));
+        if (next) next.addEventListener('click', () => goTo(centeredIndex() + 1));
+
+        // سحب بالفأرة (اللمس يُترك للتمرير الأصلي عبر فحص pointerType)
+        let down = false, startX = 0, startScroll = 0, moved = 0;
+        track.addEventListener('pointerdown', (e) => {
+            if (e.pointerType === 'touch') return;
+            down = true; moved = 0;
+            startX = e.clientX;
+            startScroll = track.scrollLeft;
+            track.classList.add('is-dragging');
+        });
+        track.addEventListener('pointermove', (e) => {
+            if (!down) return;
+            const dx = e.clientX - startX;
+            moved = Math.max(moved, Math.abs(dx));
+            track.scrollLeft = startScroll - dx;
+        });
+        const endDrag = () => {
+            if (!down) return;
+            down = false;
+            track.classList.remove('is-dragging');
+        };
+        track.addEventListener('pointerup', endDrag);
+        track.addEventListener('pointercancel', endDrag);
+        track.addEventListener('pointerleave', endDrag);
+        // منع فتح اللوحة إن كان الإفلات بعد سحب فعلي
+        track.addEventListener('click', (e) => {
+            if (moved > 8) { e.preventDefault(); e.stopPropagation(); moved = 0; }
+        }, true);
+
+        render();
+        window.addEventListener('resize', onScroll, { passive: true });
+    }
+
     /* ── 10. كانفاس الهيرو (جزيئات فاتحة) ────────────────────── */
     function initHeroCanvas() {
         const canvas = qs('#hero-canvas');
@@ -390,61 +486,6 @@
                 tl.to('.portal-vignette', { autoAlpha: 0, duration: 0.15 }, 0.73);
             }
 
-            /* — المعرض الأفقي السينمائي (Horizontal Parallax Portfolio) — */
-            const hPortfolio = qs('#portfolio');
-            const hTrack = qs('#h-track');
-            const hPanels = qsa('.h-panel');
-            
-            if (hPortfolio && hTrack && hPanels.length > 0) {
-                const getScrollAmount = () => {
-                    // For RTL, scrolling should translate positively to show left items
-                    return hTrack.scrollWidth - window.innerWidth;
-                };
-
-                // عدّاد التقدم السينمائي (01 / 12 + شريط)
-                const hCurrent = qs('#h-current');
-                const hTotal = qs('#h-total');
-                const hBarFill = qs('#h-bar-fill');
-                const pad2 = (n) => String(n).padStart(2, '0');
-                if (hTotal) hTotal.textContent = pad2(hPanels.length);
-
-                const hTl = gsap.to(hTrack, {
-                    x: getScrollAmount,
-                    ease: "none",
-                    scrollTrigger: {
-                        trigger: hPortfolio,
-                        start: "top top",
-                        end: () => `+=${hTrack.scrollWidth}`,
-                        pin: true,
-                        scrub: 1.5,
-                        invalidateOnRefresh: true,
-                        onUpdate: (self) => {
-                            if (hBarFill) hBarFill.style.transform = 'scaleX(' + self.progress + ')';
-                            if (hCurrent) hCurrent.textContent =
-                                pad2(Math.min(hPanels.length, Math.floor(self.progress * hPanels.length) + 1));
-                        }
-                    }
-                });
-
-                // Parallax Effect for Images inside cards
-                qsa('.parallax-img', hPortfolio).forEach((img) => {
-                    gsap.fromTo(img, 
-                        { x: '-15%' }, 
-                        {
-                            x: '15%',
-                            ease: 'none',
-                            scrollTrigger: {
-                                trigger: hPortfolio,
-                                start: "top top",
-                                end: () => `+=${hTrack.scrollWidth}`,
-                                scrub: 1.5,
-                                invalidateOnRefresh: true
-                            }
-                        }
-                    );
-                });
-            }
-
             /* — عالم المسيرة المهنية (CV Horizontal Timeline) — */
             const cvSection = qs('#cv-timeline');
             const cvTrack = qs('#cv-track');
@@ -563,6 +604,7 @@
         initWorksFilter();
         initContactForm();
         initMarquee();
+        initCinemaGallery();
         initHeroCanvas();
         initScrollFX();
         initPreloader();

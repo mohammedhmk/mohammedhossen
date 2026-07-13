@@ -38,7 +38,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <link rel="stylesheet" href="css/style.css?v=8">
+    <link rel="stylesheet" href="css/style.css?v=9">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
 </head>
 
@@ -321,13 +321,17 @@
         <!-- ═══════════ العالم الغامق — عالم الأعمال ═══════════ -->
         <div class="world world-dark">
 
-            <!-- Portfolio -->
-
-                                    <!-- ═══════════ المعرض الأفقي السينمائي (Horizontal Parallax Portfolio) ═══════════ -->
-            <section id="portfolio" class="horizontal-portfolio" aria-label="أعمالي">
-                <div class="h-track-container">
+            <!-- ═══════════ معرض حر أفقي (اسحب أو مرّر — بلا خطف للتمرير) ═══════════ -->
+            <section id="portfolio" class="cinema section" aria-label="أعمال مختارة">
+                <div class="container cinema-head">
+                    <h2 class="section-title reveal">أعمال مختارة</h2>
+                    <p class="section-subtitle reveal">لمحة سينمائية من أبرز مشاريعي — اسحب أو مرّر أفقياً لاستكشافها بحرية.</p>
+                </div>
+                <div class="cinema-viewport">
+                    <button type="button" class="cinema-nav cinema-prev" aria-label="السابق"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+                    <button type="button" class="cinema-nav cinema-next" aria-label="التالي"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
                     <div class="h-track" id="h-track">
-                        
+
                         <!-- Panel 1 -->
                         <div class="h-panel">
                             <div class="h-panel-inner">
@@ -510,10 +514,7 @@
 
                     </div>
                 </div>
-                <div class="h-progress" aria-hidden="true">
-                    <span class="h-counter"><b id="h-current">01</b> / <b id="h-total">12</b></span>
-                    <span class="h-bar"><i id="h-bar-fill"></i></span>
-                </div>
+                <div class="cinema-progress" aria-hidden="true"><i id="h-bar-fill"></i></div>
             </section>
 
             <!-- ═══════════ شبكة كل الأعمال (Bento سريعة المسح) ═══════════ -->
@@ -1092,7 +1093,7 @@
             }
         });
     </script>
-    <script src="js/main.js?v=7"></script>
+    <script src="js/main.js?v=9"></script>
 
 
 <!-- Hidden Fancybox Images: بقية صور كل معرض (الصورة الأولى هي رابط اللوحة نفسه — لا تكرار) -->
