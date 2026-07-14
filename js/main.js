@@ -486,28 +486,7 @@
                 tl.to('.portal-vignette', { autoAlpha: 0, duration: 0.15 }, 0.73);
             }
 
-            /* — عالم المسيرة المهنية (CV Horizontal Timeline) — */
-            const cvSection = qs('#cv-timeline');
-            const cvTrack = qs('#cv-track');
-            if (cvSection && cvTrack) {
-                gsap.to(cvTrack, {
-                    x: () => {
-                        // For RTL, scrolling should move elements to the right (positive X)
-                        // However, since we want them to slide left as we scroll down, we use positive X.
-                        // Wait, in RTL flex containers, items start from right. To see items on the left, we need to translate X positively.
-                        return cvTrack.scrollWidth - window.innerWidth;
-                    },
-                    ease: "none",
-                    scrollTrigger: {
-                        trigger: cvSection,
-                        pin: true,
-                        scrub: 1,
-                        start: "top top",
-                        end: () => `+=${cvTrack.scrollWidth}`,
-                        invalidateOnRefresh: true
-                    }
-                });
-            }
+            /* — المسيرة المهنية أصبحت خطاً زمنياً عمودياً (تمرير طبيعي، بلا pin) — */
 
             /* — الشروق: العودة إلى النور — */
             const sun = qs('.sun-disc');

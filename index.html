@@ -38,7 +38,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <link rel="stylesheet" href="css/style.css?v=9">
+    <link rel="stylesheet" href="css/style.css?v=10">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
 </head>
 
@@ -848,18 +848,18 @@
             </section>
             
         
-        <!-- ═══════════ عالم السيرة المهنية (CV World) ═══════════ -->
-        <div class="world world-cv" id="cv-world-wrapper">
-            <section id="cv-timeline" class="cv-timeline-section">
-                <div class="cv-timeline-header">
-                    <h2>رحلتي المهنية</h2>
-                    <p>أكثر من 5 سنوات من الإبداع والقيادة التسويقية</p>
-                </div>
-                <div class="cv-track-container">
-                    <div class="cv-track" id="cv-track">
-                        
+        <!-- ═══════════ المسيرة المهنية — خط زمني عمودي (تمرير طبيعي) ═══════════ -->
+        <div class="world-cv" id="cv-world-wrapper">
+            <section id="cv-timeline" class="section cv-timeline-section">
+                <div class="container">
+                    <div class="cv-timeline-header">
+                        <h2 class="reveal">رحلتي المهنية</h2>
+                        <p class="reveal">أكثر من 5 سنوات من الإبداع والقيادة التسويقية</p>
+                    </div>
+                    <div class="cv-vtimeline">
+
                         <!-- Node 1 -->
-                        <div class="cv-node">
+                        <div class="cv-node reveal">
                             <div class="cv-node-content highlight-node">
                                 <span class="cv-year">الحاضر</span>
                                 <h3>مدير تسويق</h3>
@@ -870,7 +870,7 @@
                         </div>
 
                         <!-- Node 2 -->
-                        <div class="cv-node">
+                        <div class="cv-node reveal">
                             <div class="cv-node-content">
                                 <span class="cv-year">خبرة تراكمية</span>
                                 <h3>مصمم جرافيك وتطوير مواقع</h3>
@@ -881,7 +881,7 @@
                         </div>
 
                         <!-- Node 3 -->
-                        <div class="cv-node">
+                        <div class="cv-node reveal">
                             <div class="cv-node-content">
                                 <span class="cv-year">ترسانة المهارات</span>
                                 <h3>أدوات واحتراف</h3>
@@ -896,12 +896,12 @@
                         </div>
 
                         <!-- Node 4 -->
-                        <div class="cv-node">
+                        <div class="cv-node reveal">
                             <div class="cv-node-content highlight-node">
                                 <span class="cv-year">المستقبل</span>
                                 <h3>رؤية وطموح</h3>
                                 <p>صناعة تجارب رقمية لا تُنسى، وبناء علامات تجارية تتصدر المشهد في عالم يتطور لحظة بلحظة.</p>
-                                <a href="cv/محمد_حسين_سيرة_ذاتية.pdf" class="btn btn-primary" style="margin-top: 1rem;" download><i class="fas fa-download"></i> تحميل النسخة الورقية (PDF)</a>
+                                <a href="cv/محمد_حسين_سيرة_ذاتية.pdf" class="btn btn-primary cv-dl" download><i class="fas fa-download"></i> تحميل النسخة الورقية (PDF)</a>
                             </div>
                         </div>
 
@@ -1093,7 +1093,7 @@
             }
         });
     </script>
-    <script src="js/main.js?v=9"></script>
+    <script src="js/main.js?v=10"></script>
 
 
 <!-- Hidden Fancybox Images: بقية صور كل معرض (الصورة الأولى هي رابط اللوحة نفسه — لا تكرار) -->

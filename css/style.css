@@ -1340,84 +1340,83 @@ html.fx .reveal {
 
 
 /* ───────────── CV Timeline World ───────────── */
+/* ───────────── المسيرة المهنية — خط زمني عمودي ───────────── */
 .world-cv {
     position: relative;
-    overflow: hidden;
     color: #fff;
 }
 
 .cv-timeline-section {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
+    background: var(--bg);
 }
 
 .cv-timeline-header {
-    position: absolute;
-    top: 10vh;
-    left: 0;
-    width: 100%;
     text-align: center;
-    z-index: 10;
+    margin-bottom: clamp(2.5rem, 6vw, 4rem);
 }
 
 .cv-timeline-header h2 {
-    font-size: 3rem;
-    color: #3EC6A8;
+    font-size: var(--fs-h2);
+    font-weight: 900;
+    color: var(--teal-bright);
     margin-bottom: 0.5rem;
-    text-shadow: 0 4px 20px rgba(62, 198, 168, 0.4);
+    text-shadow: 0 4px 20px rgba(62, 198, 168, 0.35);
 }
 
 .cv-timeline-header p {
-    font-size: 1.2rem;
-    color: rgba(255,255,255,0.8);
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.8);
 }
 
-.cv-track-container {
-    width: 100%;
-    overflow: hidden;
-}
-
-.cv-track {
-    display: flex;
-    align-items: center;
-    height: 60vh;
-    width: fit-content;
-    padding: 0 20vw;
-    gap: 10vw;
-    will-change: transform;
+/* الحاوية: خط رأسي على جهة البداية (اليمين في RTL) */
+.cv-vtimeline {
     position: relative;
+    max-width: 820px;
+    margin-inline: auto;
 }
 
-.cv-track::before {
+.cv-vtimeline::before {
     content: '';
     position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, rgba(62, 198, 168, 0.4), transparent);
-    z-index: 0;
-    transform: translateY(-50%);
+    inset-inline-start: 12px;         /* مركز الخط عند 13px */
+    top: 6px;
+    bottom: 6px;
+    width: 2px;
+    background: linear-gradient(to bottom, transparent, rgba(62, 198, 168, 0.5) 12%, rgba(62, 198, 168, 0.5) 88%, transparent);
 }
 
 .cv-node {
-    width: 500px;
-    flex-shrink: 0;
     position: relative;
+    padding-inline-start: 3rem;       /* يُزيح المحتوى ليُفسح للنقطة والخط */
+    margin-bottom: clamp(1.6rem, 4vw, 2.6rem);
+}
+
+.cv-node:last-child { margin-bottom: 0; }
+
+/* نقطة العقدة على الخط (مركزها 13px = مركز الخط) */
+.cv-node::before {
+    content: '';
+    position: absolute;
+    inset-inline-start: 4px;
+    top: 2.2rem;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--teal);
+    border: 3px solid var(--bg);
+    box-shadow: 0 0 0 2px rgba(62, 198, 168, 0.4), 0 0 16px rgba(62, 198, 168, 0.5);
+    z-index: 2;
 }
 
 .cv-node-content {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255,255,255,0.08);
     backdrop-filter: blur(15px);
-    padding: 3rem;
+    padding: clamp(1.6rem, 3.5vw, 2.6rem);
     border-radius: 20px;
     position: relative;
-    z-index: 2;
+    z-index: 1;
+    overflow: hidden;
     transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
     box-shadow: 0 10px 30px rgba(0,0,0,0.4);
     text-align: right;
@@ -1487,23 +1486,33 @@ html.fx .reveal {
 .cv-icon {
     position: absolute;
     bottom: -15px;
-    left: 30px; /* Arabic layout, icon on the left */
-    font-size: 8rem;
-    opacity: 0.03;
+    inset-inline-end: 24px;
+    font-size: 7rem;
+    opacity: 0.05;
     color: #fff;
-    z-index: -1;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* النص فوق أيقونة العلامة المائية */
+.cv-node-content > :not(.cv-icon) {
+    position: relative;
+    z-index: 1;
 }
 
 .cv-node-content.highlight-node .cv-icon {
     color: #3EC6A8;
-    opacity: 0.08;
+    opacity: 0.1;
+}
+
+.cv-dl {
+    margin-top: 1.4rem;
 }
 
 @media (max-width: 768px) {
-    .cv-node { width: 85vw; }
-    .cv-node-content { padding: 2rem; }
+    .cv-node { padding-inline-start: 2.4rem; }
     .cv-node-content h3 { font-size: 1.6rem; }
-    .cv-track { padding: 0 10vw; }
+    .cv-icon { font-size: 5rem; }
 }
 
 /* ==========================================================================
